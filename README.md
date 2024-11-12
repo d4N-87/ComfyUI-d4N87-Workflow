@@ -1,7 +1,9 @@
 # ComfyUI-d4N87-Workflow
 ComfyUI Workflow by d4N87
 
-# ITA
+YT: https://www.youtube.com/@d4n87
+
+## ITA
 
 Ciao ragazzi, io sono Dan!
 
@@ -17,7 +19,7 @@ git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
 
 Altrimenti nelle release trovate lo zip con dentro tutti i workflow (sono i medesimi ma caricati tutti insieme). Questo zip viene aggiornato ad ogni pubblicazione di un video, mentre i singoli workflow potrebbero essere aggiornati singolarmente.
 
-# ENG
+## ENG
 
 Hi guys, I'm Dan!
 
