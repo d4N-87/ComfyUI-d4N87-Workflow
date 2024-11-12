@@ -1,0 +1,961 @@
+{
+  "last_node_id": 288,
+  "last_link_id": 623,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        891.4756339952336,
+        98.64060236259492
+      ],
+      "size": {
+        "0": 226.8000030517578,
+        "1": 54
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 606
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 604,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            595
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a little house with a sign \"CIAO A TUTTI\""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 275,
+      "type": "Reroute",
+      "pos": [
+        390,
+        390
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 603
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            606,
+            607
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 71,
+      "type": "CLIPTextEncode",
+      "pos": [
+        891.4756339952336,
+        328.6406023625947
+      ],
+      "size": {
+        "0": 226.8000030517578,
+        "1": 54
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 607
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 605,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            623
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Negative)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "bad quality, poor quality, doll, disfigured, jpg, toy, bad anatomy, missing limbs, missing fingers, 3d, cgi, looking at the camera, illustration, bad hands"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 282,
+      "type": "Note",
+      "pos": [
+        889.036225763861,
+        199.08934266758914
+      ],
+      "size": {
+        "0": 226.6665802001953,
+        "1": 80.45083618164062
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene inserito il prompt positivo e negativo."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 284,
+      "type": "Note",
+      "pos": [
+        1174.5027811579207,
+        598.2316654586508
+      ],
+      "size": {
+        "0": 312.7103271484375,
+        "1": 79.42266082763672
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui avviene la solita generazione, dove è possibile variare i valori e sperimentare nuove combinazioni."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 233,
+      "type": "PreviewImage",
+      "pos": [
+        2000.9633661664568,
+        86.47319851835893
+      ],
+      "size": {
+        "0": 604.7489624023438,
+        "1": 592.15576171875
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 615
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 286,
+      "type": "SaveImage",
+      "pos": [
+        2620.9633661664566,
+        86.47319851835893
+      ],
+      "size": {
+        "0": 325.2772521972656,
+        "1": 270
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 616
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 279,
+      "type": "EmptyLatentImage",
+      "pos": [
+        803.4447363804024,
+        530.4616679958973
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 611,
+          "widget": {
+            "name": "width"
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 612,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            613
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 281,
+      "type": "Note",
+      "pos": [
+        463.44473638040216,
+        670.4616679958974
+      ],
+      "size": {
+        "0": 653.1782836914062,
+        "1": 64.14444732666016
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene impostata la risoluzione della generazione, deve essere attorno a 1 Mpixel e un multiplo di 64."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 287,
+      "type": "Note",
+      "pos": [
+        2621.8566117720184,
+        397.2337421070445
+      ],
+      "size": {
+        "0": 325.63360595703125,
+        "1": 274.49920654296875
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene mostrata l'anteprima e salvata l'immagine finale nella cartella Output."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 280,
+      "type": "CM_SDXLResolution",
+      "pos": [
+        465.69304234384384,
+        538.1131234737343
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            611
+          ],
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            612
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Risoluzioni",
+      "properties": {
+        "Node name for S&R": "CM_SDXLResolution"
+      },
+      "widgets_values": [
+        "832x1216"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 277,
+      "type": "PrimitiveNode",
+      "pos": [
+        501.4756339952341,
+        328.6406023625947
+      ],
+      "size": {
+        "0": 345.2939758300781,
+        "1": 109.18203735351562
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            605
+          ],
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "Negative",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "bad quality, poor quality, doll, disfigured, jpg, toy, bad anatomy, missing limbs, missing fingers, 3d, cgi, looking at the camera, illustration, bad hands"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 252,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        21.798912093798005,
+        90.27919380532698
+      ],
+      "size": {
+        "0": 372.7066955566406,
+        "1": 98
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            622
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            602
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "SD3_Medium.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 274,
+      "type": "Note",
+      "pos": [
+        22,
+        230
+      ],
+      "size": {
+        "0": 373.32177734375,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il modello di SD3."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 273,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        1529,
+        89
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 601
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 602
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            614
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 285,
+      "type": "Reroute",
+      "pos": [
+        1880,
+        90
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 614
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            615,
+            616
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 271,
+      "type": "KSampler",
+      "pos": [
+        1173.0740824274521,
+        86.94597515103334
+      ],
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 622
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 595
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 623
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 613
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            601
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        235861954418108,
+        "randomize",
+        30,
+        5.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 11,
+      "type": "TripleCLIPLoader",
+      "pos": [
+        24.679791752867573,
+        384.99413940979974
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            603
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TripleCLIPLoader"
+      },
+      "widgets_values": [
+        "CLIP_L.safetensors",
+        "CLIP_G.safetensors",
+        "T5-xxl_FP16.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 288,
+      "type": "Note",
+      "pos": [
+        1615,
+        287
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "title": "d4N87",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 276,
+      "type": "PrimitiveNode",
+      "pos": [
+        501.4756339952341,
+        88.64060236259489
+      ],
+      "size": {
+        "0": 345.2928466796875,
+        "1": 191.06167602539062
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            604
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "Positive",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "a little house with a sign \"CIAO A TUTTI\""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      595,
+      6,
+      0,
+      271,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      601,
+      271,
+      0,
+      273,
+      0,
+      "LATENT"
+    ],
+    [
+      602,
+      252,
+      2,
+      273,
+      1,
+      "VAE"
+    ],
+    [
+      603,
+      11,
+      0,
+      275,
+      0,
+      "*"
+    ],
+    [
+      604,
+      276,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      605,
+      277,
+      0,
+      71,
+      1,
+      "STRING"
+    ],
+    [
+      606,
+      275,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      607,
+      275,
+      0,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      611,
+      280,
+      0,
+      279,
+      0,
+      "INT"
+    ],
+    [
+      612,
+      280,
+      1,
+      279,
+      1,
+      "INT"
+    ],
+    [
+      613,
+      279,
+      0,
+      271,
+      3,
+      "LATENT"
+    ],
+    [
+      614,
+      273,
+      0,
+      285,
+      0,
+      "*"
+    ],
+    [
+      615,
+      285,
+      0,
+      233,
+      0,
+      "IMAGE"
+    ],
+    [
+      616,
+      285,
+      0,
+      286,
+      0,
+      "IMAGE"
+    ],
+    [
+      622,
+      252,
+      0,
+      271,
+      0,
+      "MODEL"
+    ],
+    [
+      623,
+      71,
+      0,
+      271,
+      2,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Caricamento Modello SD3 - d4N87",
+      "bounding": [
+        12,
+        11,
+        393,
+        287
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Anteprima & Salvataggio - d4N87",
+      "bounding": [
+        1989,
+        13,
+        971,
+        678
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Caricamento CLIP - d4N87",
+      "bounding": [
+        15,
+        311,
+        335,
+        190
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Prompt - d4N87",
+      "bounding": [
+        491,
+        14,
+        637,
+        433
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Risoluzione - d4N87",
+      "bounding": [
+        455,
+        464,
+        674,
+        285
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Generazione - d4N87",
+      "bounding": [
+        1163,
+        13,
+        339,
+        677
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.4641000000000017,
+      "offset": [
+        -1533.269749568342,
+        -0.5262698338880938
+      ]
+    }
+  },
+  "version": 0.4
+}

@@ -1,0 +1,2844 @@
+{
+  "last_node_id": 138,
+  "last_link_id": 223,
+  "nodes": [
+    {
+      "id": 125,
+      "type": "IF_SaveText",
+      "pos": [
+        450,
+        80
+      ],
+      "size": {
+        "0": 315,
+        "1": 238
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "question_input",
+          "type": "STRING",
+          "link": 204,
+          "widget": {
+            "name": "question_input"
+          }
+        },
+        {
+          "name": "response_input",
+          "type": "STRING",
+          "link": 205,
+          "widget": {
+            "name": "response_input"
+          }
+        },
+        {
+          "name": "negative_input",
+          "type": "STRING",
+          "link": 206,
+          "widget": {
+            "name": "negative_input"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            215
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [
+            213
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "Turn",
+          "type": "STRING",
+          "links": [
+            211
+          ],
+          "shape": 3,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_SaveText"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        false,
+        "txt",
+        "create"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 117,
+      "type": "ShowText|pysssss",
+      "pos": [
+        450,
+        370
+      ],
+      "size": {
+        "0": 312.16424560546875,
+        "1": 312.3222961425781
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 211,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "ID: 84c3a9b5-bbc1-4ab4-a3b1-5996cd3dec5d\nQuestion: It is a portrait of a man intent on setting up a time machine, wearing watchmaker's glasses and a nineteenth-century suit, in a secret laboratory that is lit by a morning sun, much dust in the air. His face is smiling as if he has just discovered something incredible. In the background is a bookcase with lots of books. He rests his hands on a desk with many written papers, calculations, and books\nResponse: extreme close-up, macro detail, high resolution Here's a visual prompt for the image:\n\n**Title:** \"Timeless Pursuit\"\n\n**Composition:**\n\n* The subject, a bespectacled man in a 19th-century suit, sits intently at a wooden desk, surrounded by dusty tomes and scattered papers.\n* His face beams with excitement as he gazes upon his handiwork, a time machine prototype taking shape before him.\n* Morning sunlight streams through grimy windows, casting an ethereal glow on the entire scene.\n\n**Details:**\n\n* Watchmaker's glasses perched on the bridge of his nose add a touch of nostalgia and whimsy.\n* His hair is unkempt, with strands falling across his forehead as he focuses intently on his task.\n* The time machine prototype sprawls across the desk, a tangle of copper wires, gears, and clockwork mechanisms.\n* Old books, papers, and scrolls are strewn about, hinting at years of research and experimentation.\n* A faint aura of curiosity and wonder surrounds him, as if he's on the cusp of unlocking the secrets of time itself.\n\n**Lighting:**\n\n* Warm, golden light spills through the windows, casting deep shadows across the subject's face.\n* Soft highlights accentuate the intricate details of the time machine prototype.\n* Ambient lighting in the background adds depth and dimensionality to the scene.\n\n**Composition:**\n\n* The subject is centered, with the time machine prototype dominating the frame.\n* Negative space around him Realistic, detailed, high-resolution, candid, lifelike,\nNegative: lowres,  text,  error,  cropped,  worst quality,  low quality,  jpeg artifacts,  ugly,  duplicate,  morbid,  mutilated,  out of frame,  mutation,  deformed,  blurry,  dehydrated,  bad anatomy,  bad proportions,  disfigured, username,  watermark,  signature, backgound out of focus, black and white,  monochrome"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 123,
+      "type": "Reroute",
+      "pos": [
+        810,
+        100
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 215,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": [
+            202,
+            203
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 6,
+      "type": "T5TextEncode",
+      "pos": [
+        1380,
+        440
+      ],
+      "size": {
+        "0": 210,
+        "1": 54
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "T5",
+          "type": "T5",
+          "link": 126,
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 102,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            94
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "T5 Text Encode (Negative)",
+      "properties": {
+        "Node name for S&R": "T5TextEncode"
+      },
+      "widgets_values": [
+        "bokeh effect"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 83,
+      "type": "Reroute",
+      "pos": [
+        1280,
+        380
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "T5",
+          "links": [
+            125,
+            126
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 7,
+      "type": "T5v11Loader",
+      "pos": [
+        920,
+        380
+      ],
+      "size": {
+        "0": 340,
+        "1": 154
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "T5",
+          "type": "T5",
+          "links": [
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "T5 Loader",
+      "properties": {
+        "Node name for S&R": "T5v11Loader"
+      },
+      "widgets_values": [
+        "model-00001-of-00002.safetensors",
+        "xxl",
+        "folder",
+        "cpu",
+        "default"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 129,
+      "type": "Note",
+      "pos": [
+        20,
+        730
+      ],
+      "size": {
+        "0": 738.8036499023438,
+        "1": 93.74048614501953
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "In questo blocco avviene la trasformazione del testo in prompt grazie a Ollama, che applicando il modello scelto e le impostazioni annesse, ricrea automaticamente il positive e il negative."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 56,
+      "type": "PrimitiveNode",
+      "pos": [
+        1020,
+        580
+      ],
+      "size": {
+        "0": 235.1999969482422,
+        "1": 83.0911865234375
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            102
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "PixArt Sigma Negative Prompt",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "bokeh effect"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 2
+    },
+    {
+      "id": 62,
+      "type": "PrimitiveNode",
+      "pos": [
+        1380,
+        550
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false,
+        "pinned": false
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            103,
+            186
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "steps"
+          }
+        }
+      ],
+      "title": "Steps",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        17,
+        "fixed"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 2
+    },
+    {
+      "id": 5,
+      "type": "T5TextEncode",
+      "pos": [
+        1380,
+        330
+      ],
+      "size": {
+        "0": 210,
+        "1": 58.0341796875
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "T5",
+          "type": "T5",
+          "link": 125,
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 202,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            93
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "T5 Text Encode (Positive",
+      "properties": {
+        "Node name for S&R": "T5TextEncode"
+      },
+      "widgets_values": [
+        "a lion dressed as a man singing at a microphone thrilled by the music, eyes shining with joy, dressed as a punk in a rock club with a 70s atmosphere, many people following the concert, side lights with a three-quarter shot, 90s camera colors"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 81,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1247.0860236089509,
+        859.8264824401973
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 121,
+          "widget": {
+            "name": "width"
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 122,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            123
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 112,
+      "type": "PrimitiveNode",
+      "pos": [
+        1380,
+        670
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            183,
+            185,
+            187
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "noise_seed"
+          }
+        }
+      ],
+      "title": "Seed",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        41969194842525,
+        "randomize"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 60,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1640,
+        200
+      ],
+      "size": {
+        "0": 280,
+        "1": 542
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 92
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 93
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 94
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 123
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 103,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 185,
+          "widget": {
+            "name": "noise_seed"
+          },
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "PixArt Sigma KSampler",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        41969194842525,
+        "fixed",
+        17,
+        4,
+        "dpmpp_2m",
+        "karras",
+        0,
+        10000,
+        "disable"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 1,
+      "type": "PixArtCheckpointLoader",
+      "pos": [
+        1270,
+        200
+      ],
+      "size": {
+        "0": 340,
+        "1": 82
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            92
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "PixArt Sigma .pth Loader",
+      "properties": {
+        "Node name for S&R": "PixArtCheckpointLoader"
+      },
+      "widgets_values": [
+        "PixArt-Sigma-XL-2-1024-MS.pth",
+        "PixArtMS_Sigma_XL_2"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 8,
+      "type": "VAELoader",
+      "pos": [
+        1580,
+        80
+      ],
+      "size": {
+        "0": 340,
+        "1": 60
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            128
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "PixArt Sigma VAE Loader",
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "pixart_sigma_vae.safetensors"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 84,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        2007,
+        100
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 127
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 128
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            131
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 85,
+      "type": "Reroute",
+      "pos": [
+        2360,
+        100
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            132,
+            134
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 130,
+      "type": "Note",
+      "pos": [
+        918.9027710878063,
+        87.95792608382912
+      ],
+      "size": {
+        "0": 334.8448791503906,
+        "1": 221.761962890625
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "In questo blocco avviene la prima generazione, sfruttando il modello di PixArt Sigma, che dovrebbe seguire in modo più preciso il prompt."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 114,
+      "type": "DifferentialDiffusion",
+      "pos": [
+        2672.5420540466807,
+        545.0040299283208
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            194
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DifferentialDiffusion"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 108,
+      "type": "PerturbedAttentionGuidance",
+      "pos": [
+        2902.5420540466807,
+        545.0040299283208
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 194,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            191
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PerturbedAttentionGuidance"
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 40,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2872.102223537376,
+        947.5226007052333
+      ],
+      "size": {
+        "0": 235.1999969482422,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": false,
+        "pinned": false
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 140
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 203,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            162
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encoder (Positive)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a lion dressed as a man singing at a microphone thrilled by the music, eyes shining with joy, dressed as a punk in a rock club with a 70s atmosphere, many people following the concert, side lights with a three-quarter shot, 90s camera colors"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 87,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2872.102223537376,
+        1047.5226007052322
+      ],
+      "size": {
+        "0": 235.1999969482422,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": false,
+        "pinned": false
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 141
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 213,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            165
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encoder (Negative)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "illustration, drawing, 3d, cg, cartoons, bad quality, bokeh effect"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 103,
+      "type": "Reroute",
+      "pos": [
+        3132.102223537376,
+        947.5226007052333
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CONDITIONING",
+          "links": [
+            163,
+            164
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 104,
+      "type": "Reroute",
+      "pos": [
+        3132.102223537376,
+        1047.5226007052322
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 165
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CONDITIONING",
+          "links": [
+            166,
+            167
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 131,
+      "type": "Note",
+      "pos": [
+        1977.7213881311338,
+        453.7472689289694
+      ],
+      "size": {
+        "0": 287.8290710449219,
+        "1": 72.6077651977539
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui sarà caricato il modello SD che andrà a fare da refiner per i passaggi successivi."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 92,
+      "type": "Reroute",
+      "pos": [
+        2310,
+        350
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 219
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            146,
+            147,
+            159
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 98,
+      "type": "Reroute",
+      "pos": [
+        2310,
+        270
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MODEL",
+          "links": [
+            154,
+            170,
+            193
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 89,
+      "type": "Reroute",
+      "pos": [
+        2310,
+        310
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 220
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            140,
+            141,
+            169
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 42,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        3286.858302675752,
+        537.6832078426404
+      ],
+      "size": {
+        "0": 280,
+        "1": 542
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 191
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 163
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 166
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 136,
+          "slot_index": 3
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 186,
+          "widget": {
+            "name": "start_at_step"
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 187,
+          "widget": {
+            "name": "noise_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            142,
+            157
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler - DD + PAG",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        41969194842525,
+        "fixed",
+        26,
+        2,
+        "dpmpp_2m",
+        "karras",
+        17,
+        10000,
+        "disable"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 134,
+      "type": "Note",
+      "pos": [
+        3286.858302675752,
+        1117.6832078426398
+      ],
+      "size": {
+        "0": 280.1556701660156,
+        "1": 97.41928100585938
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui avviene la seconda generazione, che va a rifinire quella realizzata da PixArt, andando a migliorare con il Differential Diffusion e il Perturbed-Attetion Guidance."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 132,
+      "type": "Note",
+      "pos": [
+        2672.5420540466807,
+        645.0040299283208
+      ],
+      "size": {
+        "0": 542.3187866210938,
+        "1": 58.56229019165039
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "In questo passaggio vengono aggiunti il Differential Diffusion e il Perturbed-Attention Guidance al modello, prima di raggiungere il KSampler."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 96,
+      "type": "RandomNoise",
+      "pos": [
+        2854.360281623474,
+        1383.3521700154606
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 183,
+          "widget": {
+            "name": "noise_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            151
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        643651007170274,
+        "randomize"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 94,
+      "type": "PerpNegGuider",
+      "pos": [
+        2854.360281623474,
+        1523.3521700154608
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 142
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 170
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 164
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 167
+        },
+        {
+          "name": "empty_conditioning",
+          "type": "CONDITIONING",
+          "link": 168,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            150
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PerpNegGuider"
+      },
+      "widgets_values": [
+        1.5,
+        0.7000000000000001
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 99,
+      "type": "KSamplerSelect",
+      "pos": [
+        2854.360281623474,
+        1713.3521700154613
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            156
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "dpmpp_2m"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 97,
+      "type": "BasicScheduler",
+      "pos": [
+        2854.360281623474,
+        1823.352170015462
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            155
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "karras",
+        20,
+        0.2
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 95,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        3214.360281623474,
+        1383.3521700154606
+      ],
+      "size": {
+        "0": 355.20001220703125,
+        "1": 326
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 151,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 150
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 156,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 155
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": [
+            158
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "SamplerCustomAdvanced + PerpNeg",
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 106,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2554.360281623474,
+        1583.3521700154608
+      ],
+      "size": {
+        "0": 267.65478515625,
+        "1": 76.0000228881836
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 169,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            168
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "CLIP Text Encode (Empty Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 133,
+      "type": "Note",
+      "pos": [
+        2872.807937184837,
+        1147.5315760287187
+      ],
+      "size": {
+        "0": 245.19058227539062,
+        "1": 95.22863006591797
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Questo passaggio si occupa di passare il conditioning del positive e negative, con il prompt generato da Ollama."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 135,
+      "type": "Note",
+      "pos": [
+        3214.360281623474,
+        1753.3521700154613
+      ],
+      "size": {
+        "0": 346.2940368652344,
+        "1": 173.06004333496094
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Questo è il passaggio finale, qui viene effettuato il secondo refiner applicando il PerpNeg."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 102,
+      "type": "PreviewImage",
+      "pos": [
+        2862.3080527343723,
+        92.36228692169198
+      ],
+      "size": {
+        "0": 300.9803161621094,
+        "1": 329.92620849609375
+      },
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "title": "SDXL+DD+PAG Preview",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 101,
+      "type": "PreviewImage",
+      "pos": [
+        3172.3080527343723,
+        92.36228692169198
+      ],
+      "size": {
+        "0": 314.9239501953125,
+        "1": 328.3650817871094
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 160
+        }
+      ],
+      "title": "PerpNegGuider Preview",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 127,
+      "type": "SaveImage",
+      "pos": [
+        3502.3080527343723,
+        92.36228692169198
+      ],
+      "size": {
+        "0": 323.308349609375,
+        "1": 320.5591735839844
+      },
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 223
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 53,
+      "type": "PreviewImage",
+      "pos": [
+        2542.3080527343723,
+        92.36228692169198
+      ],
+      "size": {
+        "0": 309.9327392578125,
+        "1": 333.2345886230469
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 132
+        }
+      ],
+      "title": "PixArt Preview",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 86,
+      "type": "VAEEncodeTiled",
+      "pos": [
+        2910,
+        770
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 134
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeTiled"
+      },
+      "widgets_values": [
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 90,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        3630,
+        540
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 142
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 147,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            161
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 39,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1977.7172714993158,
+        274.08811368721433
+      ],
+      "size": {
+        "0": 290,
+        "1": 140
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            218
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            220
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            219
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Caricamento Modello",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Sleipnir_TLHTurbo_v2.7_FP16.safetensors"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 124,
+      "type": "IF_PromptMkr",
+      "pos": [
+        20,
+        80
+      ],
+      "size": {
+        "0": 405.48370361328125,
+        "1": 607.8073120117188
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": [
+            204
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            205
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [
+            206
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_PromptMkr"
+      },
+      "widgets_values": [
+        "It is a portrait of a man intent on setting up a time machine, wearing watchmaker's glasses and a nineteenth-century suit, in a secret laboratory that is lit by a morning sun, much dust in the air. His face is smiling as if he has just discovered something incredible. In the background is a bookcase with lots of books. He rests his hands on a desk with many written papers, calculations, and books",
+        "localhost",
+        "11434",
+        "ollama",
+        "impactframes/llama3_ifai_sd_prompt_mkr_q4km:latest",
+        "IF_PromptMKR_IMG",
+        "CloseUp",
+        "Photographic",
+        "Standard",
+        0.7,
+        256,
+        312799228486693,
+        "randomize",
+        false,
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 82,
+      "type": "CM_SDXLResolution",
+      "pos": [
+        917.086023608952,
+        859.8264824401973
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            121
+          ],
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            122
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Risoluzioni SDXL",
+      "properties": {
+        "Node name for S&R": "CM_SDXLResolution"
+      },
+      "widgets_values": [
+        "1344x768"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 137,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        4039.2855224609375,
+        1430.0000305175781
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            221
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 138,
+      "type": "Note",
+      "pos": [
+        4039.2855224609375,
+        1530.0000305175781
+      ],
+      "size": {
+        "0": 577.3831176757812,
+        "1": 62.30693817138672
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui avviene l'upscaling, sotto a Load Upscale Model si sceglie il mdoello di upscaling.\nNon è un processo come l'Hires.fix, qui viene semplicemente ingrandita l'immagine generata."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 100,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        3610,
+        1400
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 158
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            160,
+            222
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 136,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        4369.2855224609375,
+        1430.0000305175781
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 221,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            223
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      92,
+      1,
+      0,
+      60,
+      0,
+      "MODEL"
+    ],
+    [
+      93,
+      5,
+      0,
+      60,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      94,
+      6,
+      0,
+      60,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      102,
+      56,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      103,
+      62,
+      0,
+      60,
+      4,
+      "INT"
+    ],
+    [
+      121,
+      82,
+      0,
+      81,
+      0,
+      "INT"
+    ],
+    [
+      122,
+      82,
+      1,
+      81,
+      1,
+      "INT"
+    ],
+    [
+      123,
+      81,
+      0,
+      60,
+      3,
+      "LATENT"
+    ],
+    [
+      124,
+      7,
+      0,
+      83,
+      0,
+      "*"
+    ],
+    [
+      125,
+      83,
+      0,
+      5,
+      0,
+      "T5"
+    ],
+    [
+      126,
+      83,
+      0,
+      6,
+      0,
+      "T5"
+    ],
+    [
+      127,
+      60,
+      0,
+      84,
+      0,
+      "LATENT"
+    ],
+    [
+      128,
+      8,
+      0,
+      84,
+      1,
+      "VAE"
+    ],
+    [
+      131,
+      84,
+      0,
+      85,
+      0,
+      "*"
+    ],
+    [
+      132,
+      85,
+      0,
+      53,
+      0,
+      "IMAGE"
+    ],
+    [
+      134,
+      85,
+      0,
+      86,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      86,
+      0,
+      42,
+      3,
+      "LATENT"
+    ],
+    [
+      140,
+      89,
+      0,
+      40,
+      0,
+      "CLIP"
+    ],
+    [
+      141,
+      89,
+      0,
+      87,
+      0,
+      "CLIP"
+    ],
+    [
+      142,
+      42,
+      0,
+      90,
+      0,
+      "LATENT"
+    ],
+    [
+      146,
+      92,
+      0,
+      86,
+      1,
+      "VAE"
+    ],
+    [
+      147,
+      92,
+      0,
+      90,
+      1,
+      "VAE"
+    ],
+    [
+      150,
+      94,
+      0,
+      95,
+      1,
+      "GUIDER"
+    ],
+    [
+      151,
+      96,
+      0,
+      95,
+      0,
+      "NOISE"
+    ],
+    [
+      154,
+      98,
+      0,
+      97,
+      0,
+      "MODEL"
+    ],
+    [
+      155,
+      97,
+      0,
+      95,
+      3,
+      "SIGMAS"
+    ],
+    [
+      156,
+      99,
+      0,
+      95,
+      2,
+      "SAMPLER"
+    ],
+    [
+      157,
+      42,
+      0,
+      95,
+      4,
+      "LATENT"
+    ],
+    [
+      158,
+      95,
+      1,
+      100,
+      0,
+      "LATENT"
+    ],
+    [
+      159,
+      92,
+      0,
+      100,
+      1,
+      "VAE"
+    ],
+    [
+      160,
+      100,
+      0,
+      101,
+      0,
+      "IMAGE"
+    ],
+    [
+      161,
+      90,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      40,
+      0,
+      103,
+      0,
+      "*"
+    ],
+    [
+      163,
+      103,
+      0,
+      42,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      164,
+      103,
+      0,
+      94,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      165,
+      87,
+      0,
+      104,
+      0,
+      "*"
+    ],
+    [
+      166,
+      104,
+      0,
+      42,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      167,
+      104,
+      0,
+      94,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      168,
+      106,
+      0,
+      94,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      169,
+      89,
+      0,
+      106,
+      0,
+      "CLIP"
+    ],
+    [
+      170,
+      98,
+      0,
+      94,
+      0,
+      "MODEL"
+    ],
+    [
+      183,
+      112,
+      0,
+      96,
+      0,
+      "INT"
+    ],
+    [
+      185,
+      112,
+      0,
+      60,
+      5,
+      "INT"
+    ],
+    [
+      186,
+      62,
+      0,
+      42,
+      4,
+      "INT"
+    ],
+    [
+      187,
+      112,
+      0,
+      42,
+      5,
+      "INT"
+    ],
+    [
+      191,
+      108,
+      0,
+      42,
+      0,
+      "MODEL"
+    ],
+    [
+      193,
+      98,
+      0,
+      114,
+      0,
+      "MODEL"
+    ],
+    [
+      194,
+      114,
+      0,
+      108,
+      0,
+      "MODEL"
+    ],
+    [
+      202,
+      123,
+      0,
+      5,
+      1,
+      "STRING"
+    ],
+    [
+      203,
+      123,
+      0,
+      40,
+      1,
+      "STRING"
+    ],
+    [
+      204,
+      124,
+      0,
+      125,
+      0,
+      "STRING"
+    ],
+    [
+      205,
+      124,
+      1,
+      125,
+      1,
+      "STRING"
+    ],
+    [
+      206,
+      124,
+      2,
+      125,
+      2,
+      "STRING"
+    ],
+    [
+      211,
+      125,
+      3,
+      117,
+      0,
+      "STRING"
+    ],
+    [
+      213,
+      125,
+      2,
+      87,
+      1,
+      "STRING"
+    ],
+    [
+      215,
+      125,
+      1,
+      123,
+      0,
+      "*"
+    ],
+    [
+      218,
+      39,
+      0,
+      98,
+      0,
+      "*"
+    ],
+    [
+      219,
+      39,
+      2,
+      92,
+      0,
+      "*"
+    ],
+    [
+      220,
+      39,
+      1,
+      89,
+      0,
+      "*"
+    ],
+    [
+      221,
+      137,
+      0,
+      136,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      222,
+      100,
+      0,
+      136,
+      1,
+      "IMAGE"
+    ],
+    [
+      223,
+      136,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Ollama - d4N87",
+      "bounding": [
+        7,
+        11,
+        768,
+        832
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "PixArt Sigma - d4N87",
+      "bounding": [
+        907,
+        9,
+        1028,
+        753
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Risoluzione Generazione SDXL - d4N87",
+      "bounding": [
+        906,
+        791,
+        669,
+        184
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Caricamento Modello - d4N87",
+      "bounding": [
+        1967,
+        204,
+        431,
+        331
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "DD + PAG - d4N87",
+      "bounding": [
+        2668,
+        467,
+        562,
+        251
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "CLIP TE - d4N87",
+      "bounding": [
+        2865,
+        874,
+        365,
+        382
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "1st Refiner - d4N87",
+      "bounding": [
+        3280,
+        462,
+        298,
+        767
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "2nd Refiner - d4N87",
+      "bounding": [
+        2536,
+        1298,
+        1048,
+        640
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Anteprime - d4N87",
+      "bounding": [
+        2528,
+        15,
+        1309,
+        416
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Upscale - d4N87",
+      "bounding": [
+        4024,
+        1359,
+        602,
+        243
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.42409761837248483,
+      "offset": [
+        -452.1158634201872,
+        22.008110493159563
+      ]
+    }
+  },
+  "version": 0.4
+}

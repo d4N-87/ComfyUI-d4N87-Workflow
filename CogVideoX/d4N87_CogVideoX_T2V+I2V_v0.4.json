@@ -1,0 +1,1009 @@
+{
+  "last_node_id": 52,
+  "last_link_id": 63,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "CogVideoTextEncode",
+      "pos": {
+        "0": 558.428466796875,
+        "1": 344
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CogVideo TextEncode - Negative",
+      "properties": {
+        "Node name for S&R": "CogVideoTextEncode"
+      },
+      "widgets_values": [
+        "bad quality, low resolution, no watermark, strange motion",
+        1,
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 47,
+      "type": "Note",
+      "pos": {
+        "0": 91.02044677734375,
+        "1": 1066.243408203125
+      },
+      "size": {
+        "0": 308.1720886230469,
+        "1": 79.26493072509766
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il T5-xxl, in base al proprio sistema si può scegliere se FP16, FP8 o GGUF nella variante migliore."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 48,
+      "type": "Note",
+      "pos": {
+        "0": 561,
+        "1": 594
+      },
+      "size": {
+        "0": 392.5907287597656,
+        "1": 76.37971496582031
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui è da inserire il prompt, dove nel caso dell'I2V va spiegato come trasformare l'immagine, mentre nel modello normale sarà da inserire cosa dovrà creare come video."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 10,
+      "type": "LoadAndResizeImage",
+      "pos": {
+        "0": 997.635986328125,
+        "1": 93.4366683959961
+      },
+      "size": [
+        315,
+        566.0000076293945
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            48
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "cogvideox_test.png",
+        false,
+        720,
+        480,
+        1,
+        true,
+        2,
+        "alpha",
+        "",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 50,
+      "type": "Note",
+      "pos": {
+        "0": 1685.246337890625,
+        "1": 496.4877014160156
+      },
+      "size": {
+        "0": 402.2142333984375,
+        "1": 86.44654846191406
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qua avviene l'elaborazione vera e propria, se si vuole elaborare solo tramite prompt allora basta lasciare collegati pipeline, positive e negative.\nSe invece si vuole animare un'immagine bisogna collegare anche l'image_cond_latents al nodo per caricare l'immagine."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 49,
+      "type": "Note",
+      "pos": {
+        "0": 2242,
+        "1": 539
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 46,
+      "type": "Note",
+      "pos": {
+        "0": 17.4285888671875,
+        "1": 539.4285888671875
+      },
+      "size": {
+        "0": 380.80670166015625,
+        "1": 295.6601257324219
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il modello di CogVideoX, è possibile scegliere fra quello originale, nelle varianti 2B, 5B, 5B I2V e fra le altre versioni e Fun. Per la versione 5B è consigliata la precisione BF16  (ma compatibile solo con le RTX30/40), per la 2B la FP16.\nPer risparmiare VRAM è possibile scegliere la versione GGUF, si trovano i medesimi modelli, ma con una qualità finale minore.\nLa versione I2V sta a significare Image to Video, per le altre è da inserire il prompt soltanto.\n\nQuesti settaggi in ordine:\n\nMinor tempo, maggiore VRAM\nfp8 disable, sequential cpu offload disable\n\nMaggior tempo, normale VRAM\nfp8 enable, sequential cpu offload disable\n\nMolto tempo, poca VRAM\nfp8 enable, sequential cpu offload enable\n\nCon l'elaborazione solo da prompt cosiglio di attivare il sequential cpu offload."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 15,
+      "type": "Reroute",
+      "pos": {
+        "0": 433,
+        "1": 935
+      },
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            11,
+            12
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "CLIPLoaderGGUF",
+      "pos": {
+        "0": 88.07768249511719,
+        "1": 937.7606201171875
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            52
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "T5-xxl_v1.1_Q8_0.gguf",
+        "sd3"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 19,
+      "type": "CogVideoImageEncode",
+      "pos": {
+        "0": 1329.63623046875,
+        "1": 81.43669128417969
+      },
+      "size": {
+        "0": 315,
+        "1": 122
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "COGVIDEOPIPE",
+          "link": 17
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CogVideoImageEncode"
+      },
+      "widgets_values": [
+        16,
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 18,
+      "type": "Reroute",
+      "pos": {
+        "0": 447,
+        "1": 82
+      },
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "COGVIDEOPIPE",
+          "links": [
+            14,
+            17
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 21,
+      "type": "CogVideoDecode",
+      "pos": {
+        "0": 2130.95654296875,
+        "1": 82.94041442871094
+      },
+      "size": {
+        "0": 315,
+        "1": 198
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "COGVIDEOPIPE",
+          "link": 21
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            23
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CogVideoDecode"
+      },
+      "widgets_values": [
+        true,
+        240,
+        360,
+        0.2,
+        0.2,
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 13,
+      "type": "DownloadAndLoadCogVideoGGUFModel",
+      "pos": {
+        "0": 17,
+        "1": 319
+      },
+      "size": {
+        "0": 386.9832458496094,
+        "1": 174
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pab_config",
+          "type": "PAB_CONFIG",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "block_edit",
+          "type": "TRANSFORMERBLOCKS",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cogvideo_pipe",
+          "type": "COGVIDEOPIPE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadCogVideoGGUFModel"
+      },
+      "widgets_values": [
+        "CogVideoX_5b_GGUF_Q4_0.safetensors",
+        "bf16",
+        false,
+        "main_device",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 17,
+      "type": "CogVideoSampler",
+      "pos": {
+        "0": 1684.427001953125,
+        "1": 83.23120880126953
+      },
+      "size": {
+        "0": 405.5999755859375,
+        "1": 370
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "COGVIDEOPIPE",
+          "link": 14
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "image_cond_latents",
+          "type": "LATENT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "context_options",
+          "type": "COGCONTEXT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "controlnet",
+          "type": "COGVIDECONTROLNET",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cogvideo_pipe",
+          "type": "COGVIDEOPIPE",
+          "links": [
+            21
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [
+            22
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CogVideoSampler"
+      },
+      "widgets_values": [
+        480,
+        720,
+        49,
+        50,
+        6,
+        719589139602729,
+        "randomize",
+        "CogVideoXDDIM",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 22,
+      "type": "VHS_VideoCombine",
+      "pos": {
+        "0": 2490,
+        "1": 82
+      },
+      "size": [
+        626.28564453125,
+        334
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 10,
+        "loop_count": 0,
+        "filename_prefix": "CogVideoX",
+        "format": "video/nvenc_hevc-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "CogVideoX_00011.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/nvenc_hevc-mp4",
+            "frame_rate": 10
+          },
+          "muted": false
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 14,
+      "type": "CogVideoTextEncode",
+      "pos": {
+        "0": 557.428466796875,
+        "1": 81
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CogVideo TextEncode - Positive",
+      "properties": {
+        "Node name for S&R": "CogVideoTextEncode"
+      },
+      "widgets_values": [
+        "A panda dressed like samurai with sunglasses, is training with his katana, on a rooftop terrace, recently refreshed by a light rain. The scene unfolds from a distance, while droplets of water glisten on the concrete behind it. The overcast sky provides a dramatic backdrop, emphasizing the vibrant white coat of the panda.\nSuddenly lightning in the clouds",
+        1,
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 20,
+      "type": "DownloadAndLoadCogVideoModel",
+      "pos": {
+        "0": 17,
+        "1": 79
+      },
+      "size": {
+        "0": 388.4125671386719,
+        "1": 194
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pab_config",
+          "type": "PAB_CONFIG",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "block_edit",
+          "type": "TRANSFORMERBLOCKS",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "lora",
+          "type": "COGLORA",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cogvideo_pipe",
+          "type": "COGVIDEOPIPE",
+          "links": [
+            62
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadCogVideoModel"
+      },
+      "widgets_values": [
+        "THUDM/CogVideoX-5b",
+        "bf16",
+        "disabled",
+        "disabled",
+        false
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 51,
+      "type": "Note",
+      "pos": {
+        "0": 2131,
+        "1": 327
+      },
+      "size": {
+        "0": 317.3437194824219,
+        "1": 84.94534301757812
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene decodificata l'elaborazione e mandata al nodo che la trasforma in video.\nAttivando l'opzione vae_tiling si riesce a risparmiare tanta VRAM, questo passaggio altrimenti avrebbe una richiesta altissima."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 52,
+      "type": "Note",
+      "pos": {
+        "0": 1328.63623046875,
+        "1": 254.4366455078125
+      },
+      "size": {
+        "0": 314.8747253417969,
+        "1": 92.85903930664062
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui scegliete l'immagine da animare, la risoluzione deve essere questa perché richiesta così dal modello.\n\n720x480"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      11,
+      15,
+      0,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      12,
+      15,
+      0,
+      16,
+      0,
+      "CLIP"
+    ],
+    [
+      14,
+      18,
+      0,
+      17,
+      0,
+      "COGVIDEOPIPE"
+    ],
+    [
+      15,
+      14,
+      0,
+      17,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      16,
+      0,
+      17,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      18,
+      0,
+      19,
+      0,
+      "COGVIDEOPIPE"
+    ],
+    [
+      21,
+      17,
+      0,
+      21,
+      0,
+      "COGVIDEOPIPE"
+    ],
+    [
+      22,
+      17,
+      1,
+      21,
+      1,
+      "LATENT"
+    ],
+    [
+      23,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      48,
+      10,
+      0,
+      19,
+      1,
+      "IMAGE"
+    ],
+    [
+      52,
+      23,
+      0,
+      15,
+      0,
+      "*"
+    ],
+    [
+      62,
+      20,
+      0,
+      18,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Caricamento immagine - d4N87",
+      "bounding": [
+        988,
+        11,
+        667,
+        659
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Decode - d4N87",
+      "bounding": [
+        2120,
+        11,
+        336,
+        409
+      ],
+      "color": "#a1309b",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Elaborazione - d4N87",
+      "bounding": [
+        1675,
+        11,
+        427,
+        584
+      ],
+      "color": "#3f789e",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Prompt - d4N87",
+      "bounding": [
+        547,
+        10,
+        421,
+        670
+      ],
+      "color": "#8A8",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Caricamento CLIP - d4N87",
+      "bounding": [
+        79,
+        867,
+        335,
+        288
+      ],
+      "color": "#b06634",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Caricamento modello - d4N87",
+      "bounding": [
+        7,
+        8,
+        407,
+        841
+      ],
+      "color": "#3f789e",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "title": "Anteprima & Salvataggio - d4N87",
+      "bounding": [
+        2475,
+        10,
+        646,
+        833
+      ],
+      "color": "#88A",
+      "font_size": 22,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917354,
+      "offset": [
+        27.774263687707,
+        191.97823066559792
+      ]
+    }
+  },
+  "version": 0.4
+}
