@@ -1,7 +1,7 @@
 # ComfyUI-d4N87-Workflow
 ComfyUI Workflow by d4N87
 
-#ITA
+# ITA
 
 Ciao ragazzi, io sono Dan!
 
@@ -11,13 +11,13 @@ Sono divisi per tipologia, per poterli usare basterà semplicemente trascinarli 
 
 Per clonare tutta la cartella:
 
-... cmd
+```cmd
 git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
-...
+```
 
 Altrimenti nelle release trovate lo zip con dentro tutti i workflow (sono i medesimi ma caricati tutti insieme). Questo zip viene aggiornato ad ogni pubblicazione di un video, mentre i singoli workflow potrebbero essere aggiornati singolarmente.
 
-#ENG
+# ENG
 
 Hi guys, I'm Dan!
 
@@ -27,8 +27,8 @@ They are divided by type, to use them you will just need to drag and drop them i
 
 To clone the whole folder:
 
-... cmd
+```cmd
 git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
-...
+```
 
 Otherwise in the releases you will find the zipper with all the workflows inside (they are the same but loaded all together). This zipper is updated each time a video is released, while individual workflows might be updated individually.
