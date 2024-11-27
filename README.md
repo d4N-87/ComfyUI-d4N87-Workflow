@@ -1,5 +1,5 @@
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
+[![Release Version Badge](https://img.shields.io/github/v/release/d4N-87/ComfyUI-d4N87-Workflow?style=for-the-badge)](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/releases)
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -38,7 +38,6 @@ Altrimenti nelle release trovate lo zip con dentro tutti i workflow (sono i mede
 La versione riportata a fine workflow rappresenta solamente le volte che ho modificato il flusso e l'ho risalvato, solitamente la v0.1 rappresenta la prima versione corretta funzionante, quelle successive sono solamente di aggiornamento.
 </details>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ENG
 
@@ -61,13 +60,18 @@ Otherwise in the releases you will find the zipper with all the workflows inside
 The version shown at the end of the workflow represents only the times I have modified the flow and resaved it, usually v0.1 represents the first working correct version, the later ones are only updating.
 </details>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Supporta lo sviluppatore
+
+Se i workflow e le guide ti sono stati utili, puoi supportare il canale tramite PayPal con una donazione.
+
+If the workflows and guides have been helpful to you, you can support the channel through PayPal with a donation.
+
+[![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://paypal.me/d4n87?country.x=IT&locale.x=it_IT)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/d4N-87/ComfyUI-d4N87-Workflow.svg?style=for-the-badge
 [contributors-url]: https://github.com/d4N-87/ComfyUI-d4N87-Workflow/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/d4N-87/ComfyUI-d4N87-Workflow.svg?style=for-the-badge
-[forks-url]: https://github.com/d4N-87/ComfyUI-d4N87-Workflow/network/members
 [stars-shield]: https://img.shields.io/github/stars/d4N-87/ComfyUI-d4N87-Workflow.svg?style=for-the-badge
 [stars-url]: https://github.com/d4N-87/ComfyUI-d4N87-Workflow/stargazers
 [issues-shield]: https://img.shields.io/github/issues/d4N-87/ComfyUI-d4N87-Workflow.svg?style=for-the-badge
