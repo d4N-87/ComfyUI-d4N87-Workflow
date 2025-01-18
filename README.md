@@ -69,6 +69,11 @@ If the workflows and guides have been helpful to you, you can support the channe
 
 [![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://paypal.me/d4n87?country.x=IT&locale.x=it_IT)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=d4N-87/ComfyUI-d4N87-Workflow&type=Date)](https://star-history.com/#d4N-87/ComfyUI-d4N87-Workflow&Date)
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/d4N-87/ComfyUI-d4N87-Workflow.svg?style=for-the-badge
 [contributors-url]: https://github.com/d4N-87/ComfyUI-d4N87-Workflow/graphs/contributors
