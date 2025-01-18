@@ -1,0 +1,1180 @@
+{
+  "last_node_id": 100,
+  "last_link_id": 214,
+  "nodes": [
+    {
+      "id": 83,
+      "type": "Note",
+      "pos": [
+        -479.9071044921875,
+        151.21299743652344
+      ],
+      "size": [
+        315.0140686035156,
+        82.20555877685547
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il modello in versione T2W, che poi sarebbe il T2V. Conviene utilizzare la versione 7B, causa richiesta VRAM."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 38,
+      "type": "CLIPLoader",
+      "pos": [
+        -478.8450012207031,
+        326.3392028808594
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            198
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "T5-xxl_v1.0_fp8_e4m3fn_scaled.safetensors",
+        "cosmos",
+        "default"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 86,
+      "type": "Reroute",
+      "pos": [
+        -145.3508758544922,
+        328.4808044433594
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 198
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            199,
+            200
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 85,
+      "type": "Note",
+      "pos": [
+        -477.9793701171875,
+        445.3898620605469
+      ],
+      "size": [
+        315.0140686035156,
+        82.20555877685547
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il modello T5-xxl v1.0 dedicato a Cosmos, consigliabile in versione FP8."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 87,
+      "type": "Note",
+      "pos": [
+        -22.457279205322266,
+        460.3968505859375
+      ],
+      "size": [
+        424.85565185546875,
+        83.69749450683594
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui è possibile scrivere il prompt, essendo Cosmos un modello non distillato è possibile anche aggiungere il negative, per aiutare la generazione.\nE' consigliabile fare un prompt molto dettagliato, i prompt brevi non hanno buoni risultati."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -22.958803176879883,
+        238.76870727539062
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 199
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            197
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Negative)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "The video captures a series of frames showing ugly scenes, static with no motion, motion blur, over-saturation, shaky footage, low resolution, grainy texture, pixelated images, poorly lit areas, underexposed and overexposed scenes, poor color balance, washed out colors, choppy sequences, jerky movements, low frame rate, artifacting, color banding, unnatural transitions, outdated special effects, fake elements, unconvincing visuals, poorly edited content, jump cuts, visual noise, and flickering. Overall, the video is of poor quality."
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        487.1349182128906,
+        37.18169021606445
+      ],
+      "size": [
+        385.8114318847656,
+        262
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 195
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 196
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 197
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 205
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            87
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        924292209792219,
+        "randomize",
+        20,
+        6.5,
+        "res_multistep",
+        "karras",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 89,
+      "type": "Note",
+      "pos": [
+        487.7428894042969,
+        338.6588134765625
+      ],
+      "size": [
+        386.8038330078125,
+        79.64773559570312
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene effettuata l'elaborazione vera e propria."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        930.7508544921875,
+        36.113006591796875
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 87
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 203
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            201
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 91,
+      "type": "Note",
+      "pos": [
+        992.7830200195312,
+        197.25486755371094
+      ],
+      "size": [
+        269.9750671386719,
+        61.33383560180664
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {},
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/d4n87"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 95,
+      "type": "Note",
+      "pos": [
+        111.57308959960938,
+        861.6185302734375
+      ],
+      "size": [
+        312.5851745605469,
+        60.14077377319336
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "La lunghezza può essere variata, ma sembra che 121 sia il numero ideale."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 92,
+      "type": "CosmosImageToVideoLatent",
+      "pos": [
+        109.73794555664062,
+        651.7337036132812
+      ],
+      "size": [
+        315,
+        170
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 204
+        },
+        {
+          "name": "start_image",
+          "type": "IMAGE",
+          "link": 208,
+          "shape": 7
+        },
+        {
+          "name": "end_image",
+          "type": "IMAGE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 213,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 214,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            205
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosmosImageToVideoLatent"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        121,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 100,
+      "type": "PrimitiveNode",
+      "pos": [
+        -479.7804870605469,
+        762.67236328125
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            211,
+            212
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        704,
+        "fixed"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 97,
+      "type": "LoadAndResizeImage",
+      "pos": [
+        -254.44529724121094,
+        1252.2669677734375
+      ],
+      "size": [
+        315,
+        566
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 210,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 212,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [],
+          "slot_index": 3
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "example.png",
+        true,
+        704,
+        704,
+        1,
+        false,
+        2,
+        "alpha",
+        "",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 88,
+      "type": "Note",
+      "pos": [
+        -481.24468994140625,
+        884.9703369140625
+      ],
+      "size": [
+        210,
+        931.783935546875
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene impostata la risoluzione del video, conviene non scendere sotto i 704x704 o comunque 704 in altezza o larghezza.\n\nE' possibile impostare sia un'immagine di partenza, che un'immagine di arrivo, in modo da avere un'animazione nel mezzo."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 39,
+      "type": "VAELoader",
+      "pos": [
+        508.7989196777344,
+        488.2773742675781
+      ],
+      "size": [
+        278.68310546875,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            202
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "Cosmos\\Cosmos_cv8x8x8_1.0.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 93,
+      "type": "Reroute",
+      "pos": [
+        807.9928588867188,
+        488.3820495605469
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 202
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            203,
+            204
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 90,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1171.2109375,
+        34.27339172363281
+      ],
+      "size": [
+        496.9401550292969,
+        334
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 201
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 25,
+        "loop_count": 0,
+        "filename_prefix": "Cosmos",
+        "format": "video/nvenc_hevc-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {},
+          "muted": false
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 98,
+      "type": "PrimitiveNode",
+      "pos": [
+        -480.300048828125,
+        643.1292724609375
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            209,
+            210
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "width"
+          }
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        704,
+        "fixed"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 37,
+      "type": "UNETLoader",
+      "pos": [
+        -481.402587890625,
+        33.0577392578125
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            195
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "Cosmos\\Cosmos_v1.0_7B_I2W.safetensors",
+        "fp8_e4m3fn"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 94,
+      "type": "LoadAndResizeImage",
+      "pos": [
+        -255.58624267578125,
+        648.7333374023438
+      ],
+      "size": [
+        315,
+        566
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 209,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 211,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            208
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            213
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            214
+          ],
+          "slot_index": 3
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00001_.png",
+        true,
+        704,
+        704,
+        1,
+        false,
+        2,
+        "alpha",
+        "",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 42,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -23.68984031677246,
+        33.52064514160156
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 200
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            196
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "It is a shot of a dog dressed as a chef sitting that on the kitchen countertop, preparing a pizza with his paws.\nThe dog has a chef's hat on his head and is busy with his paws putting the pomoro on the pizza and the mozzarella cheese. Use a paw to scoop the passata from a bowl and pour it over the pizza, placing it evenly.\nThe shot slowly zooms in on the pizza.\nIn the background is the kitchen made of dark wood, the worktop is made of a light fir wood.\nOn the countertop is scattered flour, traces of tomato and stainless steel tools, with a jar containing basil.\nThe scene lighting is made by soft warm lights, recreating a comfortable feeling."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      87,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      195,
+      37,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      196,
+      42,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      197,
+      7,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      198,
+      38,
+      0,
+      86,
+      0,
+      "*"
+    ],
+    [
+      199,
+      86,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      200,
+      86,
+      0,
+      42,
+      0,
+      "CLIP"
+    ],
+    [
+      201,
+      8,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      202,
+      39,
+      0,
+      93,
+      0,
+      "*"
+    ],
+    [
+      203,
+      93,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      204,
+      93,
+      0,
+      92,
+      0,
+      "VAE"
+    ],
+    [
+      205,
+      92,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      208,
+      94,
+      0,
+      92,
+      1,
+      "IMAGE"
+    ],
+    [
+      209,
+      98,
+      0,
+      94,
+      0,
+      "INT"
+    ],
+    [
+      210,
+      98,
+      0,
+      97,
+      0,
+      "INT"
+    ],
+    [
+      211,
+      100,
+      0,
+      94,
+      1,
+      "INT"
+    ],
+    [
+      212,
+      100,
+      0,
+      97,
+      1,
+      "INT"
+    ],
+    [
+      213,
+      94,
+      2,
+      92,
+      3,
+      "INT"
+    ],
+    [
+      214,
+      94,
+      3,
+      92,
+      4,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Caricamento modello - d4N87",
+      "bounding": [
+        -489.5397644042969,
+        -40.815460205078125,
+        335.3284606933594,
+        287.6050720214844
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "CLIP - d4N87",
+      "bounding": [
+        -488.8450012207031,
+        252.73919677734375,
+        335.87969970703125,
+        284.856201171875
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Prompt - d4N87",
+      "bounding": [
+        -33.689842224121094,
+        -40.079341888427734,
+        446.0882263183594,
+        594.173828125
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Caricamento immagini - d4N87",
+      "bounding": [
+        -485.59844970703125,
+        574.2841186523438,
+        558.8258666992188,
+        1253.2225341796875
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Elaborazione - d4N87",
+      "bounding": [
+        477.1348876953125,
+        -36.41831970214844,
+        407.41180419921875,
+        464.72491455078125
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Latent - d4N87",
+      "bounding": [
+        99.73794555664062,
+        578.1337280273438,
+        335,
+        353.6255798339844
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8022157037357922,
+      "offset": [
+        756.7524383928559,
+        123.11749336856359
+      ]
+    },
+    "node_versions": {
+      "comfy-core": "0.3.12",
+      "ComfyUI-KJNodes": "c9c8dcd5e7ed2f7669f130a5ced1e3005264a2de",
+      "ComfyUI-VideoHelperSuite": "c47b10ca1798b4925ff5a5f07d80c51ca80a837d"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
