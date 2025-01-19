@@ -1,0 +1,1244 @@
+{
+  "last_node_id": 136,
+  "last_link_id": 233,
+  "nodes": [
+    {
+      "id": 101,
+      "type": "Note",
+      "pos": [
+        13.784346580505371,
+        2385.524658203125
+      ],
+      "size": [
+        312.6372375488281,
+        70.86444091796875
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricata l'immagine del soggetto da cui verrà preso il volto."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 113,
+      "type": "LoadAndResizeImage",
+      "pos": [
+        16.18028450012207,
+        1781.232666015625
+      ],
+      "size": [
+        315,
+        566
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "dog.jpg",
+        false,
+        0,
+        0,
+        1,
+        false,
+        2,
+        "alpha",
+        "",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 100,
+      "type": "ReActorFaceBoost",
+      "pos": [
+        21.777074813842773,
+        2810.87890625
+      ],
+      "size": [
+        315,
+        178
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACE_BOOST",
+          "type": "FACE_BOOST",
+          "links": [
+            185
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceBoost"
+      },
+      "widgets_values": [
+        true,
+        "GPEN-BFR-2048.onnx",
+        "Lanczos",
+        1,
+        0.5,
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 121,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1825.6099853515625,
+        1019.0571899414062
+      ],
+      "size": [
+        494.9743347167969,
+        611.2669067382812
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 233
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 219,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 25,
+        "loop_count": 0,
+        "filename_prefix": "ReActor",
+        "format": "video/nvenc_hevc-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "ReActor_00007.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/nvenc_hevc-mp4",
+            "frame_rate": 25,
+            "workflow": "ReActor_00007.png",
+            "fullpath": "D:\\AI\\comfyui\\ComfyUI\\output\\ReActor_00007.mp4"
+          },
+          "muted": false
+        }
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 123,
+      "type": "Note",
+      "pos": [
+        1825.8265380859375,
+        1682.6597900390625
+      ],
+      "size": [
+        497.4853820800781,
+        100.88744354248047
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui verrà mostrato e salvato il video, il framerate viene preso direttamente dal video in ingresso."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 122,
+      "type": "Note",
+      "pos": [
+        826.5823364257812,
+        2090.148681640625
+      ],
+      "size": [
+        686.071533203125,
+        69.93714904785156
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Questi due nodi vi permettono di vedere l'anteprima della maschera e della volto sostituito, di base non sono collegati perché richiedono risorse aggiuntive che non sempre sono utili da vedere in anteprima.\nNel caso fosse necessario, collegare Preview Maschera a MASK_PREVIEW e Preview Faccia Sostituita a SWAPPED_FACE."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 124,
+      "type": "VHS_VideoInfo",
+      "pos": [
+        1175.3736572265625,
+        708.5162963867188
+      ],
+      "size": [
+        262,
+        206
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": [
+            219
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoInfo"
+      },
+      "widgets_values": {},
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 96,
+      "type": "Note",
+      "pos": [
+        19.89385223388672,
+        2647.093505859375
+      ],
+      "size": [
+        312.6372375488281,
+        70.86444091796875
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il modello del soggetto creato con ReActor."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 95,
+      "type": "Note",
+      "pos": [
+        14.660171508789062,
+        1542.04150390625
+      ],
+      "size": [
+        315.1959533691406,
+        144.3358612060547
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il video al quale verrà sostituito il volto.\nFare attenzione al frame_load_cap, se non impostato verrà caricato il video completo (in caso contrario inserire quanti frame in totale dovrà elaborare, ma conviene sempre editare il video e renderlo della lunghezza giusta)."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 125,
+      "type": "Note",
+      "pos": [
+        18.947097778320312,
+        3024.46875
+      ],
+      "size": [
+        318.074951171875,
+        78.11460876464844
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Il passaggio con il Face Booster serve a migliorare l'immagine del volto facendo un upscaling, ora è impostato al massimo, ma si può abbassare il modello scegliendo anche 1024 o 512."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 103,
+      "type": "PreviewImage",
+      "pos": [
+        1170.7930908203125,
+        1800.8192138671875
+      ],
+      "size": [
+        337.5319519042969,
+        246
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Faccia Sostituita",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 102,
+      "type": "PreviewImage",
+      "pos": [
+        828.2449340820312,
+        1802.42626953125
+      ],
+      "size": [
+        335.1181335449219,
+        246
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Maschera",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 131,
+      "type": "easy imageBatchToImageList",
+      "pos": [
+        447.7496032714844,
+        970.0183715820312
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 230
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy imageBatchToImageList"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 117,
+      "type": "Reroute",
+      "pos": [
+        665.1339111328125,
+        1011.8789672851562
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 229
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            205,
+            206
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "INPUT_IMAGE",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 94,
+      "type": "ReActorLoadFaceModel",
+      "pos": [
+        19.89385223388672,
+        2547.093505859375
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [
+            184
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorLoadFaceModel"
+      },
+      "widgets_values": [
+        "DAN_v2.safetensors"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 120,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        13.715953826904297,
+        1014.8645629882812
+      ],
+      "size": [
+        318.61376953125,
+        444.06402587890625
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            228
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            218
+          ],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "test.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 75,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "force_rate": 0,
+            "frame_load_cap": 75,
+            "skip_first_frames": 0,
+            "select_every_nth": 1,
+            "filename": "test.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          },
+          "muted": false
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 97,
+      "type": "ReActorFaceSwap",
+      "pos": [
+        782.3490600585938,
+        1008.71923828125
+      ],
+      "size": [
+        314.51348876953125,
+        457.7363586425781
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 205
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": 184,
+          "shape": 7
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": 185,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            231
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 134,
+      "type": "Reroute",
+      "pos": [
+        353.5496520996094,
+        1011.4664916992188
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            229,
+            230
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "IMAGE",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 104,
+      "type": "ReActorMaskHelper",
+      "pos": [
+        1212.7650146484375,
+        1012.2059326171875
+      ],
+      "size": [
+        330,
+        454
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 206
+        },
+        {
+          "name": "swapped_image",
+          "type": "IMAGE",
+          "link": 232
+        },
+        {
+          "name": "mask_optional",
+          "type": "MASK",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            225
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "MASK_PREVIEW",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "SWAPPED_FACE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorMaskHelper"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt",
+        0.5,
+        10,
+        3,
+        10,
+        "sam_vit_b_01ec64.pth",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False",
+        "dilate",
+        0,
+        9,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 136,
+      "type": "Reroute",
+      "pos": [
+        1114.08740234375,
+        984.8289794921875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 231
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            232,
+            233
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "IMAGE_ELAB",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 106,
+      "type": "Note",
+      "pos": [
+        782.3489990234375,
+        1511.374755859375
+      ],
+      "size": [
+        772.1693725585938,
+        146.20193481445312
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui avviene l'elaborazione di ReActor, il nodo Masking Helper serve a migliorare l'elaborazione del volto.\n\nDopo alcuni test ho deciso di bypassarlo di base per l'elaborazione video, perché non restituisce buoni risultati in tutti i contesti. Consiglio di usarlo in video dove il soggetto ha il volto in una posizione molto frontale e preferibilmente senza occhiali.\n\nPer utilizzarlo:\n\n1. Collegare l'IMAGE del nodo Image Batch To Image List al reroute INPUT_IMAGE\n2. Togliere il bypass dal nodo Masking Helper (tasto destro)\n3. Togliere il bypass dal nodo Image List To Image Batch (tasto destro)"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 119,
+      "type": "Note",
+      "pos": [
+        1629.0341796875,
+        1295.1058349609375
+      ],
+      "size": [
+        385.5068054199219,
+        183.69479370117188
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/c/d4N87\n\n\n     _ _  _       __ ___ _____ \n  __| | || |   /\\ \\ ( _ )___  |\n / _` | || |_ /  \\/ / _ \\  / / \n| (_| |__   _/ /\\  / (_) |/ /  \n \\__,_|  |_| \\_\\ \\/ \\___//_/   \n                             "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 133,
+      "type": "easy imageListToImageBatch",
+      "pos": [
+        1578.2918701171875,
+        984.2144165039062
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 225
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy imageListToImageBatch"
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      184,
+      94,
+      0,
+      97,
+      2,
+      "FACE_MODEL"
+    ],
+    [
+      185,
+      100,
+      0,
+      97,
+      3,
+      "FACE_BOOST"
+    ],
+    [
+      205,
+      117,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      206,
+      117,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      218,
+      120,
+      3,
+      124,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      219,
+      124,
+      0,
+      121,
+      4,
+      "FLOAT"
+    ],
+    [
+      225,
+      104,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      228,
+      120,
+      0,
+      134,
+      0,
+      "*"
+    ],
+    [
+      229,
+      134,
+      0,
+      117,
+      0,
+      "*"
+    ],
+    [
+      230,
+      134,
+      0,
+      131,
+      0,
+      "IMAGE"
+    ],
+    [
+      231,
+      97,
+      0,
+      136,
+      0,
+      "*"
+    ],
+    [
+      232,
+      136,
+      0,
+      104,
+      1,
+      "IMAGE"
+    ],
+    [
+      233,
+      136,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 19,
+      "title": "Video info - d4N87",
+      "bounding": [
+        1165.3736572265625,
+        634.9163208007812,
+        282,
+        289.6000061035156
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "Elaborazione ReActor - d4N87",
+      "bounding": [
+        772.3490600585938,
+        938.718994140625,
+        789.3782348632812,
+        749.4684448242188
+      ],
+      "color": "#8A8",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 18,
+      "title": "Salvataggio - d4N87",
+      "bounding": [
+        1814.0601806640625,
+        940.3681030273438,
+        520.1826171875,
+        850.7723388671875
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Caricamento video - d4N87",
+      "bounding": [
+        7.693910598754883,
+        948.0660400390625,
+        331.0289611816406,
+        757.9002685546875
+      ],
+      "color": "#3f789e",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "Caricamento soggetto - d4N87",
+      "bounding": [
+        8.068130493164062,
+        1713.3177490234375,
+        331.1810302734375,
+        753.711181640625
+      ],
+      "color": "#b06634",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 17,
+      "title": "Preview volto - d4N87",
+      "bounding": [
+        818.244873046875,
+        1728.8262939453125,
+        696.8557739257812,
+        437.940185546875
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "Modello soggetto - d4N87",
+      "bounding": [
+        9.893850326538086,
+        2477.093505859375,
+        332.00396728515625,
+        250.64141845703125
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "FB - d4N87",
+      "bounding": [
+        11.77708625793457,
+        2737.27880859375,
+        335.9749755859375,
+        377.5254821777344
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8022157037358033,
+      "offset": [
+        101.93541145964076,
+        -727.2130277742019
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-KJNodes": "c9c8dcd5e7ed2f7669f130a5ced1e3005264a2de",
+      "comfyui-reactor-node": "a43075813dbd17de9c51c9fc7ea768eaf1681d89",
+      "ComfyUI-VideoHelperSuite": "c47b10ca1798b4925ff5a5f07d80c51ca80a837d",
+      "comfy-core": "0.3.12",
+      "ComfyUI-Easy-Use": "bf21bbfd93bb4f6aae91d71df601a86710dfd40b"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
