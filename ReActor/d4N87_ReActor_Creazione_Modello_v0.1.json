@@ -1,0 +1,225 @@
+{
+  "last_node_id": 5,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "VHS_LoadImagesPath",
+      "pos": [
+        833.5930786132812,
+        1332.465576171875
+      ],
+      "size": [
+        242.24609375,
+        194
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadImagesPath"
+      },
+      "widgets_values": {
+        "directory": "",
+        "image_load_cap": 0,
+        "skip_first_images": 0,
+        "select_every_nth": 1,
+        "choose folder to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          },
+          "muted": false
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 2,
+      "type": "ReActorSaveFaceModel",
+      "pos": [
+        1102.2313232421875,
+        1333.3466796875
+      ],
+      "size": [
+        327.5999755859375,
+        126
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1,
+          "shape": 7
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ReActorSaveFaceModel"
+      },
+      "widgets_values": [
+        true,
+        "default",
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 3,
+      "type": "Note",
+      "pos": [
+        837.206298828125,
+        1570.6978759765625
+      ],
+      "size": [
+        234.2101287841797,
+        123.13019561767578
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui selezionare la cartella che contiene tutte le foto del volto.\nConsigliabile sistemarle tutte già in aspect ratio 1:1, con un'ottima qualita, ripreso fino all'inizio delle spalle.\nNon è necessario fare risoluzioni enormi, può andare anche 1024x1024."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 4,
+      "type": "Note",
+      "pos": [
+        1106.167236328125,
+        1501.2056884765625
+      ],
+      "size": [
+        316.6200866699219,
+        185.9347381591797
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Questo passaggio salva il modello vero e proprio, che è possibile trovare nella cartella models/reactor/faces.\nNel campo face_model_name impostare il nome che avrà poi il modello."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 5,
+      "type": "Note",
+      "pos": [
+        1062.8416748046875,
+        1245.2823486328125
+      ],
+      "size": [
+        234.2101287841797,
+        123.13019561767578
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {},
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/c/d4N87\n\n\n     _ _  _       __ ___ _____ \n  __| | || |   /\\ \\ ( _ )___  |\n / _` | || |_ /  \\/ / _ \\  / / \n| (_| |__   _/ /\\  / (_) |/ /  \n \\__,_|  |_| \\_\\ \\/ \\___//_/   \n                             "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Creazione modello volto - d4N87",
+      "bounding": [
+        823.5930786132812,
+        1258.8656005859375,
+        616.2382202148438,
+        444.9625549316406
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.5632914597584762,
+      "offset": [
+        -539.3132768439475,
+        -1137.5632804971392
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-VideoHelperSuite": "f24f4e10f448913eb8c0d8ce5ff6190a8be84454",
+      "comfyui-reactor-node": "a43075813dbd17de9c51c9fc7ea768eaf1681d89"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
