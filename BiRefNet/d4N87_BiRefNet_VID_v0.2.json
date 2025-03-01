@@ -1,0 +1,787 @@
+{
+  "last_node_id": 63,
+  "last_link_id": 117,
+  "nodes": [
+    {
+      "id": 30,
+      "type": "Note",
+      "pos": [
+        -577.4413452148438,
+        586.3675537109375
+      ],
+      "size": [
+        309.3717041015625,
+        264.2765808105469
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "model_name\n\nGeneral: Un modello pre-addestrato per casi d'uso generali.\nGeneral-HR: un modello pre-addestrato per casi d'uso generali che mostra ottime prestazioni su immagini a risoluzione più elevata (2048x2048).\nGeneral-Lite: Un modello pre-addestrato leggero per casi d'uso generali.\nGeneral-Lite-2K: Un modello preaddestrato leggero per casi d'uso generali in alta risoluzione (2560x1440).\nPortrait: Un modello pre-addestrato per ritratti umani.\nMatting: Un modello pre-addestrato per l'uso generale del trimap-free matting.\nDIS: un modello preaddestrato per la segmentazione dicotomica delle immagini (DIS).\nHRSOD: un modello preaddestrato per il rilevamento di oggetti salienti ad alta risoluzione (HRSOD).\nCOD: modello preaddestrato per il rilevamento di oggetti nascosti (COD).\nDIS-TR_TEs: Un modello pre-addestrato con un set di dati massivo.\n\ndevice\n\nSe lasciato su AUTO sceglierà lui automaticamente, dando priorità alla GPU. Nel caso volete cambiarlo potete impostare CPU.\n\ndtype\n\nL'elaborazione non pesa particolarmente, dovrebbe andare in float32 anche su hardware non molto potente, in caso contrario impostare float16."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 60,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        342.94970703125,
+        948.3412475585938
+      ],
+      "size": [
+        378.40618896484375,
+        545.9190063476562
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 113
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT,INT",
+          "link": 116,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "BiRefNet",
+        "format": "video/nvenc_h264-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "BiRefNet_00002.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/nvenc_h264-mp4",
+            "frame_rate": 25,
+            "workflow": "BiRefNet_00002.png",
+            "fullpath": "D:\\AI\\comfyui\\ComfyUI\\output\\BiRefNet_00002.mp4"
+          }
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 31,
+      "type": "Note",
+      "pos": [
+        -512.7464599609375,
+        949.7733764648438
+      ],
+      "size": [
+        252.89422607421875,
+        70.34305572509766
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il video."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 56,
+      "type": "RembgByBiRefNet",
+      "pos": [
+        -186.35543823242188,
+        845.3787841796875
+      ],
+      "size": [
+        225.9783172607422,
+        47.497920989990234
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BIREFNET",
+          "link": 108,
+          "label": "model"
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 109,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            110
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "image"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            112
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "mask"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": [],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 61,
+      "type": "Note",
+      "pos": [
+        -185.7682647705078,
+        931.2068481445312
+      ],
+      "size": [
+        224.7299346923828,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene l'elaborazione."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 59,
+      "type": "MaskToImage",
+      "pos": [
+        147.72227478027344,
+        952.6762084960938
+      ],
+      "size": [
+        176.39999389648438,
+        27.32692527770996
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            113
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 55,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -510.1688537597656,
+        1073.1241455078125
+      ],
+      "size": [
+        247.455078125,
+        452.1437072753906
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            109
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            104
+          ],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "dog.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "None",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 0,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1,
+            "filename": "dog.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 4,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": [
+        -578.999267578125,
+        439.1757507324219
+      ],
+      "size": [
+        312.1580810546875,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BIREFNET",
+          "links": [
+            108
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "model"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "General-HR",
+        "AUTO",
+        "float32"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 58,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        151.17701721191406,
+        306.79913330078125
+      ],
+      "size": [
+        378.40618896484375,
+        545.9190063476562
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT,INT",
+          "link": 117,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "BiRefNet",
+        "format": "video/nvenc_h264-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "BiRefNet_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/nvenc_h264-mp4",
+            "frame_rate": 25,
+            "workflow": "BiRefNet_00001.png",
+            "fullpath": "D:\\AI\\comfyui\\ComfyUI\\output\\BiRefNet_00001.mp4"
+          }
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 57,
+      "type": "VHS_VideoInfo",
+      "pos": [
+        -227.77659606933594,
+        1134.3778076171875
+      ],
+      "size": [
+        262,
+        206
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "links": [
+            115
+          ],
+          "slot_index": 5
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoInfo"
+      },
+      "widgets_values": {},
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 62,
+      "type": "Reroute",
+      "pos": [
+        43.373111724853516,
+        1234.4600830078125
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 115,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "FLOAT",
+          "links": [
+            116,
+            117
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "FRAMERATE",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 63,
+      "type": "Note",
+      "pos": [
+        -72.77272033691406,
+        1058.61962890625
+      ],
+      "size": [
+        385.5068054199219,
+        183.69479370117188
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/c/d4N87\n\n\n     _ _  _       __ ___ _____ \n  __| | || |   /\\ \\ ( _ )___  |\n / _` | || |_ /  \\/ / _ \\  / / \n| (_| |__   _/ /\\  / (_) |/ /  \n \\__,_|  |_| \\_\\ \\/ \\___//_/   \n                             "
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      104,
+      55,
+      3,
+      57,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      108,
+      4,
+      0,
+      56,
+      0,
+      "BIREFNET"
+    ],
+    [
+      109,
+      55,
+      0,
+      56,
+      1,
+      "IMAGE"
+    ],
+    [
+      110,
+      56,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      56,
+      1,
+      59,
+      0,
+      "MASK"
+    ],
+    [
+      113,
+      59,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      115,
+      57,
+      5,
+      62,
+      0,
+      "*"
+    ],
+    [
+      116,
+      62,
+      0,
+      60,
+      4,
+      "FLOAT,INT"
+    ],
+    [
+      117,
+      62,
+      0,
+      58,
+      4,
+      "FLOAT,INT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "Caricamento modello - d4N87",
+      "bounding": [
+        -588.999267578125,
+        365.57574462890625,
+        332.1580810546875,
+        496.8961181640625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Video - d4N87",
+      "bounding": [
+        -522.7464599609375,
+        876.1732788085938,
+        268.8467712402344,
+        655.1377563476562
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Elaborazione - d4N87",
+      "bounding": [
+        -196.35545349121094,
+        771.77880859375,
+        242.3213348388672,
+        229.1757049560547
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Save - d4N87",
+      "bounding": [
+        141.17701721191406,
+        233.1990966796875,
+        398.4062194824219,
+        629.5189208984375
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Save mask - d4N87",
+      "bounding": [
+        137.7222900390625,
+        874.7411499023438,
+        593.63330078125,
+        629.51904296875
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.067749101672378,
+      "offset": [
+        985.2544774933519,
+        -539.2004154064075
+      ]
+    },
+    "workspace_info": {
+      "id": "mJpqWc0YMHXCo6Wl7romf",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    },
+    "node_versions": {
+      "ComfyUI-VideoHelperSuite": "8629188458dc6cb832f871ece3bd273507e8a766",
+      "comfyui_birefnet_ll": "1.1.1",
+      "comfy-core": "0.3.14"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
