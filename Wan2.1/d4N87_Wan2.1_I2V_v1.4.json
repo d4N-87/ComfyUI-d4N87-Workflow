@@ -1,6 +1,6 @@
 {
-  "last_node_id": 76,
-  "last_link_id": 131,
+  "last_node_id": 78,
+  "last_link_id": 133,
   "nodes": [
     {
       "id": 37,
@@ -72,7 +72,7 @@
         82
       ],
       "flags": {},
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -275,7 +275,7 @@
         26
       ],
       "flags": {},
-      "order": 16,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -431,7 +431,7 @@
         78
       ],
       "flags": {},
-      "order": 19,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -478,7 +478,7 @@
         26
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -505,6 +505,229 @@
       },
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 50,
+      "type": "Note",
+      "pos": [
+        -289.5371398925781,
+        286.98284912109375
+      ],
+      "size": [
+        358.9018249511719,
+        107.06253814697266
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il modello, è possibile scegliere fra le solite combinazioni di FP16, FP8 o GGUF nelle varie versioni.\nOltre a questo si possono scegliere i numeri di parametri, quello massimo da 14 B e quello minore da 1.3 B.\nSe viene scelto il modello FP8, selezionare il weight_dtype annesso."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 69,
+      "type": "Reroute",
+      "pos": [
+        91.16866302490234,
+        950.1300048828125
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            124,
+            129
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "VAE",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 49,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        -289.3850402832031,
+        61.45528793334961
+      ],
+      "size": [
+        358.833984375,
+        61.906044006347656
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            99
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "298192ed60f8ca821c6fe5f8030cae23424cada5",
+        "Node name for S&R": "UnetLoaderGGUF",
+        "aux_id": "city96/ComfyUI-GGUF"
+      },
+      "widgets_values": [
+        "Wan2.1\\Wan2.1_I2V_14B_480p_Q8_0.gguf"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 67,
+      "type": "Note",
+      "pos": [
+        -288.83135986328125,
+        1520.130126953125
+      ],
+      "size": [
+        354.43804931640625,
+        88
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricata l'immagine, è possibile ridimensionarla, il modello di base è diviso fra 480p o 720p, ma volendo può accettare anche altre risoluzioni (es. 512x512).\nRisoluzioni consigliate:\n\n480p\n\n832 x 480\n480 x 832\n\n720p (minimo 960px)\n\n1280 x 720\n720 x 1280"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 52,
+      "type": "Note",
+      "pos": [
+        -288.12371826171875,
+        766.1615600585938
+      ],
+      "size": [
+        356.0375061035156,
+        88
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il CLIP, in questo caso l'umt5_xxl.\nE' possibile sceglierlo in FP16, FP8 o GGUF"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 53,
+      "type": "Reroute",
+      "pos": [
+        91.04480743408203,
+        580.0400390625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            101,
+            102
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 76,
+      "type": "CLIPLoaderGGUF",
+      "pos": [
+        -289.58941650390625,
+        626.4146728515625
+      ],
+      "size": [
+        362.12274169921875,
+        94.48238372802734
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            131
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "bc5223b0e37e053dbec2ea5e5f52c2fd4b8f712a",
+        "Node name for S&R": "CLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "UMT5-xxl_Q8_0.gguf",
+        "wan"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 6,
@@ -544,24 +767,95 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Three friends smiling and holding up a billboard, with the camera coming slightly closer"
+        "It is a video of a golden retriever running on a country road, the camera follows him as he runs.\nThe dog is very energetic and happy to run in nature at sunset."
       ],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
+      "id": 65,
+      "type": "LoadAndResizeImage",
+      "pos": [
+        -288.83135986328125,
+        1650.130126953125
+      ],
+      "size": [
+        353.05853271484375,
+        559.234130859375
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            109
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            118
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            119
+          ],
+          "slot_index": 3
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "dog.jpg",
+        true,
+        832,
+        480,
+        1,
+        false,
+        2,
+        "alpha",
+        "",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 60,
       "type": "WanImageToVideo",
       "pos": [
-        699.6296997070312,
-        303.92401123046875
+        693.2405395507812,
+        179.44854736328125
       ],
       "size": [
         342.5999755859375,
         250
       ],
       "flags": {},
-      "order": 24,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -642,116 +936,224 @@
       "widgets_values": [
         512,
         512,
-        77,
+        37,
         1
       ],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
-      "id": 50,
-      "type": "Note",
+      "id": 3,
+      "type": "KSampler",
       "pos": [
-        -289.5371398925781,
-        286.98284912109375
+        1056.34716796875,
+        180.32040405273438
       ],
       "size": [
-        358.9018249511719,
-        107.06253814697266
+        315,
+        474
       ],
       "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui viene caricato il modello, è possibile scegliere fra le solite combinazioni di FP16, FP8 o GGUF nelle varie versioni.\nOltre a questo si possono scegliere i numeri di parametri, quello massimo da 14 B e quello minore da 1.3 B.\nSe viene scelto il modello FP8, selezionare il weight_dtype annesso."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 69,
-      "type": "Reroute",
-      "pos": [
-        91.16866302490234,
-        950.1300048828125
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 15,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
-          "name": "",
-          "type": "*",
-          "link": 120
+          "name": "model",
+          "type": "MODEL",
+          "link": 133
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 116
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 117
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 112
         }
       ],
       "outputs": [
         {
-          "name": "",
-          "type": "VAE",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            124,
-            129
+            128
           ],
           "slot_index": 0
         }
       ],
-      "title": "VAE",
       "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 68,
-      "type": "Note",
-      "pos": [
-        1501.82421875,
-        546.42333984375
-      ],
-      "size": [
-        385.5068054199219,
-        183.69479370117188
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "d4N87",
-      "properties": {
-        "text": ""
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/c/d4N87\n\n\n     _ _  _       __ ___ _____ \n  __| | || |   /\\ \\ ( _ )___  |\n / _` | || |_ /  \\/ / _ \\  / / \n| (_| |__   _/ /\\  / (_) |/ /  \n \\__,_|  |_| \\_\\ \\/ \\___//_/   \n                             "
+        920660093758609,
+        "randomize",
+        30,
+        6,
+        "uni_pc",
+        "simple",
+        1
       ],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
+      "id": 72,
+      "type": "WanVideoTeaCacheKJ",
+      "pos": [
+        699.3549194335938,
+        760.9811401367188
+      ],
+      "size": [
+        340.20001220703125,
+        154
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            132
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
+        "Node name for S&R": "WanVideoTeaCacheKJ"
+      },
+      "widgets_values": [
+        0.275,
+        0.1,
+        1,
+        "main_device",
+        "i2v_480"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 77,
+      "type": "SkipLayerGuidanceWanVideo",
+      "pos": [
+        1049.35498046875,
+        760.9811401367188
+      ],
+      "size": [
+        352.79998779296875,
+        106
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            133
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+        "Node name for S&R": "SkipLayerGuidanceWanVideo"
+      },
+      "widgets_values": [
+        "9,10",
+        0.2,
+        1
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 78,
+      "type": "Note",
+      "pos": [
+        700.671142578125,
+        955.08984375
+      ],
+      "size": [
+        697.9902954101562,
+        136.38348388671875
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Nel nodo Tea Cache impostare il coefficients in base al modello utilizzato, mentre il rel_l1_thresh va impostato come consigliato dal nodo stesso:\n\n|       Model       |  Low   | Medium  |  High  |\n+-------------------+--------+---------+--------+\n| Wan2.1 t2v 1.3B  |  0.05  |  0.07   |  0.08  |\n| Wan2.1 t2v 14B   |  0.14  |  0.15   |  0.20  |\n| Wan2.1 i2v 480P  |  0.13  |  0.19   |  0.26  |\n| Wan2.1 i2v 720P  |  0.18  |  0.20   |  0.30  |\n\nIl nodo Skip Layer Guidance viene consigliato su un valore di 10, 9 o entrambi."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": [
+        692.4126586914062,
+        470.6611022949219
+      ],
+      "size": [
+        345.7585754394531,
+        185.45455932617188
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene la codifica dell'immagine in latent e successivamente l'elaborazione vera e propria.\nE' consigliabile fare molta attenzione alla lunghezza del video, che potrebbe allungare esponenzialmente l'elaborazione."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
       "id": 74,
       "type": "VAEDecodeTiled",
       "pos": [
-        1404.90869140625,
-        306.8870544433594
+        1403.503173828125,
+        181.0227508544922
       ],
       "size": [
         315,
         150
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -790,18 +1192,46 @@
       "bgcolor": "#533"
     },
     {
+      "id": 68,
+      "type": "Note",
+      "pos": [
+        1420.531494140625,
+        414.10858154296875
+      ],
+      "size": [
+        385.5068054199219,
+        183.69479370117188
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "d4N87",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "https://www.youtube.com/@d4n87\nhttps://www.patreon.com/c/d4N87\n\n\n     _ _  _       __ ___ _____ \n  __| | || |   /\\ \\ ( _ )___  |\n / _` | || |_ /  \\/ / _ \\  / / \n| (_| |__   _/ /\\  / (_) |/ /  \n \\__,_|  |_| \\_\\ \\/ \\___//_/   \n                             "
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
       "id": 54,
       "type": "VHS_VideoCombine",
       "pos": [
-        1746.2933349609375,
-        307.487548828125
+        1743.5029296875,
+        181.02276611328125
       ],
       "size": [
         578.5680541992188,
-        334
+        670.2507934570312
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -855,381 +1285,18 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "Wan2.1_00003.mp4",
+            "filename": "Wan2.1_00002.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/nvenc_hevc-mp4",
-            "frame_rate": 25,
-            "workflow": "Wan2.1_00003.png",
-            "fullpath": "D:\\AI\\comfyui\\ComfyUI\\output\\Wan2.1_00003.mp4"
+            "frame_rate": 12,
+            "workflow": "Wan2.1_00002.png",
+            "fullpath": "D:\\AI\\comfyui\\ComfyUI\\output\\Wan2.1_00002.mp4"
           }
         }
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 65,
-      "type": "LoadAndResizeImage",
-      "pos": [
-        -288.83135986328125,
-        1650.130126953125
-      ],
-      "size": [
-        353.05853271484375,
-        559.234130859375
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            109
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            118
-          ],
-          "slot_index": 2
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            119
-          ],
-          "slot_index": 3
-        },
-        {
-          "name": "image_path",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
-        "Node name for S&R": "LoadAndResizeImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00002_.png",
-        true,
-        512,
-        512,
-        1,
-        false,
-        2,
-        "alpha",
-        "",
-        "image"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 72,
-      "type": "WanVideoTeaCacheKJ",
-      "pos": [
-        702.9481201171875,
-        606.7730712890625
-      ],
-      "size": [
-        340.20001220703125,
-        154
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 126
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            127
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
-        "Node name for S&R": "WanVideoTeaCacheKJ"
-      },
-      "widgets_values": [
-        0.275,
-        0.1,
-        1,
-        "main_device",
-        "i2v_480"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1059.8719482421875,
-        303.91455078125
-      ],
-      "size": [
-        315,
-        474
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 127
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 116
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 117
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 112
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            128
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.24",
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        625207656625993,
-        "randomize",
-        30,
-        6,
-        "uni_pc",
-        "simple",
-        1
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 49,
-      "type": "UnetLoaderGGUF",
-      "pos": [
-        -289.3850402832031,
-        61.45528793334961
-      ],
-      "size": [
-        358.833984375,
-        61.906044006347656
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            99
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-GGUF",
-        "ver": "298192ed60f8ca821c6fe5f8030cae23424cada5",
-        "Node name for S&R": "UnetLoaderGGUF",
-        "aux_id": "city96/ComfyUI-GGUF"
-      },
-      "widgets_values": [
-        "Wan2.1\\Wan2.1_I2V_14B_480p_Q8_0.gguf"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 67,
-      "type": "Note",
-      "pos": [
-        -288.83135986328125,
-        1520.130126953125
-      ],
-      "size": [
-        354.43804931640625,
-        88
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui viene caricata l'immagine, è possibile ridimensionarla, il modello di base è diviso fra 480p o 720p, ma volendo può accettare anche altre risoluzioni (es. 512x512).\nRisoluzioni consigliate:\n\n480p\n\n832 x 480\n480 x 832\n\n720p (minimo 960px)\n\n1280 x 720\n720 x 1280"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 58,
-      "type": "Note",
-      "pos": [
-        694.6273193359375,
-        173.86322021484375
-      ],
-      "size": [
-        680.0952758789062,
-        90.32582092285156
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui avviene la codifica dell'immagine in latent e successivamente l'elaborazione vera e propria.\nNel nodo Tea Cache impostare il coefficients in base al modello utilizzato, mentre il rel_l1_thresh va impostato a circa 0.275, un range fra 0.250 e 0.4."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 52,
-      "type": "Note",
-      "pos": [
-        -288.12371826171875,
-        766.1615600585938
-      ],
-      "size": [
-        356.0375061035156,
-        88
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui viene caricato il CLIP, in questo caso l'umt5_xxl.\nE' possibile sceglierlo in FP16, FP8 o GGUF"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 53,
-      "type": "Reroute",
-      "pos": [
-        91.04480743408203,
-        580.0400390625
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 131
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "CLIP",
-          "links": [
-            101,
-            102
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP",
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 76,
-      "type": "CLIPLoaderGGUF",
-      "pos": [
-        -289.58941650390625,
-        626.4146728515625
-      ],
-      "size": [
-        362.12274169921875,
-        94.48238372802734
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            131
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-GGUF",
-        "ver": "bc5223b0e37e053dbec2ea5e5f52c2fd4b8f712a",
-        "Node name for S&R": "CLIPLoaderGGUF"
-      },
-      "widgets_values": [
-        "UMT5-xxl_Q8_0.gguf",
-        "wan"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1402,14 +1469,6 @@
       "MODEL"
     ],
     [
-      127,
-      72,
-      0,
-      3,
-      0,
-      "MODEL"
-    ],
-    [
       128,
       3,
       0,
@@ -1440,6 +1499,22 @@
       53,
       0,
       "*"
+    ],
+    [
+      132,
+      72,
+      0,
+      77,
+      0,
+      "MODEL"
+    ],
+    [
+      133,
+      77,
+      0,
+      3,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1501,8 +1576,8 @@
       "bounding": [
         684.6273803710938,
         103.8631591796875,
-        695.9520874023438,
-        683.2989501953125
+        692.3470458984375,
+        563.5301513671875
       ],
       "color": "#88A",
       "font_size": 24,
@@ -1546,15 +1621,28 @@
       "color": "#8AA",
       "font_size": 24,
       "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Ottimizzazioni - d4N87",
+      "bounding": [
+        689.3549194335938,
+        687.3811645507812,
+        722.800048828125,
+        414.0924377441406
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.6105100000000008,
+      "scale": 0.8264462809917354,
       "offset": [
-        53.289018834885155,
-        -358.9692538761422
+        332.99584494477125,
+        37.282797465158616
       ]
     },
     "VHS_latentpreview": false,

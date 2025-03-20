@@ -1,6 +1,6 @@
 {
-  "last_node_id": 67,
-  "last_link_id": 113,
+  "last_node_id": 70,
+  "last_link_id": 117,
   "nodes": [
     {
       "id": 37,
@@ -95,7 +95,7 @@
         180.6060791015625
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -150,45 +150,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 40,
-      "type": "EmptyHunyuanLatentVideo",
-      "pos": [
-        347.2813720703125,
-        774.7474365234375
-      ],
-      "size": [
-        315,
-        130
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            91
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.24",
-        "Node name for S&R": "EmptyHunyuanLatentVideo"
-      },
-      "widgets_values": [
-        832,
-        480,
-        33,
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 51,
       "type": "Reroute",
       "pos": [
@@ -200,7 +161,7 @@
         26
       ],
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -239,7 +200,7 @@
         82
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -281,7 +242,7 @@
         61.906044006347656
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -318,7 +279,7 @@
         164.31304931640625
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -361,7 +322,7 @@
         58
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -403,7 +364,7 @@
         26
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -418,7 +379,7 @@
           "type": "MODEL",
           "links": [
             106,
-            107
+            117
           ],
           "slot_index": 0
         }
@@ -432,15 +393,272 @@
       "bgcolor": "#535"
     },
     {
-      "id": 3,
-      "type": "KSampler",
+      "id": 39,
+      "type": "VAELoader",
       "pos": [
-        1157.186279296875,
-        174.72811889648438
+        -287.8226318359375,
+        954.0548095703125
+      ],
+      "size": [
+        353.5398254394531,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            110
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "Wan2.1\\Wan2.1_VAE.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 57,
+      "type": "Note",
+      "pos": [
+        347.219970703125,
+        947.3833618164062
+      ],
+      "size": [
+        313.6685485839844,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene impostata la risoluzione del video. Wan2.1 permette di arrivare anche a 720p, ma ovviamente tutto è in relazione al vostro hardware e quanto avete possibilità di elaborare.\nRisoluzioni consigliate:\n\n832 x 480\n480 x 832\n\n1280 x 720\n720 x 1280"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 66,
+      "type": "Note",
+      "pos": [
+        -286.869384765625,
+        769.2940063476562
+      ],
+      "size": [
+        356.0375061035156,
+        88
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui viene caricato il CLIP, in questo caso l'umt5_xxl.\nE' possibile sceglierlo in FP16, FP8 o GGUF"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 64,
+      "type": "CLIPLoader",
+      "pos": [
+        -288.73211669921875,
+        491.123046875
+      ],
+      "size": [
+        360.5921630859375,
+        98.00003051757812
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "UMT5-xxl_FP8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 53,
+      "type": "Reroute",
+      "pos": [
+        101.76388549804688,
+        583.9141235351562
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            101,
+            102
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 67,
+      "type": "CLIPLoaderGGUF",
+      "pos": [
+        -287.9187927246094,
+        627.9421997070312
+      ],
+      "size": [
+        358.36175537109375,
+        100.89022064208984
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            113
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "bc5223b0e37e053dbec2ea5e5f52c2fd4b8f712a",
+        "Node name for S&R": "CLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "UMT5-xxl_Q8_0.gguf",
+        "wan"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 40,
+      "type": "EmptyHunyuanLatentVideo",
+      "pos": [
+        347.2813720703125,
+        774.7474365234375
       ],
       "size": [
         315,
-        474
+        130
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            91
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "EmptyHunyuanLatentVideo"
+      },
+      "widgets_values": [
+        832,
+        480,
+        37,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": [
+        802.6293334960938,
+        170.19146728515625
+      ],
+      "size": [
+        311.74310302734375,
+        88
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 68,
+      "type": "WanVideoTeaCacheKJ",
+      "pos": [
+        806.71728515625,
+        863.8277587890625
+      ],
+      "size": [
+        340.20001220703125,
+        154
       ],
       "flags": {},
       "order": 21,
@@ -449,7 +667,76 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 108
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            114
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
+        "Node name for S&R": "WanVideoTeaCacheKJ"
+      },
+      "widgets_values": [
+        0.275,
+        0.1,
+        1,
+        "main_device",
+        "i2v_480"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 70,
+      "type": "Note",
+      "pos": [
+        808.0335693359375,
+        1057.9361572265625
+      ],
+      "size": [
+        697.9902954101562,
+        136.38348388671875
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Nel nodo Tea Cache impostare il coefficients in base al modello utilizzato, mentre il rel_l1_thresh va impostato come consigliato dal nodo stesso:\n\n|       Model       |  Low   | Medium  |  High  |\n+-------------------+--------+---------+--------+\n| Wan2.1 t2v 1.3B  |  0.05  |  0.07   |  0.08  |\n| Wan2.1 t2v 14B   |  0.14  |  0.15   |  0.20  |\n| Wan2.1 i2v 480P  |  0.13  |  0.19   |  0.26  |\n| Wan2.1 i2v 720P  |  0.18  |  0.20   |  0.30  |\n\nIl nodo Skip Layer Guidance viene consigliato su un valore di 10, 9 o entrambi."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        802.5407104492188,
+        295.7048034667969
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 116
         },
         {
           "name": "positive",
@@ -495,47 +782,55 @@
       "bgcolor": "#335"
     },
     {
-      "id": 39,
-      "type": "VAELoader",
+      "id": 69,
+      "type": "SkipLayerGuidanceWanVideo",
       "pos": [
-        -287.8226318359375,
-        954.0548095703125
+        1156.7181396484375,
+        863.8277587890625
       ],
       "size": [
-        353.5398254394531,
-        58
+        352.79998779296875,
+        106
       ],
       "flags": {},
-      "order": 6,
+      "order": 22,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 114
+        }
+      ],
       "outputs": [
         {
-          "name": "VAE",
-          "type": "VAE",
+          "name": "MODEL",
+          "type": "MODEL",
           "links": [
-            110
+            116
           ],
           "slot_index": 0
         }
       ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.24",
-        "Node name for S&R": "VAELoader"
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+        "Node name for S&R": "SkipLayerGuidanceWanVideo"
       },
       "widgets_values": [
-        "Wan2.1\\Wan2.1_VAE.safetensors"
+        "9,10",
+        0.2,
+        1
       ],
-      "color": "#322",
-      "bgcolor": "#533"
+      "color": "#233",
+      "bgcolor": "#355"
     },
     {
       "id": 60,
       "type": "Note",
       "pos": [
-        1567.3504638671875,
-        498.4591979980469
+        1246.830322265625,
+        543.1344604492188
       ],
       "size": [
         385.5068054199219,
@@ -544,7 +839,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -562,15 +857,15 @@
       "id": 63,
       "type": "VAEDecodeTiled",
       "pos": [
-        1509.1070556640625,
-        173.02670288085938
+        1141.687744140625,
+        295.76666259765625
       ],
       "size": [
         315,
         150
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -609,41 +904,18 @@
       "bgcolor": "#533"
     },
     {
-      "id": 58,
-      "type": "Note",
-      "pos": [
-        802.3655395507812,
-        364.1420593261719
-      ],
-      "size": [
-        341.891845703125,
-        284.317626953125
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui avviene la codifica dell'immagine in latent e successivamente l'elaborazione vera e propria.\n\nNel nodo Tea Cache impostare il coefficients in base al modello utilizzato, mentre il rel_l1_thresh va impostato a circa 0.03 per l'1.3B, mentre circa 0.275 per il 14B."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 54,
       "type": "VHS_VideoCombine",
       "pos": [
-        1855.6798095703125,
-        169.14671325683594
+        1480.017822265625,
+        294.2328796386719
       ],
       "size": [
         578.5680541992188,
         334
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -709,211 +981,6 @@
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 57,
-      "type": "Note",
-      "pos": [
-        347.219970703125,
-        947.3833618164062
-      ],
-      "size": [
-        313.6685485839844,
-        88
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui viene impostata la risoluzione del video. Wan2.1 permette di arrivare anche a 720p, ma ovviamente tutto è in relazione al vostro hardware e quanto avete possibilità di elaborare.\nRisoluzioni consigliate:\n\n832 x 480\n480 x 832\n\n1280 x 720\n720 x 1280"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 61,
-      "type": "WanVideoTeaCacheKJ",
-      "pos": [
-        802.7227783203125,
-        172.78781127929688
-      ],
-      "size": [
-        340.20001220703125,
-        154
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 107
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            108
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
-        "Node name for S&R": "WanVideoTeaCacheKJ"
-      },
-      "widgets_values": [
-        0.275,
-        0.1,
-        1,
-        "main_device",
-        "14B"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 66,
-      "type": "Note",
-      "pos": [
-        -286.869384765625,
-        769.2940063476562
-      ],
-      "size": [
-        356.0375061035156,
-        88
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui viene caricato il CLIP, in questo caso l'umt5_xxl.\nE' possibile sceglierlo in FP16, FP8 o GGUF"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 64,
-      "type": "CLIPLoader",
-      "pos": [
-        -288.73211669921875,
-        491.123046875
-      ],
-      "size": [
-        360.5921630859375,
-        98.00003051757812
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.24",
-        "Node name for S&R": "CLIPLoader"
-      },
-      "widgets_values": [
-        "UMT5-xxl_FP8_e4m3fn_scaled.safetensors",
-        "wan",
-        "default"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 53,
-      "type": "Reroute",
-      "pos": [
-        101.76388549804688,
-        583.9141235351562
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 113
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "CLIP",
-          "links": [
-            101,
-            102
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP",
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      },
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 67,
-      "type": "CLIPLoaderGGUF",
-      "pos": [
-        -287.9187927246094,
-        627.9421997070312
-      ],
-      "size": [
-        358.36175537109375,
-        100.89022064208984
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            113
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-GGUF",
-        "ver": "bc5223b0e37e053dbec2ea5e5f52c2fd4b8f712a",
-        "Node name for S&R": "CLIPLoaderGGUF"
-      },
-      "widgets_values": [
-        "UMT5-xxl_Q8_0.gguf",
-        "wan"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -990,22 +1057,6 @@
       "MODEL"
     ],
     [
-      107,
-      62,
-      0,
-      61,
-      0,
-      "MODEL"
-    ],
-    [
-      108,
-      61,
-      0,
-      3,
-      0,
-      "MODEL"
-    ],
-    [
       109,
       3,
       0,
@@ -1036,6 +1087,30 @@
       53,
       0,
       "*"
+    ],
+    [
+      114,
+      68,
+      0,
+      69,
+      0,
+      "MODEL"
+    ],
+    [
+      116,
+      69,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      117,
+      62,
+      0,
+      68,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -1097,8 +1172,8 @@
       "bounding": [
         792.7557983398438,
         97.83218383789062,
-        685.8046875,
-        557.252685546875
+        331.3472900390625,
+        678.9533081054688
       ],
       "color": "#88A",
       "font_size": 24,
@@ -1129,15 +1204,28 @@
       "color": "#b58b2a",
       "font_size": 24,
       "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "Ottimizzazioni - d4N87",
+      "bounding": [
+        796.7173461914062,
+        790.227783203125,
+        722.800048828125,
+        414.0924377441406
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1,
+      "scale": 0.9090909090909091,
       "offset": [
-        363.72776581611265,
-        -5.537032748687125
+        216.83335698268036,
+        -163.64144681374626
       ]
     },
     "VHS_latentpreview": false,
