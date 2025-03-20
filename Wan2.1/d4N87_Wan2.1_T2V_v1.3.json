@@ -1,6 +1,6 @@
 {
-  "last_node_id": 66,
-  "last_link_id": 112,
+  "last_node_id": 67,
+  "last_link_id": 113,
   "nodes": [
     {
       "id": 37,
@@ -226,46 +226,6 @@
       },
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 53,
-      "type": "Reroute",
-      "pos": [
-        93.17741394042969,
-        488.6044921875
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 112
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "CLIP",
-          "links": [
-            101,
-            102
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP",
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      },
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 59,
@@ -820,41 +780,6 @@
       "bgcolor": "#355"
     },
     {
-      "id": 65,
-      "type": "DualCLIPLoaderGGUF",
-      "pos": [
-        -287.07568359375,
-        626.5276489257812
-      ],
-      "size": [
-        357.4928894042969,
-        106
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI-GGUF",
-        "ver": "5aa6e98ad74e2fa826f80c8dbded5ec3dd09ba1f",
-        "Node name for S&R": "DualCLIPLoaderGGUF"
-      },
-      "widgets_values": [
-        "CLIP_G.safetensors",
-        "UMT5-xxl_FP8_e4m3fn_scaled.safetensors",
-        "hunyuan_video"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 66,
       "type": "Note",
       "pos": [
@@ -866,7 +791,7 @@
         88
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -889,16 +814,14 @@
         98.00003051757812
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            112
-          ],
+          "links": [],
           "slot_index": 0
         }
       ],
@@ -911,6 +834,83 @@
         "UMT5-xxl_FP8_e4m3fn_scaled.safetensors",
         "wan",
         "default"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 53,
+      "type": "Reroute",
+      "pos": [
+        101.76388549804688,
+        583.9141235351562
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 113
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            101,
+            102
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 67,
+      "type": "CLIPLoaderGGUF",
+      "pos": [
+        -287.9187927246094,
+        627.9421997070312
+      ],
+      "size": [
+        358.36175537109375,
+        100.89022064208984
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            113
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "bc5223b0e37e053dbec2ea5e5f52c2fd4b8f712a",
+        "Node name for S&R": "CLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "UMT5-xxl_Q8_0.gguf",
+        "wan"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1030,8 +1030,8 @@
       "IMAGE"
     ],
     [
-      112,
-      64,
+      113,
+      67,
       0,
       53,
       0,
@@ -1136,8 +1136,8 @@
     "ds": {
       "scale": 1,
       "offset": [
-        744.2427019752122,
-        27.016162890044853
+        363.72776581611265,
+        -5.537032748687125
       ]
     },
     "VHS_latentpreview": false,
