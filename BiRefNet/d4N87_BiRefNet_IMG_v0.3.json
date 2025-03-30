@@ -1,30 +1,9 @@
 {
+  "id": "7898cac3-9ba6-407c-963b-95478e8cbdce",
+  "revision": 0,
   "last_node_id": 54,
   "last_link_id": 103,
   "nodes": [
-    {
-      "id": 30,
-      "type": "Note",
-      "pos": [
-        -505.06689453125,
-        17.271793365478516
-      ],
-      "size": [
-        309.3717041015625,
-        264.2765808105469
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "model_name\n\nGeneral: Un modello pre-addestrato per casi d'uso generali.\nGeneral-HR: un modello pre-addestrato per casi d'uso generali che mostra ottime prestazioni su immagini a risoluzione più elevata (2048x2048).\nGeneral-Lite: Un modello pre-addestrato leggero per casi d'uso generali.\nGeneral-Lite-2K: Un modello preaddestrato leggero per casi d'uso generali in alta risoluzione (2560x1440).\nPortrait: Un modello pre-addestrato per ritratti umani.\nMatting: Un modello pre-addestrato per l'uso generale del trimap-free matting.\nDIS: un modello preaddestrato per la segmentazione dicotomica delle immagini (DIS).\nHRSOD: un modello preaddestrato per il rilevamento di oggetti salienti ad alta risoluzione (HRSOD).\nCOD: modello preaddestrato per il rilevamento di oggetti nascosti (COD).\nDIS-TR_TEs: Un modello pre-addestrato con un set di dati massivo.\n\ndevice\n\nSe lasciato su AUTO sceglierà lui automaticamente, dando priorità alla GPU. Nel caso volete cambiarlo potete impostare CPU.\n\ndtype\n\nL'elaborazione non pesa particolarmente, dovrebbe andare in float32 anche su hardware non molto potente, in caso contrario impostare float16."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
     {
       "id": 29,
       "type": "Reroute",
@@ -37,7 +16,7 @@
         26
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -50,11 +29,11 @@
         {
           "name": "",
           "type": "BIREFNET",
+          "slot_index": 0,
           "links": [
             61,
             62
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "MODEL",
@@ -69,15 +48,15 @@
       "id": 31,
       "type": "Note",
       "pos": [
-        -512.7464599609375,
-        949.7733764648438
+        -512.2825317382812,
+        1039.3319091796875
       ],
       "size": [
         316.4233093261719,
-        78.38472747802734
+        88
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -97,25 +76,27 @@
       ],
       "size": [
         210,
-        76
+        112
       ],
       "flags": {},
       "order": 17,
       "mode": 0,
       "inputs": [
         {
+          "dir": 3,
           "name": "input",
           "type": "INT",
-          "link": 70,
           "widget": {
             "name": "input"
           },
-          "dir": 3
+          "link": 70
         }
       ],
       "outputs": [],
       "title": "Altezza",
       "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "cb3612624037ad50d76a8caf44ed58694648e245",
         "Node name for S&R": "Display Int (rgthree)"
       },
       "widgets_values": [
@@ -134,25 +115,27 @@
       ],
       "size": [
         210,
-        76
+        112
       ],
       "flags": {},
       "order": 14,
       "mode": 0,
       "inputs": [
         {
+          "dir": 3,
           "name": "input",
           "type": "INT",
-          "link": 69,
           "widget": {
             "name": "input"
           },
-          "dir": 3
+          "link": 69
         }
       ],
       "outputs": [],
       "title": "Larghezza",
       "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "cb3612624037ad50d76a8caf44ed58694648e245",
         "Node name for S&R": "Display Int (rgthree)"
       },
       "widgets_values": [
@@ -178,17 +161,21 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "mask",
           "name": "mask",
           "type": "MASK",
-          "link": 88,
-          "label": "mask"
+          "link": 88
         }
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "MaskPreview+"
       },
-      "widgets_values": [],
+      "widgets_values": [
+        ""
+      ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -208,17 +195,21 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "images",
           "name": "images",
           "type": "IMAGE",
-          "link": 86,
-          "label": "images"
+          "link": 86
         }
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "PreviewImage"
       },
-      "widgets_values": [],
+      "widgets_values": [
+        ""
+      ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -245,10 +236,13 @@
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "v1"
+        "v1",
+        ""
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -278,13 +272,15 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             90
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "MaskToImage"
       },
       "widgets_values": [],
@@ -307,55 +303,57 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "model",
           "name": "model",
           "type": "BIREFNET",
-          "link": 61,
-          "label": "model"
+          "link": 61
         },
         {
+          "label": "images",
           "name": "images",
           "type": "IMAGE",
-          "link": 74,
-          "label": "images"
+          "link": 74
         },
         {
           "name": "width",
           "type": "INT",
-          "link": 55,
           "widget": {
             "name": "width"
-          }
+          },
+          "link": 55
         },
         {
           "name": "height",
           "type": "INT",
-          "link": 54,
           "widget": {
             "name": "height"
-          }
+          },
+          "link": 54
         }
       ],
       "outputs": [
         {
+          "label": "image",
           "name": "image",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             84
-          ],
-          "slot_index": 0,
-          "label": "image"
+          ]
         },
         {
+          "label": "mask",
           "name": "mask",
           "type": "MASK",
+          "slot_index": 1,
           "links": [
             87
-          ],
-          "slot_index": 1,
-          "label": "mask"
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_birefnet_ll",
+        "ver": "1.1.1",
         "Node name for S&R": "RembgByBiRefNetAdvanced"
       },
       "widgets_values": [
@@ -394,10 +392,13 @@
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "v1"
+        "v1",
+        ""
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -411,10 +412,10 @@
       ],
       "size": [
         241.90985107421875,
-        77.07023620605469
+        88
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -424,73 +425,6 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 15,
-      "type": "GetMaskByBiRefNet",
-      "pos": [
-        443.2222900390625,
-        587.2476196289062
-      ],
-      "size": [
-        249.39996337890625,
-        150
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "BIREFNET",
-          "link": 62,
-          "label": "model"
-        },
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 76,
-          "label": "images"
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 51,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 53,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": [
-            77
-          ],
-          "slot_index": 0,
-          "label": "mask"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "GetMaskByBiRefNet"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        "bicubic",
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 16,
@@ -508,36 +442,38 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "images",
           "name": "images",
           "type": "IMAGE",
-          "link": 75,
-          "label": "images"
+          "link": 75
         },
         {
+          "label": "masks",
           "name": "masks",
           "type": "MASK",
-          "link": 78,
-          "label": "masks"
+          "link": 78
         }
       ],
       "outputs": [
         {
+          "label": "image",
           "name": "image",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             80
-          ],
-          "slot_index": 0,
-          "label": "image"
+          ]
         },
         {
+          "label": "mask",
           "name": "mask",
           "type": "MASK",
-          "links": null,
-          "label": "mask"
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_birefnet_ll",
+        "ver": "1.1.1",
         "Node name for S&R": "BlurFusionForegroundEstimation"
       },
       "widgets_values": [
@@ -558,10 +494,10 @@
       ],
       "size": [
         622.416259765625,
-        69.19845581054688
+        88
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -588,17 +524,21 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "mask",
           "name": "mask",
           "type": "MASK",
-          "link": 95,
-          "label": "mask"
+          "link": 95
         }
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "MaskPreview+"
       },
-      "widgets_values": [],
+      "widgets_values": [
+        ""
+      ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -618,17 +558,21 @@
       "mode": 0,
       "inputs": [
         {
+          "label": "images",
           "name": "images",
           "type": "IMAGE",
-          "link": 93,
-          "label": "images"
+          "link": 93
         }
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "PreviewImage"
       },
-      "widgets_values": [],
+      "widgets_values": [
+        ""
+      ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
     },
@@ -657,13 +601,15 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             92
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "MaskToImage"
       },
       "widgets_values": [],
@@ -695,12 +641,12 @@
         {
           "name": "",
           "type": "MASK",
+          "slot_index": 0,
           "links": [
             78,
             95,
             96
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "MASK_v2",
@@ -723,7 +669,7 @@
         26
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -736,13 +682,13 @@
         {
           "name": "",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             72,
             74,
             75,
             76
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "IMG_1",
@@ -771,22 +717,22 @@
         {
           "name": "",
           "type": "*",
-          "link": 103,
           "widget": {
             "name": "value"
-          }
+          },
+          "link": 103
         }
       ],
       "outputs": [
         {
           "name": "",
           "type": "INT",
+          "slot_index": 0,
           "links": [
             53,
             54,
             70
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "HEIGHT",
@@ -815,22 +761,22 @@
         {
           "name": "",
           "type": "*",
-          "link": 102,
           "widget": {
             "name": "value"
-          }
+          },
+          "link": 102
         }
       ],
       "outputs": [
         {
           "name": "",
           "type": "INT",
+          "slot_index": 0,
           "links": [
             51,
             55,
             69
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "WIDTH",
@@ -866,11 +812,11 @@
         {
           "name": "",
           "type": "MASK",
+          "slot_index": 0,
           "links": [
             88,
             89
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "MASK_v1",
@@ -906,11 +852,11 @@
         {
           "name": "",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             85,
             86
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "IMG_v1",
@@ -946,11 +892,11 @@
         {
           "name": "",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             93,
             94
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "IMG_v2",
@@ -970,10 +916,10 @@
       ],
       "size": [
         250.6704559326172,
-        79.18486785888672
+        88
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -998,7 +944,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1011,69 +957,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 22,
-      "type": "LoadAndResizeImage",
-      "pos": [
-        -508.84075927734375,
-        1082.779052734375
-      ],
-      "size": [
-        315,
-        566
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [],
-          "slot_index": 0
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [],
-          "slot_index": 2
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [],
-          "slot_index": 3
-        },
-        {
-          "name": "image_path",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadAndResizeImage"
-      },
-      "widgets_values": [
-        "ragazza.jpg",
-        false,
-        0,
-        0,
-        1,
-        false,
-        2,
-        "alpha",
-        "",
-        "image"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
     },
     {
       "id": 52,
@@ -1098,10 +981,13 @@
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "v2"
+        "v2",
+        ""
       ],
       "color": "#233",
       "bgcolor": "#355"
@@ -1129,80 +1015,16 @@
       ],
       "outputs": [],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "v2"
+        "v2",
+        ""
       ],
       "color": "#233",
       "bgcolor": "#355"
-    },
-    {
-      "id": 32,
-      "type": "VHS_LoadImagesPath",
-      "pos": [
-        -431.46209716796875,
-        506.607421875
-      ],
-      "size": [
-        242.24609375,
-        356.1640625
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "meta_batch",
-          "type": "VHS_BatchManager",
-          "link": null,
-          "shape": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            101
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadImagesPath"
-      },
-      "widgets_values": {
-        "directory": "ComfyUI/input/prova/",
-        "image_load_cap": 0,
-        "skip_first_images": 0,
-        "select_every_nth": 1,
-        "choose folder to upload": "image",
-        "videopreview": {
-          "hidden": false,
-          "paused": true,
-          "params": {
-            "image_load_cap": 0,
-            "skip_first_images": 0,
-            "select_every_nth": 1,
-            "filename": "ComfyUI/input/prova/",
-            "type": "path",
-            "format": "folder"
-          }
-        }
-      },
-      "color": "#332922",
-      "bgcolor": "#593930"
     },
     {
       "id": 34,
@@ -1229,18 +1051,18 @@
         {
           "name": "width",
           "type": "INT",
+          "slot_index": 0,
           "links": [
             102
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "height",
           "type": "INT",
+          "slot_index": 1,
           "links": [
             103
-          ],
-          "slot_index": 1
+          ]
         },
         {
           "name": "count",
@@ -1249,6 +1071,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "GetImageSize+"
       },
       "widgets_values": [],
@@ -1267,22 +1091,24 @@
         106
       ],
       "flags": {},
-      "order": 8,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
+          "label": "model",
           "name": "model",
+          "shape": 3,
           "type": "BIREFNET",
+          "slot_index": 0,
           "links": [
             60
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "model"
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_birefnet_ll",
+        "ver": "1.1.1",
         "Node name for S&R": "AutoDownloadBiRefNetModel"
       },
       "widgets_values": [
@@ -1292,6 +1118,233 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 22,
+      "type": "LoadAndResizeImage",
+      "pos": [
+        -508.3768615722656,
+        1172.33740234375
+      ],
+      "size": [
+        315,
+        566
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "slot_index": 3,
+          "links": []
+        },
+        {
+          "name": "image_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "f77c0dc5d8cdec3e22782b63740f7721055bc65f",
+        "Node name for S&R": "LoadAndResizeImage"
+      },
+      "widgets_values": [
+        "IMG_20250327_111500.jpg",
+        false,
+        0,
+        0,
+        1,
+        false,
+        2,
+        "alpha",
+        "",
+        "image",
+        ""
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 15,
+      "type": "GetMaskByBiRefNet",
+      "pos": [
+        443.2222900390625,
+        587.2476196289062
+      ],
+      "size": [
+        249.39996337890625,
+        150
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "BIREFNET",
+          "link": 62
+        },
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 76
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 51
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "slot_index": 0,
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_birefnet_ll",
+        "ver": "1.1.1",
+        "Node name for S&R": "GetMaskByBiRefNet"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        "bicubic",
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 32,
+      "type": "VHS_LoadImagesPath",
+      "pos": [
+        -431.46209716796875,
+        506.607421875
+      ],
+      "size": [
+        242.24609375,
+        430.24609375
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            101
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "c9dcc3a229437df232d61da4f9697c87c1f22428",
+        "Node name for S&R": "VHS_LoadImagesPath"
+      },
+      "widgets_values": {
+        "directory": "ComfyUI/input/kinder/",
+        "image_load_cap": 0,
+        "skip_first_images": 0,
+        "select_every_nth": 1,
+        "choose folder to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "image_load_cap": 0,
+            "skip_first_images": 0,
+            "select_every_nth": 1,
+            "filename": "ComfyUI/input/kinder/",
+            "type": "path",
+            "format": "folder"
+          }
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 30,
+      "type": "Note",
+      "pos": [
+        -505.06689453125,
+        17.271793365478516
+      ],
+      "size": [
+        309.3717041015625,
+        264.2765808105469
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "model_name\n\nGeneral: Un modello pre-addestrato per casi d'uso generali.\nGeneral-HR: un modello pre-addestrato per casi d'uso generali che mostra ottime prestazioni su immagini a risoluzione più elevata (2048x2048).\nGeneral-Lite: Un modello pre-addestrato leggero per casi d'uso generali.\nGeneral-Lite-2K: Un modello preaddestrato leggero per casi d'uso generali in alta risoluzione (2560x1440).\nPortrait: Un modello pre-addestrato per ritratti umani.\nMatting: Un modello pre-addestrato per l'uso generale del trimap-free matting.\nDIS: un modello preaddestrato per la segmentazione dicotomica delle immagini (DIS).\nHRSOD: un modello preaddestrato per il rilevamento di oggetti salienti ad alta risoluzione (HRSOD).\nCOD: modello preaddestrato per il rilevamento di oggetti nascosti (COD).\nDIS-TR_TEs: Un modello pre-addestrato con un set di dati massivo.\n\ndevice\n\nSe lasciato su AUTO sceglierà lui automaticamente, dando priorità alla GPU. Nel caso volete cambiarlo potete impostare CPU.\n\ndtype\n\nL'elaborazione non pesa particolarmente, dovrebbe andare in float32 anche su hardware non molto potente, in caso contrario impostare float16."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -1564,8 +1617,8 @@
       "bounding": [
         -441.7030334472656,
         301.4839172363281,
-        257.5437316894531,
-        566.9999389648438
+        259.5855712890625,
+        650.7117309570312
       ],
       "color": "#b58b2a",
       "font_size": 24,
@@ -1575,8 +1628,8 @@
       "id": 5,
       "title": "Immagine - d4N87",
       "bounding": [
-        -522.7464599609375,
-        876.1732788085938,
+        -522.2825317382812,
+        965.7318115234375,
         338.90557861328125,
         782.6058349609375
       ],
@@ -1590,8 +1643,8 @@
       "bounding": [
         616.3924560546875,
         931.4346313476562,
-        231.79815673828125,
-        297.9741516113281
+        229.75636291503906,
+        339.31964111328125
       ],
       "color": "#88A",
       "font_size": 24,
@@ -1603,8 +1656,8 @@
       "bounding": [
         798.2030639648438,
         41.089839935302734,
-        277.3285827636719,
-        450.734375
+        276.5616149902344,
+        458.404296875
       ],
       "color": "#b06634",
       "font_size": 24,
@@ -1642,8 +1695,8 @@
       "bounding": [
         433.2222900390625,
         513.6476440429688,
-        646.9678955078125,
-        343.6087646484375
+        644.6668701171875,
+        363.167236328125
       ],
       "color": "#A88",
       "font_size": 24,
@@ -1679,10 +1732,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6629881849056357,
+      "scale": 1.0177160120847009,
       "offset": [
-        756.0494695320604,
-        88.71204512441847
+        374.90495941581344,
+        -170.54998540196604
       ]
     },
     "workspace_info": {
