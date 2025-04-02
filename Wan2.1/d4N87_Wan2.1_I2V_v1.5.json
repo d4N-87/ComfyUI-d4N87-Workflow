@@ -1,6 +1,8 @@
 {
-  "last_node_id": 78,
-  "last_link_id": 133,
+  "id": "2590636d-d18a-42fd-b809-47e55464c204",
+  "revision": 0,
+  "last_node_id": 80,
+  "last_link_id": 135,
   "nodes": [
     {
       "id": 37,
@@ -21,8 +23,8 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [],
-          "slot_index": 0
+          "slot_index": 0,
+          "links": []
         }
       ],
       "properties": {
@@ -72,7 +74,7 @@
         82
       ],
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -84,10 +86,10 @@
       "outputs": [
         {
           "name": "MODEL",
-          "type": "MODEL",
           "shape": 3,
-          "links": [],
-          "slot_index": 0
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": []
         }
       ],
       "properties": {
@@ -121,8 +123,8 @@
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [],
-          "slot_index": 0
+          "slot_index": 0,
+          "links": []
         }
       ],
       "properties": {
@@ -180,10 +182,10 @@
         {
           "name": "CLIP_VISION",
           "type": "CLIP_VISION",
+          "slot_index": 0,
           "links": [
             107
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -209,7 +211,7 @@
         180.6060791015625
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -222,10 +224,10 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             114
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "CLIP Text Encode (Negative Prompt)",
@@ -275,7 +277,7 @@
         26
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -288,11 +290,11 @@
         {
           "name": "",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             110,
             111
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -321,10 +323,10 @@
         {
           "name": "VAE",
           "type": "VAE",
+          "slot_index": 0,
           "links": [
             120
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -350,7 +352,7 @@
         26
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -363,10 +365,10 @@
         {
           "name": "",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             98
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "MODEL",
@@ -389,7 +391,7 @@
         58
       ],
       "flags": {},
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -402,10 +404,10 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             121
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -431,7 +433,7 @@
         78
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -449,10 +451,10 @@
         {
           "name": "CLIP_VISION_OUTPUT",
           "type": "CLIP_VISION_OUTPUT",
+          "slot_index": 0,
           "links": [
             105
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -465,46 +467,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 70,
-      "type": "Reroute",
-      "pos": [
-        450.7532653808594,
-        21.961015701293945
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 121
-        }
-      ],
-      "outputs": [
-        {
-          "name": "",
-          "type": "MODEL",
-          "links": [
-            122,
-            126
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "MODEL",
-      "properties": {
-        "showOutputText": false,
-        "horizontal": false
-      },
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 50,
@@ -541,7 +503,7 @@
         26
       ],
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -554,11 +516,11 @@
         {
           "name": "",
           "type": "VAE",
+          "slot_index": 0,
           "links": [
             124,
             129
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "VAE",
@@ -588,10 +550,10 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             99
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -664,7 +626,7 @@
         26
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -677,11 +639,11 @@
         {
           "name": "",
           "type": "CLIP",
+          "slot_index": 0,
           "links": [
             101,
             102
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "CLIP",
@@ -711,10 +673,10 @@
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 0,
           "links": [
             131
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -741,7 +703,7 @@
         164.31304931640625
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -754,10 +716,10 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             113
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "CLIP Text Encode (Positive Prompt)",
@@ -791,10 +753,10 @@
         {
           "name": "image",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             109
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "mask",
@@ -804,18 +766,18 @@
         {
           "name": "width",
           "type": "INT",
+          "slot_index": 2,
           "links": [
             118
-          ],
-          "slot_index": 2
+          ]
         },
         {
           "name": "height",
           "type": "INT",
+          "slot_index": 3,
           "links": [
             119
-          ],
-          "slot_index": 3
+          ]
         },
         {
           "name": "image_path",
@@ -855,7 +817,7 @@
         250
       ],
       "flags": {},
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -875,14 +837,14 @@
         },
         {
           "name": "clip_vision_output",
-          "type": "CLIP_VISION_OUTPUT",
           "shape": 7,
+          "type": "CLIP_VISION_OUTPUT",
           "link": 105
         },
         {
           "name": "start_image",
-          "type": "IMAGE",
           "shape": 7,
+          "type": "IMAGE",
           "link": 111
         },
         {
@@ -906,26 +868,26 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             116
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
+          "slot_index": 1,
           "links": [
             117
-          ],
-          "slot_index": 1
+          ]
         },
         {
           "name": "latent",
           "type": "LATENT",
+          "slot_index": 2,
           "links": [
             112
-          ],
-          "slot_index": 2
+          ]
         }
       ],
       "properties": {
@@ -954,7 +916,7 @@
         474
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -982,10 +944,10 @@
         {
           "name": "LATENT",
           "type": "LATENT",
+          "slot_index": 0,
           "links": [
             128
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -1004,96 +966,6 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
-    },
-    {
-      "id": 72,
-      "type": "WanVideoTeaCacheKJ",
-      "pos": [
-        699.3549194335938,
-        760.9811401367188
-      ],
-      "size": [
-        340.20001220703125,
-        154
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 126
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            132
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
-        "Node name for S&R": "WanVideoTeaCacheKJ"
-      },
-      "widgets_values": [
-        0.275,
-        0.1,
-        1,
-        "main_device",
-        "i2v_480"
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
-      "id": 77,
-      "type": "SkipLayerGuidanceWanVideo",
-      "pos": [
-        1049.35498046875,
-        760.9811401367188
-      ],
-      "size": [
-        352.79998779296875,
-        106
-      ],
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 132
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            133
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
-        "Node name for S&R": "SkipLayerGuidanceWanVideo"
-      },
-      "widgets_values": [
-        "9,10",
-        0.2,
-        1
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
     },
     {
       "id": 78,
@@ -1153,7 +1025,7 @@
         150
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1171,10 +1043,10 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             130
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
@@ -1228,10 +1100,10 @@
       ],
       "size": [
         578.5680541992188,
-        670.2507934570312
+        334
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1241,20 +1113,20 @@
         },
         {
           "name": "audio",
-          "type": "AUDIO",
           "shape": 7,
+          "type": "AUDIO",
           "link": null
         },
         {
           "name": "meta_batch",
-          "type": "VHS_BatchManager",
           "shape": 7,
+          "type": "VHS_BatchManager",
           "link": null
         },
         {
           "name": "vae",
-          "type": "VAE",
           "shape": 7,
+          "type": "VAE",
           "link": null
         }
       ],
@@ -1297,6 +1169,201 @@
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
+    },
+    {
+      "id": 79,
+      "type": "Note",
+      "pos": [
+        925.1422729492188,
+        -23.614459991455078
+      ],
+      "size": [
+        312.2488098144531,
+        88
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "CFG Zero da attivare solo col modello 14B."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 70,
+      "type": "Reroute",
+      "pos": [
+        450.7532653808594,
+        21.961015701293945
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            122,
+            134
+          ]
+        }
+      ],
+      "title": "MODEL",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 80,
+      "type": "CFGZeroStarAndInit",
+      "pos": [
+        922.6967163085938,
+        -146.3043670654297
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            135
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
+        "Node name for S&R": "CFGZeroStarAndInit"
+      },
+      "widgets_values": [
+        true,
+        0
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 77,
+      "type": "SkipLayerGuidanceWanVideo",
+      "pos": [
+        1049.35498046875,
+        760.9811401367188
+      ],
+      "size": [
+        352.79998779296875,
+        106
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            133
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+        "Node name for S&R": "SkipLayerGuidanceWanVideo"
+      },
+      "widgets_values": [
+        "9",
+        0.2,
+        1
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 72,
+      "type": "WanVideoTeaCacheKJ",
+      "pos": [
+        699.3549194335938,
+        760.9811401367188
+      ],
+      "size": [
+        340.20001220703125,
+        154
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 135
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "d126b62cebee81ea14ec06ea7cd7526999cb0554",
+        "Node name for S&R": "WanVideoTeaCacheKJ"
+      },
+      "widgets_values": [
+        0.26000000000000006,
+        0.1,
+        1,
+        "main_device",
+        "i2v_480"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -1461,14 +1528,6 @@
       "VAE"
     ],
     [
-      126,
-      70,
-      0,
-      72,
-      0,
-      "MODEL"
-    ],
-    [
       128,
       3,
       0,
@@ -1513,6 +1572,22 @@
       77,
       0,
       3,
+      0,
+      "MODEL"
+    ],
+    [
+      134,
+      70,
+      0,
+      80,
+      0,
+      "MODEL"
+    ],
+    [
+      135,
+      80,
+      0,
+      72,
       0,
       "MODEL"
     ]
@@ -1634,15 +1709,28 @@
       "color": "#88A",
       "font_size": 24,
       "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "CFG Zero - d4N87",
+      "bounding": [
+        912.6966552734375,
+        -219.90435791015625,
+        335,
+        294.2898864746094
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8264462809917354,
+      "scale": 1.0177160120847075,
       "offset": [
-        332.99584494477125,
-        37.282797465158616
+        329.96120872771485,
+        79.07449809767313
       ]
     },
     "VHS_latentpreview": false,
