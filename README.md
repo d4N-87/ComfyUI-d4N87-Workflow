@@ -1,73 +1,102 @@
+<!-- BADGES -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Release Version Badge](https://img.shields.io/github/v/release/d4N-87/ComfyUI-d4N87-Workflow?style=for-the-badge)](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/releases)
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- LOGO -->
+<!-- LOGO AND PROJECT TITLE -->
 <br />
 <div align="center">
   <a href="https://github.com/d4N-87/ComfyUI-d4N87-Workflow">
-    <img src="images/logo.png" alt="Logo" width="256" height="256">
+    <img src="images/logo.png" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center">ComfyUI-d4N87-Workflow</h3>
-  <h3 align="center">d4N87</h3>
-  <h3 align="center">YT: https://www.youtube.com/@d4n87</h3>
+  <h1 align="center">d4N87's ComfyUI Workflows</h1>
 
+  <p align="center">
+    La raccolta ufficiale dei workflow per ComfyUI che creo e spiego sul mio canale YouTube.
+    <br />
+    Chi arriva qui dalle mie guide, troverà tutto il materiale. Chi scopre prima questa pagina... ci vediamo su YouTube!
+    <br />
+    <br />
+    <a href="https://www.youtube.com/@d4n87" target="_blank"><strong>Visita il Canale YouTube »</strong></a>
+    ·
+    <a href="https://github.com/d4N-87/ComfyUI-d4N87-Workflow/issues">Segnala un Problema</a>
+  </p>
 </div>
 
-## ITA
+---
+<br>
 
-Ciao ragazzi, io sono Dan!
+## 🇮🇹 Versione Italiana
 
-Qui troverete il repository ufficiale di tutti i miei workflow creati per ComfyUI, nella loro versione gratuita.
+### Ciao ragazzi, io sono Dan!
+Benvenuti nel repository ufficiale dei miei workflow per ComfyUI! Qui raccolgo tutti i flussi di lavoro, pronti all'uso e divisi per categoria, che utilizzo e creo per le mie guide.
 
-Sono divisi per tipologia, per poterli usare basterà semplicemente trascinarli su ComfyUI.
+L'obiettivo è semplice: darti uno strumento potente e facile da usare. Trascina il file `.json` in ComfyUI e sei pronto a partire.
 
-Per clonare tutta la cartella:
+#### ⚠️ Prerequisiti: Niente più nodi rossi!
+Per un'esperienza senza problemi, installa il **ComfyUI-Manager**. Ti aiuterà a installare automaticamente tutti i Custom Nodes mancanti.
+- **Link per l'installazione:** [ComfyUI-Manager su GitHub](https://github.com/ltdrdata/ComfyUI-Manager)
 
-```cmd
-git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
-```
+#### 🚀 Come Usare i Workflow
+1.  **Clona il Repository (Consigliato):** Per avere aggiornamenti costanti.
+    ```sh
+    git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
+    ```
+2.  **Scarica lo ZIP:** Trovi l'archivio completo di tutti i workflow nella pagina [Releases](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/releases).
 
-Altrimenti nelle release trovate lo zip con dentro tutti i workflow (sono i medesimi ma caricati tutti insieme). Questo zip viene aggiornato ad ogni pubblicazione di un video, mentre i singoli workflow potrebbero essere aggiornati singolarmente.
+### ✨ Come Trovare i Workflow
+Ho organizzato tutti i workflow in **cartelle tematiche**. Ogni cartella prende il nome dalla tecnica o dal modello principale utilizzato (es. `SD3`, `FLUX.1`, `VideoUpscale`, etc.).
 
-<details>
-  <summary>Perché i workflow hanno una versione?</summary>
-La versione riportata a fine workflow rappresenta solamente le volte che ho modificato il flusso e l'ho risalvato, solitamente la v0.1 rappresenta la prima versione corretta funzionante, quelle successive sono solamente di aggiornamento.
-</details>
+**Esplora le cartelle qui sopra per trovare il workflow che ti serve!**
 
+### ❤️ Supporta il mio Lavoro
+Se trovi utili le mie guide e i miei workflow, considera di supportare il canale. Ogni contributo mi aiuta a creare contenuti sempre migliori. Grazie di cuore!
 
-## ENG
+<p align="center">
+  <a href="https://www.patreon.com/d4N87" target="_blank"><img src="https://img.shields.io/badge/Patreon-d4N87-orange?style=for-the-badge&logo=patreon" alt="Patreon"></a>
+    
+  <a href="https://paypal.me/d4n87?country.x=IT&locale.x=it_IT" target="_blank"><img src="https://img.shields.io/badge/PayPal-Dona-blue?style=for-the-badge&logo=paypal" alt="PayPal"></a>
+</p>
 
-Hi guys, I'm Dan!
+---
+<br>
 
-Here you will find the official repository of all my workflows created for ComfyUI, in their free version.
+## 🇬🇧 English Version
 
-They are divided by type, to use them you will just need to drag and drop them into ComfyUI.
+### Hi guys, I'm Dan!
+Welcome to the official repository for my ComfyUI workflows! Here I collect all the ready-to-use workflows, divided by category, that I use and create for my guides.
 
-To clone the whole folder:
+The goal is simple: to give you a powerful and easy-to-use tool. Just drag and drop the `.json` file into ComfyUI, and you're ready to go.
 
-```cmd
-git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
-```
+#### ⚠️ Prerequisites: No more red nodes!
+For a seamless experience, install the **ComfyUI-Manager**. It will help you automatically install any missing Custom Nodes.
+- **Installation Link:** [ComfyUI-Manager on GitHub](https://github.com/ltdrdata/ComfyUI-Manager)
 
-Otherwise in the releases you will find the zipper with all the workflows inside (they are the same but loaded all together). This zipper is updated each time a video is released, while individual workflows might be updated individually.
+#### 🚀 How to Use the Workflows
+1.  **Clone the Repository (Recommended):** To get constant updates.
+    ```sh
+    git clone https://github.com/d4N-87/ComfyUI-d4N87-Workflow.git
+    ```
+2.  **Download the ZIP:** You can find the complete archive of all workflows on the [Releases](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/releases) page.
 
-<details>
-  <summary>Why do workflows have a version?</summary>
-The version shown at the end of the workflow represents only the times I have modified the flow and resaved it, usually v0.1 represents the first working correct version, the later ones are only updating.
-</details>
+### ✨ How to Find the Workflows
+I have organized all workflows into **thematic folders**. Each folder is named after the main technique or model used (e.g., `SD3`, `FLUX.1`, `VideoUpscale`, etc.).
 
+**Simply browse the folders above to find the workflow you need!**
 
-## Supporta lo sviluppatore
+### ❤️ Support My Work
+If you find my guides and workflows useful, please consider supporting the channel. Every contribution helps me create even better content. Thank you from the heart!
 
-Se i workflow e le guide ti sono stati utili, puoi supportare il canale tramite PayPal con una donazione.
+<p align="center">
+  <a href="https://www.patreon.com/d4N87" target="_blank"><img src="https://img.shields.io/badge/Patreon-d4N87-orange?style=for-the-badge&logo=patreon" alt="Patreon"></a>
+    
+  <a href="https://paypal.me/d4n87?country.x=IT&locale.x=it_IT" target="_blank"><img src="https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal" alt="PayPal"></a>
+</p>
 
-If the workflows and guides have been helpful to you, you can support the channel through PayPal with a donation.
-
-[![Donate with PayPal](https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png)](https://paypal.me/d4n87?country.x=IT&locale.x=it_IT)
+---
 
 ## Star History
 
