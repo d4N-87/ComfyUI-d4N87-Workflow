@@ -52,6 +52,11 @@ Ho organizzato tutti i workflow in **cartelle tematiche**. Ogni cartella prende 
 
 **Esplora le cartelle qui sopra per trovare il workflow che ti serve!**
 
+### 📖 Consulta la Wiki per Guide e Soluzioni
+Per comprendere meglio le varie terminologie, ho preparato una Wiki completa.
+
+➡️ **[Vai alla Wiki del Progetto](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/wiki)**
+
 ### ❤️ Supporta il mio Lavoro
 Se trovi utili le mie guide e i miei workflow, considera di supportare il canale. Ogni contributo mi aiuta a creare contenuti sempre migliori. Grazie di cuore!
 
@@ -86,6 +91,11 @@ For a seamless experience, install the **ComfyUI-Manager**. It will help you aut
 I have organized all workflows into **thematic folders**. Each folder is named after the main technique or model used (e.g., `SD3`, `FLUX.1`, `VideoUpscale`, etc.).
 
 **Simply browse the folders above to find the workflow you need!**
+
+### 📖 See the Wiki for Guides and Solutions
+To better understand the various terminologies, I have prepared a complete Wiki.
+
+➡️ **[Go to the Project Wiki](https://github.com/d4N-87/ComfyUI-d4N87-Workflow/wiki)**
 
 ### ❤️ Support My Work
 If you find my guides and workflows useful, please consider supporting the channel. Every contribution helps me create even better content. Thank you from the heart!
