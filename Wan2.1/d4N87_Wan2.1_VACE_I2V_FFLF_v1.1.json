@@ -218,29 +218,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 202,
-      "type": "Note",
-      "pos": [
-        -826.9466552734375,
-        575.0325317382812
-      ],
-      "size": [
-        423.6352233886719,
-        88
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 205,
       "type": "Reroute",
       "pos": [
@@ -278,29 +255,6 @@
       },
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 206,
-      "type": "MarkdownNote",
-      "pos": [
-        -357.3900451660156,
-        452.4774475097656
-      ],
-      "size": [
-        313.1090393066406,
-        178.36184692382812
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Default\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
     },
     {
       "id": 207,
@@ -560,7 +514,7 @@
         82
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -597,7 +551,7 @@
         82
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -734,7 +688,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -760,7 +714,7 @@
         82
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -983,7 +937,7 @@
         602.3904418945312
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1025,7 +979,7 @@
         602.3904418945312
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1187,7 +1141,7 @@
         427.8807067871094
       ],
       "flags": {},
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1210,7 +1164,7 @@
         427.8807067871094
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1439,7 +1393,7 @@
         100.89022064208984
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1576,7 +1530,7 @@
         82
       ],
       "flags": {},
-      "order": 18,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1739,7 +1693,7 @@
         88
       ],
       "flags": {},
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -2257,6 +2211,52 @@
       "widgets_values": [],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 202,
+      "type": "Note",
+      "pos": [
+        -826.9466552734375,
+        575.0325317382812
+      ],
+      "size": [
+        423.6352233886719,
+        88
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi.\n\nSe viene usato FusionX o il LoRa CausVid, il CFG si imposta a 1 e di conseguenza il negative viene ignorato."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 206,
+      "type": "MarkdownNote",
+      "pos": [
+        -357.3900451660156,
+        452.4774475097656
+      ],
+      "size": [
+        313.1090393066406,
+        178.36184692382812
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Wan2.1\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n\n## Wan2.1 FusionX\n\n- **Steps:** 6, qualità maggiore su 8-10\n- **CGF:** 1\n- **Shift:** 2\n- **Sampler_name:** dmp++_sde\n- **Scheduler:** beta\n\nPer ridurre l'effetto slow motion:\n\n- **Lenght:** 121\n- **FPS:** 24"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -2894,13 +2894,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6727499949325747,
+      "scale": 1.0834705943388616,
       "offset": [
-        1281.99658240011,
-        -345.42680244165206
+        1315.11857639332,
+        84.29908166131105
       ]
     },
-    "frontendVersion": "1.20.7",
+    "frontendVersion": "1.23.4",
     "node_versions": {
       "comfy-core": "0.3.34"
     },

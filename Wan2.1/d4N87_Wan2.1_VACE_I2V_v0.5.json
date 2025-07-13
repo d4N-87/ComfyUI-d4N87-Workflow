@@ -1,8 +1,8 @@
 {
   "id": "457df4d6-2fec-4911-9381-4c6cb6eb9af0",
   "revision": 0,
-  "last_node_id": 75,
-  "last_link_id": 131,
+  "last_node_id": 81,
+  "last_link_id": 138,
   "nodes": [
     {
       "id": 37,
@@ -63,29 +63,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 56,
-      "type": "Note",
-      "pos": [
-        234.27093505859375,
-        480.9921569824219
-      ],
-      "size": [
-        423.6352233886719,
-        88
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 59,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -97,7 +74,7 @@
         82
       ],
       "flags": {},
-      "order": 18,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -138,7 +115,7 @@
         88
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -161,7 +138,7 @@
         26
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -201,7 +178,7 @@
         164.31304931640625
       ],
       "flags": {},
-      "order": 14,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -244,7 +221,7 @@
         180.6060791015625
       ],
       "flags": {},
-      "order": 15,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -287,7 +264,7 @@
         61.906044006347656
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -324,7 +301,7 @@
         106
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -360,7 +337,7 @@
         100.89022064208984
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -397,7 +374,7 @@
         58
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -434,7 +411,7 @@
         26
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -475,7 +452,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -501,7 +478,7 @@
         58
       ],
       "flags": {},
-      "order": 13,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -543,7 +520,7 @@
         26
       ],
       "flags": {},
-      "order": 16,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -559,7 +536,7 @@
           "slot_index": 0,
           "links": [
             106,
-            131
+            138
           ]
         }
       ],
@@ -583,13 +560,13 @@
         474
       ],
       "flags": {},
-      "order": 19,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 131
+          "link": 138
         },
         {
           "name": "positive",
@@ -623,7 +600,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        403082875740476,
+        1027393494529969,
         "randomize",
         20,
         4,
@@ -646,7 +623,7 @@
         254
       ],
       "flags": {},
-      "order": 17,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -680,7 +657,23 @@
           "name": "reference_image",
           "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": 133
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 135
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 136
         }
       ],
       "outputs": [
@@ -740,7 +733,7 @@
         150
       ],
       "flags": {},
-      "order": 21,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -790,7 +783,7 @@
         670.2507934570312
       ],
       "flags": {},
-      "order": 22,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -844,13 +837,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "Wan2.1_00001.mp4",
+            "filename": "Wan2.1_00002.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/nvenc_hevc-mp4",
             "frame_rate": 16,
-            "workflow": "Wan2.1_00001.png",
-            "fullpath": "D:\\AI\\ComfyUI\\ComfyUI\\output\\Wan2.1_00001.mp4"
+            "workflow": "Wan2.1_00002.png",
+            "fullpath": "D:\\AI\\ComfyUI\\ComfyUI\\output\\Wan2.1_00002.mp4"
           }
         }
       },
@@ -871,7 +864,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 20,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -909,27 +902,212 @@
       "bgcolor": "#533"
     },
     {
-      "id": 75,
-      "type": "MarkdownNote",
+      "id": 76,
+      "type": "ImageScale",
       "pos": [
-        700.8302001953125,
-        360.3232727050781
+        159.07489013671875,
+        1250.3172607421875
       ],
       "size": [
-        313.1090393066406,
-        178.36184692382812
+        315,
+        130
       ],
       "flags": {},
-      "order": 9,
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            131,
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        720,
+        640,
+        "center"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 78,
+      "type": "Reroute",
+      "pos": [
+        502.5450134277344,
+        1249.53759765625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            132,
+            133
+          ]
+        }
+      ],
+      "title": "IMG",
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 80,
+      "type": "GetImageSize+",
+      "pos": [
+        500.7266845703125,
+        1329.0262451171875
+      ],
+      "size": [
+        159.50155639648438,
+        66
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            135
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            136
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "GetImageSize+"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 79,
+      "type": "PreviewImage",
+      "pos": [
+        508.48663330078125,
+        1447.12890625
+      ],
+      "size": [
+        387.4927062988281,
+        412.2340087890625
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 132
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 77,
+      "type": "LoadImage",
+      "pos": [
+        -281.93096923828125,
+        1249.9622802734375
+      ],
+      "size": [
+        428.5234680175781,
+        602.3904418945312
+      ],
+      "flags": {},
+      "order": 8,
       "mode": 0,
       "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Default\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n"
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            130
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
       ],
-      "color": "#222",
-      "bgcolor": "#000"
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.30",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
     },
     {
       "id": 55,
@@ -943,13 +1121,82 @@
         88
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
       "properties": {},
       "widgets_values": [
         "Qui viene caricato il VAE."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 75,
+      "type": "Note",
+      "pos": [
+        158.72714233398438,
+        1423.693115234375
+      ],
+      "size": [
+        318.0632629394531,
+        427.8807067871094
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "L'immagine viene caricata e può essere ridimensionata secondo risoluzioni più digerite da Wan2.1 (è consigliata divisibile per 16).\nDi base viene usata 832x480, ma si può arrivare a 1280x720 secondo il modello."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 56,
+      "type": "Note",
+      "pos": [
+        234.27093505859375,
+        480.9921569824219
+      ],
+      "size": [
+        423.6352233886719,
+        88
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi.\n\nSe viene usato FusionX o il LoRa CausVid, il CFG si imposta a 1 e di conseguenza il negative viene ignorato."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 81,
+      "type": "MarkdownNote",
+      "pos": [
+        701.6941528320312,
+        355.77734375
+      ],
+      "size": [
+        313.1090393066406,
+        178.36184692382812
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Wan2.1\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n\n## Wan2.1 FusionX\n\n- **Steps:** 6, qualità maggiore su 8-10\n- **CGF:** 1\n- **Shift:** 2\n- **Sampler_name:** dmp++_sde\n- **Scheduler:** beta\n\nPer ridurre l'effetto slow motion:\n\n- **Lenght:** 121\n- **FPS:** 24"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -1101,7 +1348,63 @@
       "LATENT"
     ],
     [
+      130,
+      77,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
       131,
+      76,
+      0,
+      78,
+      0,
+      "*"
+    ],
+    [
+      132,
+      78,
+      0,
+      79,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      78,
+      0,
+      73,
+      5,
+      "IMAGE"
+    ],
+    [
+      134,
+      76,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      80,
+      0,
+      73,
+      6,
+      "INT"
+    ],
+    [
+      136,
+      80,
+      1,
+      73,
+      7,
+      "INT"
+    ],
+    [
+      138,
       62,
       0,
       3,
@@ -1187,18 +1490,31 @@
       "color": "#b58b2a",
       "font_size": 24,
       "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Immagine - d4N87",
+      "bounding": [
+        -291.93084716796875,
+        1176.362060546875,
+        775.4720458984375,
+        683.3551025390625
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9251963746224625,
+      "scale": 1.1194876132931821,
       "offset": [
-        131.98234894592835,
-        28.728590320319313
+        25.160721283640783,
+        -91.43689170427263
       ]
     },
-    "frontendVersion": "1.20.6",
+    "frontendVersion": "1.23.4",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,

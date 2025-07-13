@@ -40,29 +40,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 56,
-      "type": "Note",
-      "pos": [
-        234.27093505859375,
-        480.9921569824219
-      ],
-      "size": [
-        423.6352233886719,
-        88
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 59,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -198,7 +175,7 @@
         61.906044006347656
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -235,7 +212,7 @@
         106
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -271,7 +248,7 @@
         100.89022064208984
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -349,7 +326,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -517,7 +494,7 @@
       ],
       "size": [
         578.5680541992188,
-        334
+        670.2507934570312
       ],
       "flags": {},
       "order": 41,
@@ -751,7 +728,7 @@
         58
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1029,7 +1006,7 @@
         88
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1607,7 +1584,7 @@
         246.49818420410156
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1630,7 +1607,7 @@
         107.06253814697266
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1653,7 +1630,7 @@
         88
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1676,36 +1653,13 @@
         88
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [],
       "properties": {},
       "widgets_values": [
         "Qui viene caricato il VAE."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 123,
-      "type": "MarkdownNote",
-      "pos": [
-        697.5765991210938,
-        364.3373107910156
-      ],
-      "size": [
-        313.1090393066406,
-        178.36184692382812
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Default\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -1719,7 +1673,7 @@
       ],
       "size": [
         270,
-        266
+        286
       ],
       "flags": {},
       "order": 17,
@@ -1729,6 +1683,12 @@
           "name": "image",
           "type": "IMAGE",
           "link": 153
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
         }
       ],
       "outputs": [
@@ -1750,6 +1710,11 @@
           "links": [
             183
           ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
         }
       ],
       "properties": {
@@ -1782,7 +1747,7 @@
         551.455078125
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -1945,8 +1910,55 @@
         "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
         "Node name for S&R": "GetImageSize+"
       },
+      "widgets_values": [],
       "color": "#233",
       "bgcolor": "#355"
+    },
+    {
+      "id": 56,
+      "type": "Note",
+      "pos": [
+        234.27093505859375,
+        480.9921569824219
+      ],
+      "size": [
+        423.6352233886719,
+        88
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui è possibile scrivere il positive e il negative prompt, questo ultimo solitamente viene lasciato in questo modo, per via degli idiomi cinesi.\n\nSe viene usato FusionX o il LoRa CausVid, il CFG si imposta a 1 e di conseguenza il negative viene ignorato."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 123,
+      "type": "MarkdownNote",
+      "pos": [
+        697.5765991210938,
+        364.3373107910156
+      ],
+      "size": [
+        313.1090393066406,
+        178.36184692382812
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Qui avviene l'elaborazione vera e propria.\n\nE' consigliabile fare molta attenzione alla lunghezza del video impostata nel nodo della latent, che potrebbe allungare esponenzialmente l'elaborazione.\n\n## Wan2.1\n\n- **steps:** 20\n- **cfg:** 4.0\n\n## [CausVid LoRA 14B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors)\n## [CausVid LoRA 1.3B](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_bidirect2_T2V_1_3B_lora_rank32.safetensors)\n\n- **steps:** 2-4\n- **cfg:** 1.0\n- **strength:** 0.3-0.5\n\n## Wan2.1 FusionX\n\n- **Steps:** 6, qualità maggiore su 8-10\n- **CGF:** 1\n- **Shift:** 2\n- **Sampler_name:** dmp++_sde\n- **Scheduler:** beta\n\nPer ridurre l'effetto slow motion:\n\n- **Lenght:** 121\n- **FPS:** 24"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -2404,13 +2416,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6951137299943457,
+      "scale": 0.9251963746224747,
       "offset": [
-        697.1998728003218,
-        -212.03774692881083
+        98.32841275420174,
+        192.97390398276477
       ]
     },
-    "frontendVersion": "1.20.7",
+    "frontendVersion": "1.23.4",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
