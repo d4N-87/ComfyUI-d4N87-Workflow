@@ -829,69 +829,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1056.34716796875,
-        180.32040405273438
-      ],
-      "size": [
-        315,
-        474
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 141
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 116
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 117
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 112
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            136
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.24",
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        1016179998672427,
-        "randomize",
-        10,
-        1,
-        "uni_pc",
-        "simple",
-        1
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 50,
       "type": "Note",
       "pos": [
@@ -1059,7 +996,7 @@
       ],
       "size": [
         578.5680541992188,
-        670.2507934570312
+        334
       ],
       "flags": {},
       "order": 28,
@@ -1179,6 +1116,69 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1056.34716796875,
+        180.32040405273438
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 141
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 116
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 117
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            136
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.24",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        1016179998672427,
+        "randomize",
+        10,
+        1,
+        "dpmpp_sde",
+        "beta",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -1492,10 +1492,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.3545800120847487,
+      "scale": 1.9832405956932817,
       "offset": [
-        -144.12209662036827,
-        -81.43278559591381
+        -190.24894263925796,
+        -138.60368269046637
       ]
     },
     "frontendVersion": "1.23.4",
