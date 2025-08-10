@@ -1100,52 +1100,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 124,
-      "type": "MarkdownNote",
-      "pos": [
-        116.5396957397461,
-        294.6907958984375
-      ],
-      "size": [
-        337.55242919921875,
-        132.20989990234375
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "| LoRa  | Strenght | Link |\n| ------------- | ------------- | ------------- |\n| Wan2.1 FusionX I2V & T2V LoRa| 1.00 | 🔗 [Download Link](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/tree/main/FusionX_LoRa)  |\n| LightX2V I2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.1-I2V-14B-480P-StepDistill-CfgDistill-Lightx2v/tree/main/loras)  |\n| LightX2V T2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill-Lightx2v/tree/main/loras)  |\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 125,
-      "type": "MarkdownNote",
-      "pos": [
-        116.93817138671875,
-        695.7550659179688
-      ],
-      "size": [
-        337.55242919921875,
-        132.20989990234375
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "| LoRa  | Strenght | Link |\n| ------------- | ------------- | ------------- |\n| Wan2.1 FusionX I2V & T2V LoRa| 1.00 | 🔗 [Download Link](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/tree/main/FusionX_LoRa)  |\n| LightX2V I2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.1-I2V-14B-480P-StepDistill-CfgDistill-Lightx2v/tree/main/loras)  |\n| LightX2V T2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill-Lightx2v/tree/main/loras)  |\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 48,
       "type": "ModelSamplingSD3",
       "pos": [
@@ -1306,7 +1260,7 @@
         152.43606567382812
       ],
       "flags": {},
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1329,7 +1283,7 @@
         146.9354248046875
       ],
       "flags": {},
-      "order": 20,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1488,6 +1442,52 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 124,
+      "type": "MarkdownNote",
+      "pos": [
+        116.5396957397461,
+        294.6907958984375
+      ],
+      "size": [
+        337.55242919921875,
+        132.20989990234375
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "| LoRa  | Strenght | Link |\n| ------------- | ------------- | ------------- |\n| Wan2.1 FusionX I2V & T2V LoRa| 1.00 | 🔗 [Download Link](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/tree/main/FusionX_LoRa)  |\n| LightX2V I2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main)  |\n| LightX2V T2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main)  |\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 125,
+      "type": "MarkdownNote",
+      "pos": [
+        116.93817138671875,
+        695.7550659179688
+      ],
+      "size": [
+        337.55242919921875,
+        132.20989990234375
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "| LoRa  | Strenght | Link |\n| ------------- | ------------- | ------------- |\n| Wan2.1 FusionX I2V & T2V LoRa| 1.00 | 🔗 [Download Link](https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/tree/main/FusionX_LoRa)  |\n| LightX2V I2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main)  |\n| LightX2V T2V LoRa | 1.00  | 🔗 [Download Link](https://huggingface.co/lightx2v/Wan2.2-Lightning/tree/main)  |\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -1877,13 +1877,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7646251029937942,
+      "scale": 1.4900380132932687,
       "offset": [
-        360.4768204744249,
-        20.39908475695062
+        212.89746841967332,
+        -206.1284409923194
       ]
     },
-    "frontendVersion": "1.23.4",
+    "frontendVersion": "1.24.4",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
