@@ -2,7 +2,7 @@
   "id": "48c4ec36-f5f7-4296-9525-60416af7b109",
   "revision": 0,
   "last_node_id": 33,
-  "last_link_id": 42,
+  "last_link_id": 43,
   "nodes": [
     {
       "id": 23,
@@ -171,62 +171,6 @@
       "bgcolor": "#593930"
     },
     {
-      "id": 3,
-      "type": "FILM VFI",
-      "pos": [
-        356.1102294921875,
-        392.857666015625
-      ],
-      "size": [
-        443.4000244140625,
-        146
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "frames",
-          "type": "IMAGE",
-          "link": 2
-        },
-        {
-          "name": "optional_interpolation_states",
-          "shape": 7,
-          "type": "INTERPOLATION_STATES",
-          "link": null
-        },
-        {
-          "name": "multiplier",
-          "type": "INT",
-          "widget": {
-            "name": "multiplier"
-          },
-          "link": 31
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-frame-interpolation",
-        "ver": "1.0.6",
-        "Node name for S&R": "FILM VFI"
-      },
-      "widgets_values": [
-        "film_net_fp32.pt",
-        10,
-        2
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
       "id": 1,
       "type": "VHS_LoadVideo",
       "pos": [
@@ -260,8 +204,7 @@
           "type": "IMAGE",
           "slot_index": 0,
           "links": [
-            2,
-            36
+            2
           ]
         },
         {
@@ -378,7 +321,7 @@
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 36
+          "link": 43
         }
       ],
       "outputs": [
@@ -832,6 +775,64 @@
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
+    },
+    {
+      "id": 3,
+      "type": "FILM VFI",
+      "pos": [
+        356.1102294921875,
+        392.857666015625
+      ],
+      "size": [
+        443.4000244140625,
+        146
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "optional_interpolation_states",
+          "shape": 7,
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        },
+        {
+          "name": "multiplier",
+          "type": "INT",
+          "widget": {
+            "name": "multiplier"
+          },
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-frame-interpolation",
+        "ver": "1.0.6",
+        "Node name for S&R": "FILM VFI"
+      },
+      "widgets_values": [
+        "film_net_fp32.pt",
+        10,
+        2
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
     }
   ],
   "links": [
@@ -908,14 +909,6 @@
       "FLOAT"
     ],
     [
-      36,
-      1,
-      0,
-      4,
-      1,
-      "IMAGE"
-    ],
-    [
       37,
       11,
       4,
@@ -961,6 +954,14 @@
       0,
       9,
       0,
+      "IMAGE"
+    ],
+    [
+      43,
+      3,
+      0,
+      4,
+      1,
       "IMAGE"
     ]
   ],
@@ -1014,11 +1015,11 @@
         -81.61837673638037
       ]
     },
+    "frontendVersion": "1.27.7",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true,
-    "frontendVersion": "1.27.7"
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
