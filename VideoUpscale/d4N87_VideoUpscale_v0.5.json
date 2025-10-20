@@ -2,7 +2,7 @@
   "id": "48c4ec36-f5f7-4296-9525-60416af7b109",
   "revision": 0,
   "last_node_id": 33,
-  "last_link_id": 43,
+  "last_link_id": 44,
   "nodes": [
     {
       "id": 23,
@@ -22,13 +22,13 @@
         {
           "name": "a",
           "shape": 7,
-          "type": "INT,FLOAT",
+          "type": "*",
           "link": null
         },
         {
           "name": "b",
           "shape": 7,
-          "type": "INT,FLOAT",
+          "type": "*",
           "link": null
         },
         {
@@ -113,64 +113,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 15,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        364.1712341308594,
-        584.5432739257812
-      ],
-      "size": [
-        210,
-        128
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 16
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 30
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "slot_index": 0,
-          "links": []
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "title": "Framerate",
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "2c09d59ab5ac27ac59022832bfde4eeeb9c55825"
-      },
-      "widgets_values": [
-        "a*b"
-      ],
-      "color": "#332922",
-      "bgcolor": "#593930"
-    },
-    {
       "id": 1,
       "type": "VHS_LoadVideo",
       "pos": [
@@ -179,7 +121,7 @@
       ],
       "size": [
         247.455078125,
-        451.9747314453125
+        310
       ],
       "flags": {},
       "order": 3,
@@ -370,8 +312,7 @@
           "type": "FLOAT",
           "slot_index": 0,
           "links": [
-            16,
-            32
+            16
           ]
         },
         {
@@ -418,7 +359,7 @@
         58
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -631,7 +572,7 @@
         26
       ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -640,7 +581,7 @@
           "widget": {
             "name": "value"
           },
-          "link": 32
+          "link": 44
         }
       ],
       "outputs": [
@@ -688,93 +629,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 9,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        1837.7999267578125,
-        353.77923583984375
-      ],
-      "size": [
-        415.2525329589844,
-        570.3295288085938
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 42
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 11
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "frame_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "frame_rate"
-          },
-          "link": 35
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "73418575ca842f5f7575c48f17f45181e14715c1",
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 8,
-        "loop_count": 0,
-        "filename_prefix": "VideoUpscale",
-        "format": "video/nvenc_hevc-mp4",
-        "pix_fmt": "yuv420p",
-        "bitrate": 10,
-        "megabit": true,
-        "save_metadata": true,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "VideoUpscale_00005-audio.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/nvenc_hevc-mp4",
-            "frame_rate": 25,
-            "workflow": "VideoUpscale_00005.png",
-            "fullpath": "C:\\Users\\daniele.nofi\\Desktop\\Comfy\\ComfyUI\\ComfyUI\\output\\VideoUpscale_00005-audio.mp4"
-          }
-        }
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 3,
@@ -833,6 +687,153 @@
       ],
       "color": "#332922",
       "bgcolor": "#593930"
+    },
+    {
+      "id": 15,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        364.1712341308594,
+        584.5432739257812
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 16
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 30
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "title": "Framerate",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "2c09d59ab5ac27ac59022832bfde4eeeb9c55825"
+      },
+      "widgets_values": [
+        "a*b"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 9,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1837.7999267578125,
+        353.77923583984375
+      ],
+      "size": [
+        415.2525329589844,
+        334
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 42
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 11
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "73418575ca842f5f7575c48f17f45181e14715c1",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "VideoUpscale",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "VideoUpscale_00005-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/nvenc_hevc-mp4",
+            "frame_rate": 25,
+            "workflow": "VideoUpscale_00005.png",
+            "fullpath": "C:\\Users\\daniele.nofi\\Desktop\\Comfy\\ComfyUI\\ComfyUI\\output\\VideoUpscale_00005-audio.mp4"
+          }
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -891,14 +892,6 @@
       3,
       2,
       "INT"
-    ],
-    [
-      32,
-      11,
-      0,
-      29,
-      0,
-      "*"
     ],
     [
       35,
@@ -963,6 +956,14 @@
       4,
       1,
       "IMAGE"
+    ],
+    [
+      44,
+      15,
+      1,
+      29,
+      0,
+      "*"
     ]
   ],
   "groups": [
@@ -1009,13 +1010,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9090909090909091,
+      "scale": 0.8264462809917354,
       "offset": [
-        473.57661175543063,
-        -81.61837673638037
+        303.0357162476182,
+        4.013451632760493
       ]
     },
-    "frontendVersion": "1.27.7",
+    "frontendVersion": "1.28.7",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
