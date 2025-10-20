@@ -385,12 +385,12 @@
         "cnr_id": "ComfyUI-GGUF",
         "ver": "298192ed60f8ca821c6fe5f8030cae23424cada5",
         "Node name for S&R": "UnetLoaderGGUF",
+        "aux_id": "city96/ComfyUI-GGUF",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.3",
           "input_ue_unconnectable": {}
-        },
-        "aux_id": "city96/ComfyUI-GGUF"
+        }
       },
       "widgets_values": [
         "Wan2.1\\Wan2.1_T2V_14B_Q8_0.gguf"
@@ -702,74 +702,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        346.22353566579096,
-        -25.215463694427086
-      ],
-      "size": [
-        310,
-        550
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 95
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 46
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 52
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 91
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            211
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.62",
-        "Node name for S&R": "KSampler",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.3",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        176944627267655,
-        "randomize",
-        20,
-        2.5,
-        "uni_pc",
-        "simple",
-        1
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 116,
       "type": "Reroute",
       "pos": [
@@ -1076,18 +1008,18 @@
         {
           "name": "width",
           "type": "INT",
+          "link": 196,
           "widget": {
             "name": "width"
-          },
-          "link": 196
+          }
         },
         {
           "name": "height",
           "type": "INT",
+          "link": 197,
           "widget": {
             "name": "height"
-          },
-          "link": 197
+          }
         }
       ],
       "outputs": [
@@ -1100,9 +1032,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "FL_ImageBlank",
         "cnr_id": "comfyui_fill-nodes",
         "ver": "2.0.2",
-        "Node name for S&R": "FL_ImageBlank",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -1418,7 +1350,7 @@
       ],
       "size": [
         433.8943014256738,
-        1065.4167891378347
+        334
       ],
       "flags": {},
       "order": 31,
@@ -1502,7 +1434,7 @@
       ],
       "size": [
         433.8943014256738,
-        1065.4167891378347
+        334
       ],
       "flags": {},
       "order": 24,
@@ -1586,7 +1518,7 @@
       ],
       "size": [
         433.8943014256738,
-        1065.4167891378347
+        334
       ],
       "flags": {},
       "order": 32,
@@ -1658,6 +1590,74 @@
           }
         }
       },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        346.22353566579096,
+        -25.215463694427086
+      ],
+      "size": [
+        310,
+        550
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 95
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 46
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 52
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            211
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.3",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        176944627267655,
+        "randomize",
+        4,
+        1,
+        "uni_pc",
+        "simple",
+        1
+      ],
       "color": "#223",
       "bgcolor": "#335"
     }
