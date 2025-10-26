@@ -1,7 +1,7 @@
 {
   "id": "2590636d-d18a-42fd-b809-47e55464c204",
   "revision": 0,
-  "last_node_id": 198,
+  "last_node_id": 199,
   "last_link_id": 375,
   "nodes": [
     {
@@ -147,7 +147,7 @@
         26
       ],
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -233,7 +233,7 @@
         26
       ],
       "flags": {},
-      "order": 27,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -318,7 +318,7 @@
         130
       ],
       "flags": {},
-      "order": 34,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -362,7 +362,7 @@
         58
       ],
       "flags": {},
-      "order": 36,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -403,7 +403,7 @@
         26
       ],
       "flags": {},
-      "order": 38,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -647,7 +647,7 @@
         180.6060791015625
       ],
       "flags": {},
-      "order": 32,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -690,7 +690,7 @@
         58
       ],
       "flags": {},
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -732,7 +732,7 @@
         474
       ],
       "flags": {},
-      "order": 45,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -818,7 +818,7 @@
         46
       ],
       "flags": {},
-      "order": 35,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -899,11 +899,11 @@
         791.2064819335938
       ],
       "size": [
-        140.8000030517578,
+        140.8,
         26
       ],
       "flags": {},
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -939,11 +939,11 @@
         826.4981079101562
       ],
       "size": [
-        140.8000030517578,
+        140.8,
         26
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -983,7 +983,7 @@
         26
       ],
       "flags": {},
-      "order": 37,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1063,7 +1063,7 @@
         26
       ],
       "flags": {},
-      "order": 28,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1105,7 +1105,7 @@
         250
       ],
       "flags": {},
-      "order": 39,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1246,7 +1246,7 @@
         26
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1307,7 +1307,7 @@
         82
       ],
       "flags": {},
-      "order": 52,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1357,7 +1357,7 @@
         78
       ],
       "flags": {},
-      "order": 50,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -1403,7 +1403,7 @@
         106
       ],
       "flags": {},
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -1446,7 +1446,7 @@
         26
       ],
       "flags": {},
-      "order": 29,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1567,7 +1567,7 @@
         26
       ],
       "flags": {},
-      "order": 44,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -1607,7 +1607,7 @@
         46
       ],
       "flags": {},
-      "order": 51,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1668,43 +1668,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 162,
-      "type": "LoadAudio",
-      "pos": [
-        -373.5104675292969,
-        1587.0418701171875
-      ],
-      "size": [
-        358.24737548828125,
-        136
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": [
-            361
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.59",
-        "Node name for S&R": "LoadAudio"
-      },
-      "widgets_values": [
-        "When You Just Ain’t Got it All Together.wav",
-        null,
-        null
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 139,
       "type": "LoadAndResizeImage",
       "pos": [
@@ -1716,7 +1679,7 @@
         566.0001220703125
       ],
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1784,10 +1747,10 @@
       ],
       "size": [
         578.5680541992188,
-        697.1050415039062
+        334
       ],
       "flags": {},
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -1866,7 +1829,7 @@
         166
       ],
       "flags": {},
-      "order": 40,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -1929,118 +1892,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 180,
-      "type": "c7011d88-ef5f-473a-b243-70ac8e519b78",
-      "pos": [
-        2864.988525390625,
-        179.5838165283203
-      ],
-      "size": [
-        264.7439270019531,
-        482
-      ],
-      "flags": {},
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 302
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 303
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 304
-        },
-        {
-          "name": "audio_encoder_output",
-          "type": "AUDIO_ENCODER_OUTPUT",
-          "link": 307
-        },
-        {
-          "name": "ref_image",
-          "type": "IMAGE",
-          "link": 310
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 301
-        },
-        {
-          "label": "latent",
-          "name": "samples1",
-          "type": "LATENT",
-          "link": 300
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "widget": {
-            "name": "seed"
-          },
-          "link": 333
-        },
-        {
-          "name": "control_video",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "widget": {
-            "name": "steps"
-          },
-          "link": 335
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "widget": {
-            "name": "cfg"
-          },
-          "link": 337
-        },
-        {
-          "name": "length",
-          "type": "INT",
-          "widget": {
-            "name": "length"
-          },
-          "link": 373
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            346
-          ]
-        }
-      ],
-      "title": "Estensione Video 1 - d4N87",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.59"
-      },
-      "widgets_values": [
-        4,
-        4,
-        1,
-        77
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
-    },
-    {
       "id": 187,
       "type": "Primitive integer [Crystools]",
       "pos": [
@@ -2052,7 +1903,7 @@
         58
       ],
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2091,7 +1942,7 @@
         164.31304931640625
       ],
       "flags": {},
-      "order": 33,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -2134,7 +1985,7 @@
         155.0360107421875
       ],
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -2157,7 +2008,7 @@
         482
       ],
       "flags": {},
-      "order": 48,
+      "order": 49,
       "mode": 4,
       "inputs": [
         {
@@ -2245,6 +2096,24 @@
         }
       ],
       "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "length"
+          ]
+        ],
         "cnr_id": "comfy-core",
         "ver": "0.3.59"
       },
@@ -2269,7 +2138,7 @@
         482
       ],
       "flags": {},
-      "order": 47,
+      "order": 48,
       "mode": 4,
       "inputs": [
         {
@@ -2356,6 +2225,24 @@
         }
       ],
       "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "length"
+          ]
+        ],
         "cnr_id": "comfy-core",
         "ver": "0.3.59"
       },
@@ -2380,7 +2267,7 @@
         82
       ],
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2405,6 +2292,196 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 162,
+      "type": "LoadAudio",
+      "pos": [
+        -373.5104675292969,
+        1587.0418701171875
+      ],
+      "size": [
+        358.24737548828125,
+        136
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            361
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "When You Just Ain’t Got it All Together.wav",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 180,
+      "type": "c7011d88-ef5f-473a-b243-70ac8e519b78",
+      "pos": [
+        2864.988525390625,
+        179.5838165283203
+      ],
+      "size": [
+        264.7439270019531,
+        482
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 302
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 303
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 304
+        },
+        {
+          "name": "audio_encoder_output",
+          "type": "AUDIO_ENCODER_OUTPUT",
+          "link": 307
+        },
+        {
+          "name": "ref_image",
+          "type": "IMAGE",
+          "link": 310
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 301
+        },
+        {
+          "label": "latent",
+          "name": "samples1",
+          "type": "LATENT",
+          "link": 300
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 333
+        },
+        {
+          "name": "control_video",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 335
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": 337
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 373
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            346
+          ]
+        }
+      ],
+      "title": "Estensione Video 1 - d4N87",
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "cfg"
+          ],
+          [
+            "-1",
+            "length"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59"
+      },
+      "widgets_values": [
+        4,
+        4,
+        1,
+        77
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 199,
+      "type": "MarkdownNote",
+      "pos": [
+        -820.6173217156726,
+        135.2796872305168
+      ],
+      "size": [
+        388.3369556887229,
+        607.760934623348
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "## Model links\n\n**audio_encoders**\n- [wav2vec2_large_english_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/audio_encoders/wav2vec2_large_english_fp16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/audio_encoders)\n\n**diffusion_models**       \n- [wan2.2_s2v_14B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_s2v_14B_bf16.safetensors?download=true) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models)\n- [wan2.2_s2v_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_s2v_14B_fp8_scaled.safetensors?download=true) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/diffusion_models)\n\n**clip**\n- [umt5-xxl-encoder-QXX.gguf](https://huggingface.co/city96/umt5-xxl-encoder-gguf/tree/main) - [repository HF](https://huggingface.co/city96/umt5-xxl-encoder-gguf/tree/main)\n\n**text_encoders**   \n- [umt5_xxl_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/text_encoders/umt5_xxl_fp16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/text_encoders)\n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/text_encoders)\n\n**unet**\n- [Wan2.2-S2V-14B-QXX.gguf](https://huggingface.co/QuantStack/Wan2.2-S2V-14B-GGUF/tree/main) - [repository HF](https://huggingface.co/QuantStack/Wan2.2-S2V-14B-GGUF/tree/main)\n\n**vae**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/vae/wan_2.1_vae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/vae)\n\n___\n\n## Folders\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 audio_encoders/\n│   │   └─── wav2vec2_large_english_fp16.safetensors\n│   ├───📂 diffusion_models/\n│   │   ├─── wan2.2_s2v_14B_bf16.safetensors\n│   │   └─── wan2.2_s2v_14B_fp8_scaled.safetensors\n│   ├───📂 clip/\n│   │   └─── umt5-xxl-encoder-QXX.gguf\n│   ├───📂 text_encoders/\n│   │   ├─── umt5_xxl_fp16.safetensors\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors\n│   ├───📂 unet/\n│   │   └─── Wan2.2-S2V-14B-QXX.gguf\n│   └───📂 vae/\n│       └─── wan2.1_vae.safetensors\n```\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -3267,10 +3344,10 @@
             "linkIds": [
               320
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1859.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1859.0277099609375
+            ]
           },
           {
             "id": "d84dabe5-9a20-4072-b560-2575a0ef8ad9",
@@ -3279,10 +3356,10 @@
             "linkIds": [
               321
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1879.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1879.0277099609375
+            ]
           },
           {
             "id": "d08206e6-422a-49b9-9436-0d9b2d25b8ff",
@@ -3291,10 +3368,10 @@
             "linkIds": [
               322
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1899.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1899.0277099609375
+            ]
           },
           {
             "id": "11567594-9672-407d-bd27-601c8845cbdb",
@@ -3303,10 +3380,10 @@
             "linkIds": [
               323
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1919.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1919.0277099609375
+            ]
           },
           {
             "id": "cea648db-c2dd-4b7c-8449-214f306a6c4d",
@@ -3315,10 +3392,10 @@
             "linkIds": [
               324
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1939.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1939.0277099609375
+            ]
           },
           {
             "id": "d227f5ca-7113-407a-8318-18d0675d5b77",
@@ -3327,10 +3404,10 @@
             "linkIds": [
               309
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1959.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1959.0277099609375
+            ]
           },
           {
             "id": "4b429c8a-faa7-4357-9eb0-cce9c673802e",
@@ -3341,10 +3418,10 @@
               326
             ],
             "label": "latent",
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1979.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1979.0277099609375
+            ]
           },
           {
             "id": "bba8ea98-82e3-4788-aa34-bb0c1f480a40",
@@ -3353,10 +3430,10 @@
             "linkIds": [
               316
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 1999.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              1999.0277099609375
+            ]
           },
           {
             "id": "8bf38eb5-61d6-41a1-8b4f-da78fdc1fa8f",
@@ -3365,10 +3442,10 @@
             "linkIds": [
               325
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 2019.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              2019.0277099609375
+            ]
           },
           {
             "id": "17bbe620-3b14-4e2f-baa9-6989330c7a67",
@@ -3377,10 +3454,10 @@
             "linkIds": [
               327
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 2039.0277099609375
-            }
+            "pos": [
+              2556.678955078125,
+              2039.0277099609375
+            ]
           },
           {
             "id": "2a6ca3c1-6eaf-4a4d-bbb2-7139c5cacf22",
@@ -3389,10 +3466,10 @@
             "linkIds": [
               328
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 2059.02783203125
-            }
+            "pos": [
+              2556.678955078125,
+              2059.0277099609375
+            ]
           },
           {
             "id": "390d9a8d-71bf-4568-92dc-07c434f37f17",
@@ -3401,10 +3478,10 @@
             "linkIds": [
               329
             ],
-            "pos": {
-              "0": 2556.678955078125,
-              "1": 2079.02783203125
-            }
+            "pos": [
+              2556.678955078125,
+              2079.0277099609375
+            ]
           }
         ],
         "outputs": [
@@ -3415,10 +3492,10 @@
             "linkIds": [
               311
             ],
-            "pos": {
-              "0": 3840.15283203125,
-              "1": 1859.0277099609375
-            }
+            "pos": [
+              3840.15283203125,
+              1859.0277099609375
+            ]
           }
         ],
         "widgets": [],
@@ -3828,13 +3905,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6756327610481742,
+      "scale": 1.1969246497952657,
       "offset": [
-        -783.8396971828714,
-        55.73443651788571
+        936.1456567729936,
+        -14.439126860331598
       ]
     },
-    "frontendVersion": "1.26.13",
+    "frontendVersion": "1.28.7",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
