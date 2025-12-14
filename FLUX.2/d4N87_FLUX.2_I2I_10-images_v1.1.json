@@ -1,7 +1,7 @@
 {
   "id": "a6280028-dacf-4d95-bc14-447dbafddd00",
   "revision": 0,
-  "last_node_id": 183,
+  "last_node_id": 184,
   "last_link_id": 355,
   "nodes": [
     {
@@ -16,7 +16,7 @@
         592.18896484375
       ],
       "flags": {},
-      "order": 80,
+      "order": 81,
       "mode": 0,
       "inputs": [
         {
@@ -47,7 +47,7 @@
         385.70196533203125
       ],
       "flags": {},
-      "order": 79,
+      "order": 80,
       "mode": 0,
       "inputs": [
         {
@@ -191,7 +191,7 @@
         58
       ],
       "flags": {},
-      "order": 60,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -315,7 +315,7 @@
         46
       ],
       "flags": {},
-      "order": 74,
+      "order": 75,
       "mode": 0,
       "inputs": [
         {
@@ -395,7 +395,7 @@
         124.53733825683594
       ],
       "flags": {},
-      "order": 75,
+      "order": 76,
       "mode": 0,
       "inputs": [
         {
@@ -460,7 +460,7 @@
         26
       ],
       "flags": {},
-      "order": 31,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -576,7 +576,7 @@
         106
       ],
       "flags": {},
-      "order": 46,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -630,7 +630,7 @@
         106
       ],
       "flags": {},
-      "order": 47,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -790,7 +790,7 @@
         88
       ],
       "flags": {},
-      "order": 44,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -831,7 +831,7 @@
         88
       ],
       "flags": {},
-      "order": 45,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -872,7 +872,7 @@
         246
       ],
       "flags": {},
-      "order": 48,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -934,7 +934,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 54,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -985,7 +985,7 @@
         46
       ],
       "flags": {},
-      "order": 76,
+      "order": 77,
       "mode": 0,
       "inputs": [
         {
@@ -1029,7 +1029,7 @@
         26
       ],
       "flags": {},
-      "order": 78,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -1097,7 +1097,7 @@
         583.5060252169184
       ],
       "flags": {},
-      "order": 81,
+      "order": 82,
       "mode": 4,
       "inputs": [
         {
@@ -1179,7 +1179,7 @@
         286
       ],
       "flags": {},
-      "order": 32,
+      "order": 33,
       "mode": 4,
       "inputs": [
         {
@@ -1248,7 +1248,7 @@
         286
       ],
       "flags": {},
-      "order": 33,
+      "order": 34,
       "mode": 4,
       "inputs": [
         {
@@ -1359,7 +1359,7 @@
         286
       ],
       "flags": {},
-      "order": 34,
+      "order": 35,
       "mode": 4,
       "inputs": [
         {
@@ -1470,7 +1470,7 @@
         286
       ],
       "flags": {},
-      "order": 35,
+      "order": 36,
       "mode": 4,
       "inputs": [
         {
@@ -1581,7 +1581,7 @@
         286
       ],
       "flags": {},
-      "order": 36,
+      "order": 37,
       "mode": 4,
       "inputs": [
         {
@@ -1692,7 +1692,7 @@
         286
       ],
       "flags": {},
-      "order": 37,
+      "order": 38,
       "mode": 4,
       "inputs": [
         {
@@ -1803,7 +1803,7 @@
         286
       ],
       "flags": {},
-      "order": 38,
+      "order": 39,
       "mode": 4,
       "inputs": [
         {
@@ -1914,7 +1914,7 @@
         286
       ],
       "flags": {},
-      "order": 39,
+      "order": 40,
       "mode": 4,
       "inputs": [
         {
@@ -2025,7 +2025,7 @@
         286
       ],
       "flags": {},
-      "order": 40,
+      "order": 41,
       "mode": 4,
       "inputs": [
         {
@@ -2136,7 +2136,7 @@
         26
       ],
       "flags": {},
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -2177,7 +2177,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 50,
+      "order": 51,
       "mode": 4,
       "inputs": [
         {
@@ -2221,7 +2221,7 @@
         46
       ],
       "flags": {},
-      "order": 65,
+      "order": 66,
       "mode": 4,
       "inputs": [
         {
@@ -2269,7 +2269,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 51,
+      "order": 52,
       "mode": 4,
       "inputs": [
         {
@@ -2313,7 +2313,7 @@
         46
       ],
       "flags": {},
-      "order": 66,
+      "order": 67,
       "mode": 4,
       "inputs": [
         {
@@ -2361,7 +2361,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 52,
+      "order": 53,
       "mode": 4,
       "inputs": [
         {
@@ -2405,7 +2405,7 @@
         46
       ],
       "flags": {},
-      "order": 67,
+      "order": 68,
       "mode": 4,
       "inputs": [
         {
@@ -2453,7 +2453,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 56,
+      "order": 57,
       "mode": 4,
       "inputs": [
         {
@@ -2497,7 +2497,7 @@
         46
       ],
       "flags": {},
-      "order": 68,
+      "order": 69,
       "mode": 4,
       "inputs": [
         {
@@ -2543,7 +2543,7 @@
         46
       ],
       "flags": {},
-      "order": 69,
+      "order": 70,
       "mode": 4,
       "inputs": [
         {
@@ -2591,7 +2591,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 57,
+      "order": 58,
       "mode": 4,
       "inputs": [
         {
@@ -2635,7 +2635,7 @@
         46
       ],
       "flags": {},
-      "order": 70,
+      "order": 71,
       "mode": 4,
       "inputs": [
         {
@@ -2683,7 +2683,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 58,
+      "order": 59,
       "mode": 4,
       "inputs": [
         {
@@ -2729,7 +2729,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 61,
+      "order": 62,
       "mode": 4,
       "inputs": [
         {
@@ -2773,7 +2773,7 @@
         46
       ],
       "flags": {},
-      "order": 71,
+      "order": 72,
       "mode": 4,
       "inputs": [
         {
@@ -2819,7 +2819,7 @@
         46
       ],
       "flags": {},
-      "order": 72,
+      "order": 73,
       "mode": 4,
       "inputs": [
         {
@@ -2867,7 +2867,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 62,
+      "order": 63,
       "mode": 4,
       "inputs": [
         {
@@ -2913,7 +2913,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 63,
+      "order": 64,
       "mode": 4,
       "inputs": [
         {
@@ -2980,7 +2980,7 @@
         26
       ],
       "flags": {},
-      "order": 28,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -3020,7 +3020,7 @@
         26
       ],
       "flags": {},
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -3060,7 +3060,7 @@
         26
       ],
       "flags": {},
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -3100,7 +3100,7 @@
         26
       ],
       "flags": {},
-      "order": 59,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -3139,7 +3139,7 @@
         46
       ],
       "flags": {},
-      "order": 73,
+      "order": 74,
       "mode": 4,
       "inputs": [
         {
@@ -3185,7 +3185,7 @@
         26
       ],
       "flags": {},
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -3258,7 +3258,7 @@
         286
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 4,
       "inputs": [
         {
@@ -3329,7 +3329,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 55,
+      "order": 56,
       "mode": 4,
       "inputs": [
         {
@@ -3373,7 +3373,7 @@
         46
       ],
       "flags": {},
-      "order": 64,
+      "order": 65,
       "mode": 4,
       "inputs": [
         {
@@ -3419,7 +3419,7 @@
         126
       ],
       "flags": {},
-      "order": 77,
+      "order": 78,
       "mode": 4,
       "inputs": [
         {
@@ -3467,7 +3467,7 @@
         58
       ],
       "flags": {},
-      "order": 29,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -3518,7 +3518,7 @@
         58
       ],
       "flags": {},
-      "order": 30,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -3658,6 +3658,30 @@
       },
       "widgets_values": [
         "Qui viene caricato Mistral 3.2 Small 24B."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 184,
+      "type": "MarkdownNote",
+      "pos": [
+        -401.18538352756724,
+        41.39162798313225
+      ],
+      "size": [
+        364.3342459667815,
+        617.7279781473298
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modello, Text Encoder, VAE",
+      "properties": {},
+      "widgets_values": [
+        "## Model links\n\n**diffusion_models**       \n- [flux2-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.2-dev/resolve/main/flux2-dev.safetensors) - [repository HF](https://huggingface.co/black-forest-labs/FLUX.2-dev/tree/main)\n- [flux2_dev_fp8mixed.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/diffusion_models)\n\n**unet (GGUF)**\n- [flux2-dev-QXX.gguf](https://huggingface.co/city96/FLUX.2-dev-gguf/tree/main)\n\n**vae**\n- [flux2-vae.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/vae)\n\n**text_encoders**   \n- [mistral_3_small_flux2_bf16.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n- [mistral_3_small_flux2_fp8.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n\n**text_encoders - GGUF**   \n- [Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf](https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── flux2-dev.safetensors\n│   │   └─── flux2_dev_fp8mixed.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── mistral_3_small_flux2_bf16.safetensors \n│   │   └─── mistral_3_small_flux2_fp8.safetensors\n│   └───📂 vae/\n│       └─── flux2-vae.safetensors\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── flux2-dev-QXX.gguf\n│   └───📂 clip/\n│       └─── Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf\n```\n"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -5019,10 +5043,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5222492336546518,
+      "scale": 1.017716012084716,
       "offset": [
-        734.6767217151111,
-        237.1976439617721
+        949.7528444327639,
+        207.48502162753493
       ]
     },
     "frontendVersion": "1.32.10",
