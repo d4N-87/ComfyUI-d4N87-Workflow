@@ -1,8 +1,8 @@
 {
   "id": "a6280028-dacf-4d95-bc14-447dbafddd00",
   "revision": 0,
-  "last_node_id": 217,
-  "last_link_id": 453,
+  "last_node_id": 219,
+  "last_link_id": 458,
   "nodes": [
     {
       "id": 90,
@@ -16,7 +16,7 @@
         592.18896484375
       ],
       "flags": {},
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -47,7 +47,7 @@
         385.70196533203125
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -139,7 +139,7 @@
         26
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -165,31 +165,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 27,
-      "type": "Note",
-      "pos": [
-        11.80991457914189,
-        728.7111760913507
-      ],
-      "size": [
-        321.7504038147823,
-        88
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "Qui viene caricato Mistral 3.2 Small 24B."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 80,
       "type": "UNETLoader",
       "pos": [
@@ -201,7 +176,7 @@
         82
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -238,7 +213,7 @@
         106
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -273,7 +248,7 @@
         26
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -313,7 +288,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 27,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -364,13 +339,13 @@
         550.4329467980364
       ],
       "flags": {},
-      "order": 39,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 422
+          "link": 458
         },
         {
           "name": "positive",
@@ -428,7 +403,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -454,7 +429,7 @@
         60
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -503,7 +478,7 @@
         250
       ],
       "flags": {},
-      "order": 35,
+      "order": 36,
       "mode": 4,
       "inputs": [
         {
@@ -550,7 +525,7 @@
         260.2461242675781
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -575,7 +550,7 @@
         88
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 4,
       "inputs": [],
       "outputs": [],
@@ -600,7 +575,7 @@
         46
       ],
       "flags": {},
-      "order": 40,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -644,7 +619,7 @@
         26
       ],
       "flags": {},
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -683,7 +658,7 @@
         82
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -719,7 +694,7 @@
         26
       ],
       "flags": {},
-      "order": 30,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -758,7 +733,7 @@
         26
       ],
       "flags": {},
-      "order": 34,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -804,7 +779,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -829,48 +804,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 198,
-      "type": "LoadImage",
-      "pos": [
-        18.297436296935246,
-        1186.305527146143
-      ],
-      "size": [
-        274.080078125,
-        314
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            406
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "Reference",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.71",
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "z-image_00009_.png",
-        "image"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 191,
       "type": "EmptySD3LatentImage",
       "pos": [
@@ -882,7 +815,7 @@
         110
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -916,104 +849,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 95,
-      "type": "Lora Loader Stack (rgthree)",
-      "pos": [
-        812.4940985066992,
-        79.79727105479708
-      ],
-      "size": [
-        454.2310485839844,
-        246
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 392
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 351
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            421
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            261
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "07c5eab7c73721e313e3be58e150f7f886a5a62f",
-        "Node name for S&R": "Lora Loader Stack (rgthree)"
-      },
-      "widgets_values": [
-        "None",
-        1,
-        "None",
-        1,
-        "None",
-        1,
-        "None",
-        1.0000000000000002
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 199,
-      "type": "Reroute",
-      "pos": [
-        349.28531511551495,
-        903.9708132019057
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 408
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            409,
-            423
-          ]
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      },
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 196,
       "type": "Reroute",
       "pos": [
@@ -1025,7 +860,7 @@
         26
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1063,7 +898,7 @@
         336
       ],
       "flags": {},
-      "order": 20,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1134,7 +969,7 @@
         26
       ],
       "flags": {},
-      "order": 23,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1175,7 +1010,7 @@
         334.8871154785156
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1202,56 +1037,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 30,
-      "type": "Note",
-      "pos": [
-        16.712721678590746,
-        998.527885512421
-      ],
-      "size": [
-        308.4786071777344,
-        88
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "Qui viene caricato il VAE per FLUX.2."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 214,
-      "type": "Note",
-      "pos": [
-        762.7784749631261,
-        1184.91395990135
-      ],
-      "size": [
-        276.53573527951767,
-        88
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "Questo blocco si occupa di caricare i preprocessori, si possono variare e aggiungere in base alle proprie necessità.\nCosì com'è verrà applicato il depth all'open pose."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 212,
       "type": "Reroute",
       "pos": [
@@ -1263,7 +1048,7 @@
         26
       ],
       "flags": {},
-      "order": 28,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1301,7 +1086,7 @@
         102
       ],
       "flags": {},
-      "order": 32,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1350,7 +1135,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1402,7 +1187,7 @@
         82
       ],
       "flags": {},
-      "order": 26,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1443,103 +1228,6 @@
       "bgcolor": "#593930"
     },
     {
-      "id": 204,
-      "type": "QwenImageDiffsynthControlnet",
-      "pos": [
-        2751.3170712775,
-        73.66648938279222
-      ],
-      "size": [
-        307.5689453125,
-        138
-      ],
-      "flags": {},
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 421
-        },
-        {
-          "name": "model_patch",
-          "type": "MODEL_PATCH",
-          "link": 420
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 423
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 451
-        },
-        {
-          "name": "mask",
-          "shape": 7,
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            422
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.4.0",
-        "Node name for S&R": "QwenImageDiffsynthControlnet"
-      },
-      "widgets_values": [
-        1
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 205,
-      "type": "ModelPatchLoader",
-      "pos": [
-        2471.283098718207,
-        76.70726053698056
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL_PATCH",
-          "type": "MODEL_PATCH",
-          "links": [
-            420
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.4.0",
-        "Node name for S&R": "ModelPatchLoader"
-      },
-      "widgets_values": [
-        "Z-Image_Turbo_Fun_ControlNet_Union.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 203,
       "type": "PreviewImage",
       "pos": [
@@ -1551,7 +1239,7 @@
         428.9894533376363
       ],
       "flags": {},
-      "order": 31,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1583,7 +1271,7 @@
         428.9894533376363
       ],
       "flags": {},
-      "order": 33,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1615,7 +1303,7 @@
         26
       ],
       "flags": {},
-      "order": 29,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1674,6 +1362,195 @@
       "bgcolor": "#535"
     },
     {
+      "id": 194,
+      "type": "MarkdownNote",
+      "pos": [
+        -431.8863295261722,
+        40.658375022878616
+      ],
+      "size": [
+        406.3612668555387,
+        765.3848732372858
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modello, Text Encoder, VAE",
+      "properties": {},
+      "widgets_values": [
+        "## Model links\n\n**diffusion_models**       \n- [z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models)\n- [z-image-turbo-fp8-e4m3fn.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/T5B/Z-Image-Turbo-FP8/tree/main)\n\n**unet (GGUF)**\n- [z_image_turbo-QXX.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/tree/main)\n\n**vae**\n- [ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae)\n- [UltraFlux-v1.safetensors](https://huggingface.co/Owen777/UltraFlux-v1/resolve/main/vae/diffusion_pytorch_model.safetensors) - [repository HF](https://huggingface.co/Owen777/UltraFlux-v1/tree/main/vae)\n\n**text_encoders**   \n- [qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders)\n- [qwen3_4b_fp8_scaled.safetensors](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/resolve/main/qwen3_4b_fp8_scaled.safetensors) - [repository HF](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/tree/main)\n\n**text_encoders - GGUF**   \n- [Qwen_3_4b-QXX.gguf](https://huggingface.co/worstplayer/Z-Image_Qwen_3_4b_text_encoder_GGUF/tree/main)\n\n**controlnet**\n- [Z-Image-Turbo-Fun-Controlnet-Union.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── z_image_turbo_bf16.safetensors\n│   │   └─── z-image-turbo-fp8-e4m3fn.safetensors\n│   ├───📂 model_patches/\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union.safetensors\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors\n│   │   └─── Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors\n│   ├───📂 text_encoders/\n│   │   ├─── qwen_3_4b.safetensors \n│   │   └─── qwen3_4b_fp8_scaled.safetensors\n│   └───📂 vae/\n│       ├─── ae.safetensors\n│       └─── UltraFlux-v1.safetensors\n\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── z_image_turbo-QXX.gguf\n│   └───📂 clip/\n│       └─── Qwen_3_4b-QXX.gguf\n```\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 95,
+      "type": "Lora Loader Stack (rgthree)",
+      "pos": [
+        812.4940985066992,
+        79.79727105479708
+      ],
+      "size": [
+        454.2310485839844,
+        246
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 392
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 351
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            455
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            261
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "07c5eab7c73721e313e3be58e150f7f886a5a62f",
+        "Node name for S&R": "Lora Loader Stack (rgthree)"
+      },
+      "widgets_values": [
+        "None",
+        1,
+        "None",
+        1,
+        "None",
+        1,
+        "None",
+        1.0000000000000002
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 199,
+      "type": "Reroute",
+      "pos": [
+        349.28531511551495,
+        903.9708132019057
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 408
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            409,
+            456
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 30,
+      "type": "Note",
+      "pos": [
+        16.712721678590746,
+        998.527885512421
+      ],
+      "size": [
+        308.4786071777344,
+        88
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il VAE per FLUX.1.\nPer risultati migliori testare anche la versione UltraFlux v1."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 198,
+      "type": "LoadImage",
+      "pos": [
+        18.297436296935246,
+        1186.305527146143
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            406
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Reference",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 215,
       "type": "Reroute",
       "pos": [
@@ -1685,7 +1562,7 @@
         26
       ],
       "flags": {},
-      "order": 36,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1699,8 +1576,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            451,
-            453
+            453,
+            457
           ]
         }
       ],
@@ -1712,28 +1589,183 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 194,
-      "type": "MarkdownNote",
+      "id": 218,
+      "type": "ZImageFunControlnet",
       "pos": [
-        -431.8863295261722,
-        40.658375022878616
+        2775.073506462294,
+        70.06624773961956
       ],
       "size": [
-        407.6792428171766,
-        721.7053621177222
+        270,
+        158
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 455
+        },
+        {
+          "name": "model_patch",
+          "type": "MODEL_PATCH",
+          "link": 454
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 456
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 457
+        },
+        {
+          "name": "inpaint_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            458
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "ZImageFunControlnet"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 27,
+      "type": "Note",
+      "pos": [
+        11.80991457914189,
+        728.7111760913507
+      ],
+      "size": [
+        321.7504038147823,
+        88
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato Qwen 3 4B."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 214,
+      "type": "Note",
+      "pos": [
+        762.7784749631261,
+        1184.91395990135
+      ],
+      "size": [
+        276.53573527951767,
+        88
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Questo blocco si occupa di caricare i preprocessori, si possono variare e aggiungere in base alle proprie necessità.\nCosì com'è verrà applicato il depth all'open pose."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 219,
+      "type": "Note",
+      "pos": [
+        2485.9793641938923,
+        170.28860713217156
+      ],
+      "size": [
+        277.04615730297473,
+        88
       ],
       "flags": {},
       "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Modello, Text Encoder, VAE",
-      "properties": {},
+      "properties": {
+        "text": ""
+      },
       "widgets_values": [
-        "## Model links\n\n**diffusion_models**       \n- [z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models)\n- [z-image-turbo-fp8-e4m3fn.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/T5B/Z-Image-Turbo-FP8/tree/main)\n\n**unet (GGUF)**\n- [z_image_turbo-QXX.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/tree/main)\n\n**vae**\n- [ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae)\n\n**text_encoders**   \n- [qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders)\n- [qwen3_4b_fp8_scaled.safetensors](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/resolve/main/qwen3_4b_fp8_scaled.safetensors) - [repository HF](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/tree/main)\n\n**text_encoders - GGUF**   \n- [Qwen_3_4b-QXX.gguf](https://huggingface.co/worstplayer/Z-Image_Qwen_3_4b_text_encoder_GGUF/tree/main)\n\n**controlnet**\n- [Z-Image-Turbo-Fun-Controlnet-Union.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── z_image_turbo_bf16.safetensors\n│   │   └─── z-image-turbo-fp8-e4m3fn.safetensors\n│   ├───📂 model_patches/\n│   │   └─── Z-Image-Turbo-Fun-Controlnet-Union.safetensors\n│   │   └─── Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── qwen_3_4b.safetensors \n│   │   └─── qwen3_4b_fp8_scaled.safetensors\n│   └───📂 vae/\n│       └─── ae.safetensors\n\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── z_image_turbo-QXX.gguf\n│   └───📂 clip/\n│       └─── Qwen_3_4b-QXX.gguf\n```\n"
+        "Questo blocco si occupa di gestire ControlNet per Z-Image, viene caricato il modello e l'immagine.\nE' possibile anche gestire l'immagine di inpaint e l'eventuale maschera."
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 205,
+      "type": "ModelPatchLoader",
+      "pos": [
+        2489.6268606446156,
+        77.38670481714446
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL_PATCH",
+          "type": "MODEL_PATCH",
+          "links": [
+            454
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.4.0",
+        "Node name for S&R": "ModelPatchLoader"
+      },
+      "widgets_values": [
+        "Z-Image_Turbo_Fun_ControlNet_Union_2.1.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     }
   ],
   "links": [
@@ -1898,38 +1930,6 @@
       "IMAGE"
     ],
     [
-      420,
-      205,
-      0,
-      204,
-      1,
-      "MODEL_PATCH"
-    ],
-    [
-      421,
-      95,
-      0,
-      204,
-      0,
-      "MODEL"
-    ],
-    [
-      422,
-      204,
-      0,
-      184,
-      0,
-      "MODEL"
-    ],
-    [
-      423,
-      199,
-      0,
-      204,
-      2,
-      "VAE"
-    ],
-    [
       425,
       189,
       0,
@@ -2026,14 +2026,6 @@
       "IMAGE"
     ],
     [
-      451,
-      215,
-      0,
-      204,
-      3,
-      "IMAGE"
-    ],
-    [
       452,
       213,
       0,
@@ -2048,6 +2040,46 @@
       217,
       0,
       "IMAGE"
+    ],
+    [
+      454,
+      205,
+      0,
+      218,
+      1,
+      "MODEL_PATCH"
+    ],
+    [
+      455,
+      95,
+      0,
+      218,
+      0,
+      "MODEL"
+    ],
+    [
+      456,
+      199,
+      0,
+      218,
+      2,
+      "VAE"
+    ],
+    [
+      457,
+      215,
+      0,
+      218,
+      3,
+      "IMAGE"
+    ],
+    [
+      458,
+      218,
+      0,
+      184,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -2198,10 +2230,10 @@
       "id": 20,
       "title": "ControlNet - d4N87",
       "bounding": [
-        2461.283098718207,
-        2.866489382792246,
-        607.6029178717931,
-        218.8
+        2479.6268606446156,
+        3.545933662956152,
+        571.8685695973859,
+        262.96127629974495
       ],
       "color": "#A88",
       "font_size": 22,
@@ -2211,13 +2243,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.925196374622477,
+      "scale": 0.5744741570201232,
       "offset": [
-        725.3919123039498,
-        226.56439701583173
+        708.6681697330853,
+        269.77560121359085
       ]
     },
-    "frontendVersion": "1.34.8",
+    "frontendVersion": "1.34.9",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
