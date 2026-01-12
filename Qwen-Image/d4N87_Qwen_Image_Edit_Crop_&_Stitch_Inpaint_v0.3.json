@@ -1,7 +1,7 @@
 {
   "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
   "revision": 0,
-  "last_node_id": 143,
+  "last_node_id": 145,
   "last_link_id": 264,
   "nodes": [
     {
@@ -16,7 +16,7 @@
         336
       ],
       "flags": {},
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -87,7 +87,7 @@
         286
       ],
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 4,
       "inputs": [
         {
@@ -148,15 +148,15 @@
       "id": 120,
       "type": "SaveImage",
       "pos": [
-        1012.8464003711903,
-        -719.7649395633093
+        1332.569342191734,
+        -711.3194288651686
       ],
       "size": [
         270,
         270.00000000000006
       ],
       "flags": {},
-      "order": 38,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -181,15 +181,15 @@
       "id": 110,
       "type": "PreviewImage",
       "pos": [
-        346.94439336650663,
-        -724.338553601082
+        666.6673351870504,
+        -715.8930429029414
       ],
       "size": [
         646.3468627929688,
         681.2355346679688
       ],
       "flags": {},
-      "order": 37,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -221,10 +221,10 @@
       ],
       "size": [
         348.095703125,
-        626
+        650
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -323,7 +323,8 @@
         true,
         1024,
         1024,
-        "32"
+        "32",
+        "gpu (much faster)"
       ],
       "color": "#323",
       "bgcolor": "#535"
@@ -501,7 +502,7 @@
         60
       ],
       "flags": {},
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -553,7 +554,7 @@
         60
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -607,7 +608,7 @@
         26
       ],
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -645,7 +646,7 @@
         26
       ],
       "flags": {},
-      "order": 16,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -710,7 +711,7 @@
         26
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -748,7 +749,7 @@
         26
       ],
       "flags": {},
-      "order": 20,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -919,7 +920,7 @@
         26
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -960,7 +961,7 @@
         467.08566449546515
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -995,7 +996,7 @@
         46
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1050,7 +1051,7 @@
         200
       ],
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1156,7 +1157,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 31,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1212,7 +1213,7 @@
         126
       ],
       "flags": {},
-      "order": 33,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1260,7 +1261,7 @@
         46
       ],
       "flags": {},
-      "order": 35,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1309,7 +1310,7 @@
         26
       ],
       "flags": {},
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1335,61 +1336,6 @@
       },
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 112,
-      "type": "Image Comparer (rgthree)",
-      "pos": [
-        -785.5724622254504,
-        33.9871534584659
-      ],
-      "size": [
-        1431.4962862690495,
-        850.3152859461379
-      ],
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "image_a",
-          "type": "IMAGE",
-          "link": 232
-        },
-        {
-          "dir": 3,
-          "name": "image_b",
-          "type": "IMAGE",
-          "link": 258
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2509092031",
-        "comparer_mode": "Slide",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        [
-          {
-            "name": "A",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_nzskp_00009_.png&type=temp&subfolder=&rand=0.9392095630754187"
-          },
-          {
-            "name": "B",
-            "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_nzskp_00010_.png&type=temp&subfolder=&rand=0.22722475935955766"
-          }
-        ]
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
     },
     {
       "id": 102,
@@ -1451,7 +1397,7 @@
         82
       ],
       "flags": {},
-      "order": 18,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1514,7 +1460,7 @@
         26
       ],
       "flags": {},
-      "order": 32,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1552,7 +1498,7 @@
         200
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1631,7 +1577,7 @@
         474
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1791,7 +1737,7 @@
         297.759031633126
       ],
       "flags": {},
-      "order": 34,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1834,6 +1780,128 @@
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 112,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        -838.6936023526492,
+        21.728467982915113
+      ],
+      "size": [
+        1431.4962862690495,
+        850.3152859461379
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 232
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 258
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2509092031",
+        "comparer_mode": "Slide",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_nzskp_00009_.png&type=temp&subfolder=&rand=0.9392095630754187"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_nzskp_00010_.png&type=temp&subfolder=&rand=0.22722475935955766"
+          }
+        ]
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 145,
+      "type": "PreviewImage",
+      "pos": [
+        670.6158216856409,
+        66.58259645022365
+      ],
+      "size": [
+        646.3468627929688,
+        681.2355346679688
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 144,
+      "type": "SaveImage",
+      "pos": [
+        1336.5178286903244,
+        71.15621048799635
+      ],
+      "size": [
+        270,
+        270.00000000000006
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.77",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Inpaint_only"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -2296,8 +2364,21 @@
       "id": 10,
       "title": "Preview & Save - d4N87",
       "bounding": [
-        336.94439336650663,
-        -795.1385536010818,
+        656.6673351870504,
+        -786.6930429029411,
+        955.9020070046832,
+        762.0355346679687
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Inpaint Preview & Save - d4N87",
+      "bounding": [
+        660.6158216856409,
+        -4.217403549776092,
         955.9020070046832,
         762.0355346679687
       ],
@@ -2309,20 +2390,20 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8390545288824381,
+      "scale": 0.47362440744769047,
       "offset": [
-        1866.3569920364405,
-        931.4163203117893
+        2934.7593217777485,
+        1137.4239179866252
       ]
     },
-    "frontendVersion": "1.32.10",
+    "frontendVersion": "1.35.9",
+    "workflowRendererVersion": "LG",
     "ue_links": [],
     "links_added_by_ue": [],
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true,
-    "workflowRendererVersion": "LG"
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
