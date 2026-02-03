@@ -1,7 +1,7 @@
 {
   "id": "a6280028-dacf-4d95-bc14-447dbafddd00",
   "revision": 0,
-  "last_node_id": 184,
+  "last_node_id": 187,
   "last_link_id": 383,
   "nodes": [
     {
@@ -245,29 +245,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 130,
-      "type": "Note",
-      "pos": [
-        1309.6346231099994,
-        696.2187967505222
-      ],
-      "size": [
-        214.7307140330197,
-        110.02923526011796
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Questi nodi servono a sistemare la risoluzione in modo che sia un multiplo di 16.\nSe viene passata dall'immagine, collegarla direttamente a questi."
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 101,
       "type": "RandomNoise",
       "pos": [
@@ -279,7 +256,7 @@
         82
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -360,7 +337,7 @@
         58
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -380,71 +357,6 @@
       "widgets_values": [
         "euler"
       ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 102,
-      "type": "SamplerCustomAdvanced",
-      "pos": [
-        2147.4014778073674,
-        87.67940155021597
-      ],
-      "size": [
-        272.3617858886719,
-        326
-      ],
-      "flags": {},
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "noise",
-          "type": "NOISE",
-          "link": 191
-        },
-        {
-          "name": "guider",
-          "type": "GUIDER",
-          "link": 192
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 193
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 194
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 195
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            240
-          ]
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.71",
-        "Node name for S&R": "SamplerCustomAdvanced"
-      },
-      "widgets_values": [],
       "color": "#223",
       "bgcolor": "#335"
     },
@@ -606,7 +518,7 @@
         82
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -641,7 +553,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -677,7 +589,7 @@
         106
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -862,7 +774,7 @@
         82
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1167,7 +1079,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1193,7 +1105,7 @@
         334.8871154785156
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1231,7 +1143,7 @@
         82
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1270,7 +1182,7 @@
         82
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1309,7 +1221,7 @@
         88
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1323,11 +1235,34 @@
       "bgcolor": "#000"
     },
     {
+      "id": 130,
+      "type": "Note",
+      "pos": [
+        1309.6346231099994,
+        696.2187967505222
+      ],
+      "size": [
+        214.7307140330197,
+        110.02923526011796
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Questi nodi servono a sistemare la risoluzione in modo che sia un multiplo di 16.\nSe viene passata dall'immagine, collegarla direttamente a questi."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
       "id": 184,
       "type": "MarkdownNote",
       "pos": [
-        -389.281875325526,
-        42.18939673867322
+        -382.4605003388575,
+        41.50485865810553
       ],
       "size": [
         364.3342459667815,
@@ -1338,13 +1273,78 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Modello, Text Encoder, VAE",
+      "title": "Modello, Text Encoder, VAE - FLUX.2 Dev",
       "properties": {},
       "widgets_values": [
-        "## Model links\n\n**diffusion_models**       \n- [flux2-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.2-dev/resolve/main/flux2-dev.safetensors) - [repository HF](https://huggingface.co/black-forest-labs/FLUX.2-dev/tree/main)\n- [flux2_dev_fp8mixed.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/diffusion_models)\n\n**unet (GGUF)**\n- [flux2-dev-QXX.gguf](https://huggingface.co/city96/FLUX.2-dev-gguf/tree/main)\n\n**vae**\n- [flux2-vae.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/vae)\n\n**text_encoders**   \n- [mistral_3_small_flux2_bf16.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n- [mistral_3_small_flux2_fp8.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n\n**text_encoders - GGUF**   \n- [Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf](https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── flux2-dev.safetensors\n│   │   └─── flux2_dev_fp8mixed.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── mistral_3_small_flux2_bf16.safetensors \n│   │   └─── mistral_3_small_flux2_fp8.safetensors\n│   └───📂 vae/\n│       └─── flux2-vae.safetensors\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── flux2-dev-QXX.gguf\n│   └───📂 clip/\n│       └─── Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf\n```\n"
+        "## Model links\n\n**diffusion_models**       \n- [flux2-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.2-dev/resolve/main/flux2-dev.safetensors) - [repository HF](https://huggingface.co/black-forest-labs/FLUX.2-dev/tree/main)\n- [flux2_dev_fp8mixed.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/diffusion_models)\n\n**unet (GGUF)**\n- [flux2-dev-QXX.gguf](https://huggingface.co/city96/FLUX.2-dev-gguf/tree/main)\n\n**vae**\n- [flux2-vae.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/vae)\n\n**text_encoders**   \n- [mistral_3_small_flux2_bf16.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n- [mistral_3_small_flux2_fp8.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/text_encoders/mistral_3_small_flux2_fp8.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/flux2-dev/tree/main/split_files/text_encoders)\n\n**text_encoders - GGUF**   \n- [Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf](https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── flux2-dev.safetensors\n│   │   └─── flux2_dev_fp8mixed.safetensors\n│   ├───📂 text_encoders/\n│   │   ├─── mistral_3_small_flux2_bf16.safetensors \n│   │   └─── mistral_3_small_flux2_fp8.safetensors\n│   └───📂 vae/\n│       └─── flux2-vae.safetensors\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── flux2-dev-QXX.gguf\n│   └───📂 clip/\n│       └─── Mistral-Small-3.2-24B-Instruct-2506-QXX.gguf\n```\n"
       ],
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 102,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        2147.4014778073674,
+        87.67940155021597
+      ],
+      "size": [
+        271.53974611567355,
+        529.8720979295674
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 191
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 192
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 193
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 194
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            240
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -2087,19 +2087,19 @@
   },
   "config": {},
   "extra": {
-    "ds": {
-      "scale": 0.8410876132931542,
-      "offset": [
-        871.3181661821742,
-        337.5116140684024
-      ]
-    },
-    "frontendVersion": "1.32.10",
+    "frontendVersion": "1.36.14",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "workflowRendererVersion": "LG"
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.6951137299943441,
+      "offset": [
+        272.7332035152192,
+        296.61015684564217
+      ]
+    }
   },
   "version": 0.4
 }

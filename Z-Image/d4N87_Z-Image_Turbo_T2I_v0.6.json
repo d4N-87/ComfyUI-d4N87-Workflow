@@ -948,30 +948,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 194,
-      "type": "MarkdownNote",
-      "pos": [
-        -396.61971749313045,
-        37.87418054863274
-      ],
-      "size": [
-        383.76487564219485,
-        820.2549919259914
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Modello, Text Encoder, VAE",
-      "properties": {},
-      "widgets_values": [
-        "## Model links\n\n**diffusion_models**       \n- [z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models)\n- [z-image-turbo-fp8-e4m3fn.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/T5B/Z-Image-Turbo-FP8/tree/main)\n\n**unet (GGUF)**\n- [z_image_turbo-QXX.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/tree/main)\n\n**vae**\n- [ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae)\n- [UltraFlux-v1.safetensors](https://huggingface.co/Owen777/UltraFlux-v1/resolve/main/vae/diffusion_pytorch_model.safetensors) - [repository HF](https://huggingface.co/Owen777/UltraFlux-v1/tree/main/vae)\n\n**text_encoders**   \n- [qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders)\n- [qwen3_4b_fp8_scaled.safetensors](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/resolve/main/qwen3_4b_fp8_scaled.safetensors) - [repository HF](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/tree/main)\n\n**text_encoders - GGUF**   \n- [Qwen_3_4b-QXX.gguf](https://huggingface.co/worstplayer/Z-Image_Qwen_3_4b_text_encoder_GGUF/tree/main)\n\n**controlnet**\n- [Z-Image-Turbo-Fun-Controlnet-Union.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── z_image_turbo_bf16.safetensors\n│   │   └─── z-image-turbo-fp8-e4m3fn.safetensors\n│   ├───📂 model_patches/\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union.safetensors\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors\n│   │   └─── Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors\n│   ├───📂 text_encoders/\n│   │   ├─── qwen_3_4b.safetensors \n│   │   └─── qwen3_4b_fp8_scaled.safetensors\n│   └───📂 vae/\n│       ├─── ae.safetensors\n│       └─── UltraFlux-v1.safetensors\n\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── z_image_turbo-QXX.gguf\n│   └───📂 clip/\n│       └─── Qwen_3_4b-QXX.gguf\n```\n"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 30,
       "type": "Note",
       "pos": [
@@ -983,7 +959,7 @@
         88
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1008,7 +984,7 @@
         88
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1017,6 +993,30 @@
       },
       "widgets_values": [
         "Qui viene caricato Qwen 3 4B."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 194,
+      "type": "MarkdownNote",
+      "pos": [
+        -396.61971749313045,
+        37.87418054863274
+      ],
+      "size": [
+        383.76487564219485,
+        820.2549919259914
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modello, Text Encoder, VAE",
+      "properties": {},
+      "widgets_values": [
+        "## Model links\n\n**diffusion_models**       \n- [z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/diffusion_models)\n- [z-image-turbo-fp8-e4m3fn.safetensors](https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/diffusion_models/flux2_dev_fp8mixed.safetensors) - [repository HF](https://huggingface.co/T5B/Z-Image-Turbo-FP8/tree/main)\n\n**unet (GGUF)**\n- [z_image_turbo-QXX.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/tree/main)\n\n**vae**\n- [ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/vae)\n- [UltraFlux-v1.safetensors](https://huggingface.co/Owen777/UltraFlux-v1/resolve/main/vae/diffusion_pytorch_model.safetensors) - [repository HF](https://huggingface.co/Owen777/UltraFlux-v1/tree/main/vae)\n\n**text_encoders**   \n- [qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/z_image_turbo/tree/main/split_files/text_encoders)\n- [qwen3_4b_fp8_scaled.safetensors](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/resolve/main/qwen3_4b_fp8_scaled.safetensors) - [repository HF](https://huggingface.co/jiangchengchengNLP/qwen3-4b-fp8-scaled/tree/main)\n\n**text_encoders - GGUF**   \n- [Qwen3-4B-QXX.gguf](https://huggingface.co/unsloth/Qwen3-4B-GGUF/tree/main)\n\n**controlnet**\n- [Z-Image-Turbo-Fun-Controlnet-Union.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n- [Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors) - [repository HF](https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0/tree/main)\n___\n\n## FP8/BF16\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── z_image_turbo_bf16.safetensors\n│   │   └─── z-image-turbo-fp8-e4m3fn.safetensors\n│   ├───📂 model_patches/\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union.safetensors\n│   │   ├─── Z-Image-Turbo-Fun-Controlnet-Union-2.0.safetensors\n│   │   └─── Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors\n│   ├───📂 text_encoders/\n│   │   ├─── qwen_3_4b.safetensors \n│   │   └─── qwen3_4b_fp8_scaled.safetensors\n│   └───📂 vae/\n│       ├─── ae.safetensors\n│       └─── UltraFlux-v1.safetensors\n\n```\n___\n\n## GGUF\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 unet/\n│   │   └─── z_image_turbo-QXX.gguf\n│   └───📂 clip/\n│       └─── Qwen_3_4b-QXX.gguf\n```\n"
       ],
       "color": "#222",
       "bgcolor": "#000"
@@ -1298,13 +1298,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.695113729994343,
+      "scale": 1.0177160120847177,
       "offset": [
-        533.6618551371814,
-        330.42761111644916
+        821.7336148714489,
+        118.93513923695434
       ]
     },
-    "frontendVersion": "1.34.9",
+    "frontendVersion": "1.36.14",
     "workflowRendererVersion": "LG",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
