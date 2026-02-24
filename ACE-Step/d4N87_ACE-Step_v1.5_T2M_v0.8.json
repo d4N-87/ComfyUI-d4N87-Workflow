@@ -1,0 +1,2244 @@
+{
+  "id": "88ac5dad-efd7-40bb-84fe-fbaefdee1fa9",
+  "revision": 0,
+  "last_node_id": 185,
+  "last_link_id": 330,
+  "nodes": [
+    {
+      "id": 116,
+      "type": "Note",
+      "pos": [
+        -791.7722943399601,
+        -807.9494396624461
+      ],
+      "size": [
+        324.2046569183978,
+        88
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il modello di ACE-Step 1.5"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 78,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        -445.26247964692857,
+        -927.3233272135092
+      ],
+      "size": [
+        329.39477481889753,
+        60
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 266
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "ModelSamplingAuraFlow"
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 141,
+      "type": "MarkdownNote",
+      "pos": [
+        1046.2165733192166,
+        -763.0928417662898
+      ],
+      "size": [
+        210,
+        178.45110829190048
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "### 🧹 MIN-P (Filtro Qualità)\n\n\n**Cosa fa:** Elimina i suoni \"spazzatura\" o troppo deboli.\n\n**Formula:**\n\n`0.02 + (Creatività * 0.08)`\n\nSale insieme alla creatività per \"pulire\" il rumore generato dall'alta temperatura, mantenendo il suono nitido."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 143,
+      "type": "MarkdownNote",
+      "pos": [
+        561.0063441878883,
+        -763.4061441430301
+      ],
+      "size": [
+        210,
+        178.45110829190048
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "### 🛡️ TOP-P (Limite Sicurezza)\n\n**Cosa fa:** Restringe la scelta alle note che hanno senso logico.\n\n**Formula:** \n\n`1.0 - (Creatività * 0.2)`\n\nSi stringe quando la creatività è alta per evitare che l'AI scelga note totalmente fuori scala o stonate."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 131,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        560.9115475090314,
+        -927.4625249284777
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 281
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            323
+          ]
+        }
+      ],
+      "title": "Top-P",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469"
+      },
+      "widgets_values": [
+        "1.0 - (a * 0.2)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 144,
+      "type": "MarkdownNote",
+      "pos": [
+        802.4206803763864,
+        -763.7664137054013
+      ],
+      "size": [
+        210,
+        178.45110829190048
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "### 🎯 TOP-K (Ventaglio Opzioni)\n\n**Cosa fa:** Decide quante possibili note l'AI può considerare.\n\n**Formula:** `150 - (Creatività * 100)`\n\nRiduce il numero di opzioni man mano che la creatività sale, forzando l'AI a scegliere solo tra le migliori varianti disponibili."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 133,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        802.6908440248428,
+        -927.8759470933505
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 283
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            321
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Top-K",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469"
+      },
+      "widgets_values": [
+        "150 - (a * 100)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 135,
+      "type": "MarkdownNote",
+      "pos": [
+        -84.67343088249206,
+        -740.1536015807494
+      ],
+      "size": [
+        270.08626545123036,
+        134.491468564225
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Regola il comportamento dell'AI con un unico comando:\n- **0.0 (Fedele):** Melodie pulite, ritmi precisi e prevedibili.\n- **0.5 (Bilanciato):** Ottimo equilibrio tra ordine e innovazione.\n- **1.0 (Sperimentale):** Variazioni audaci e strutture complesse."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 134,
+      "type": "Reroute",
+      "pos": [
+        210.6479418105975,
+        -927.1773789054249
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 279
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "FLOAT",
+          "links": [
+            280,
+            281,
+            282,
+            283
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 124,
+      "type": "Reroute",
+      "pos": [
+        1941.1170577633104,
+        -927.673577928359
+      ],
+      "size": [
+        140.8,
+        26
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 273
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            274,
+            275
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 47,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1942.5173732570331,
+        -865.7660886319813
+      ],
+      "size": [
+        204.75,
+        26
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 274
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": [],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 98,
+      "type": "EmptyAceStep1.5LatentAudio",
+      "pos": [
+        1942.673421543829,
+        -793.8681469002308
+      ],
+      "size": [
+        286.9641400250715,
+        82
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": 330
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "EmptyAceStep1.5LatentAudio"
+      },
+      "widgets_values": [
+        180,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 115,
+      "type": "Note",
+      "pos": [
+        -791.5620268757818,
+        -473.2312014795831
+      ],
+      "size": [
+        325.4938862236573,
+        88
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui vengono caricati due possibili combinazioni:\n\n- Qwen 0.6B + 1.7B ACE-Step 1.5\n- Qwen 0.6B + 4B ACE-Step 1.5"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 159,
+      "type": "PrimitiveInt",
+      "pos": [
+        1952.0837389611936,
+        -305.0520162748341
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            306
+          ]
+        }
+      ],
+      "title": "Turbo - Steps",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        8,
+        "fixed"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 174,
+      "type": "PrimitiveFloat",
+      "pos": [
+        1952.6360619021855,
+        -400.0933808993797
+      ],
+      "size": [
+        211.8954334523844,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            309
+          ]
+        }
+      ],
+      "title": "Base - CFG",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveFloat"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 169,
+      "type": "PrimitiveFloat",
+      "pos": [
+        1952.5424629714878,
+        -186.10969547334884
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            310
+          ]
+        }
+      ],
+      "title": "Turbo - CFG",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveFloat"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 158,
+      "type": "PrimitiveInt",
+      "pos": [
+        1952.2012308382575,
+        -525.9153212346525
+      ],
+      "size": [
+        210,
+        89.10472863690984
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            305
+          ]
+        }
+      ],
+      "title": "Base - Steps",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        50,
+        "fixed"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 18,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        2832.537160775621,
+        -924.0517116623512
+      ],
+      "size": [
+        164.8375,
+        46
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 256
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 268
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            270
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "VAEDecodeAudio"
+      },
+      "widgets_values": [],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 122,
+      "type": "Reroute",
+      "pos": [
+        3017.179814852185,
+        -923.8354272735713
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 270
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "AUDIO",
+          "links": [
+            271,
+            272
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 121,
+      "type": "SaveAudio",
+      "pos": [
+        3131.689532143669,
+        -923.6900393904637
+      ],
+      "size": [
+        266.5291207747491,
+        112.68478292147142
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 271
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/ACE-Step"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 114,
+      "type": "Note",
+      "pos": [
+        -791.0089183269861,
+        -207.8345270558221
+      ],
+      "size": [
+        323.14358922300056,
+        88
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene caricato il VAE per ACE-Step 1.5"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 167,
+      "type": "Note",
+      "pos": [
+        2192.7325785556873,
+        -377.43858785878
+      ],
+      "size": [
+        210,
+        250.2516072022671
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Gli steps possono essere variati, ma di base sono stati impostati come consigliati.\n\nLo switch dedicato permetterà di impostare il Base (su false) o il Turbo (su true), avendo già gli step sistemati.\n\nIl CFG per il Base è consigliabile fino a un massimo di 3.5."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 111,
+      "type": "VAELoader",
+      "pos": [
+        -791.3591795073673,
+        -302.36540878467645
+      ],
+      "size": [
+        324.01068671269087,
+        58
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ACE-Step\\ACE_1.5_VAE.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        2476.9934107448557,
+        -927.3462917321729
+      ],
+      "size": [
+        329.39477481889753,
+        262
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 175
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 275
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 119
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 249
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 258
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 315
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": 316
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            256
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        489387279551100,
+        "fixed",
+        50,
+        3.5,
+        "euler",
+        "simple",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 165,
+      "type": "ComfySwitchNode",
+      "pos": [
+        2196.6028893313123,
+        -620.6162702437521
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "INT",
+          "link": 305
+        },
+        {
+          "name": "on_true",
+          "type": "INT",
+          "link": 306
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 307
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "INT",
+          "links": [
+            315
+          ]
+        }
+      ],
+      "title": "Steps",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 175,
+      "type": "ComfySwitchNode",
+      "pos": [
+        2194.473539391544,
+        -491.910289591261
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "FLOAT",
+          "link": 309
+        },
+        {
+          "name": "on_true",
+          "type": "FLOAT",
+          "link": 310
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 311
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "FLOAT",
+          "links": [
+            316
+          ]
+        }
+      ],
+      "title": "CFG",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 136,
+      "type": "MarkdownNote",
+      "pos": [
+        320.11295471040626,
+        -762.3888433546574
+      ],
+      "size": [
+        210,
+        163.3268870221823
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "### 🔥 TEMPERATURE\n**Cosa fa:** Gestisce il \"disordine\" e la varietà delle note.\n\n**Formula:**\n\n`0.7 + (Creatività * 0.8)`\n\n\nAumentandola, l'AI sceglie note meno probabili, rendendo il brano meno ripetitivo ma più imprevedibile."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 132,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1047.0475212469057,
+        -927.2809247325309
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 282
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            322
+          ]
+        }
+      ],
+      "title": "Min-P",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469"
+      },
+      "widgets_values": [
+        "0.02 + (a * 0.08)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 130,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        320.0119367087485,
+        -927.3570923830629
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 280
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            324
+          ]
+        }
+      ],
+      "title": "Temperature",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469"
+      },
+      "widgets_values": [
+        "0.7 + (a * 0.8)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 129,
+      "type": "SimpleMathSlider+",
+      "pos": [
+        -84.86055438139462,
+        -926.4847038557863
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            279
+          ]
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Level of creativity",
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMathSlider+"
+      },
+      "widgets_values": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 181,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        916.034959568565,
+        -427.7305219438523
+      ],
+      "size": [
+        210,
+        128
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 325
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 326
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            328
+          ]
+        }
+      ],
+      "title": "Conversione",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "609f3afaa74b2f88ef9ce8d939626065e3247469"
+      },
+      "widgets_values": [
+        "(a * 60) + b"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 102,
+      "type": "PrimitiveNode",
+      "pos": [
+        635.1789605598441,
+        -190.9611984630799
+      ],
+      "size": [
+        268.39945903485034,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "links": [
+            257,
+            258
+          ]
+        }
+      ],
+      "title": "Seed",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        489387279551100,
+        "randomize"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 176,
+      "type": "Note",
+      "pos": [
+        915.201828122242,
+        -263.1159505459394
+      ],
+      "size": [
+        210,
+        148.94174865475577
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Qui viene impostata la durata della traccia, inserendo i minuti e i secondi totali.\n\n\nPer ricreare una traccia già fatta, impostare il seed e cambiarlo su fixed."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 182,
+      "type": "PrimitiveInt",
+      "pos": [
+        635.0649379437344,
+        -427.9477832007491
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            325
+          ]
+        }
+      ],
+      "title": "Minutes",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        2,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 185,
+      "type": "Reroute",
+      "pos": [
+        1150.3870499750703,
+        -408.0147070613523
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 328
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "FLOAT",
+          "links": [
+            329,
+            330
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 180,
+      "type": "MarkdownNote",
+      "pos": [
+        -210.59838556755594,
+        -480.0084389467186
+      ],
+      "size": [
+        778.1394870588026,
+        879.806200151231
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Guida al prompt",
+      "properties": {},
+      "widgets_values": [
+        "### 📝 GUIDA AI PROMPT (ACE-Step 1.5)\n\n[Documentazione Completa ACE-Step](https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/Tutorial.md)\n\n___\n\n# 🎵 ACE-Step 1.5: Guida al Prompting Musicale\n\n### 1. CAPTION (Definizione dello Stile)\nLa Caption descrive il \"ritratto\" sonoro complessivo. È fondamentale essere specifici e combinare più dimensioni per ridurre l'arbitrarietà del modello.\n\n*   **Dimensioni principali:**\n    *   **Genere/Era:** `80s synth-pop`, `90s grunge`, `modern trap`, `vintage soul`.\n    *   **Atmosfera:** `melancholic`, `uplifting`, `energetic`, `dreamy`, `dark`.\n    *   **Strumentazione:** `acoustic guitar`, `808 drums`, `synth pads`, `strings`.\n    *   **Texture/Produzione:** `warm`, `crisp`, `lo-fi`, `high-fidelity`, `polished`.\n    *   **Voce:** `female breathy vocal`, `male raspy`, `falsetto`, `choir`.\n\n**Linee guida:**\n*   **Specificità:** Preferire \"sad piano ballad\" a un generico \"sad song\".\n*   **Riferimenti:** Utilizzare \"in the style of [Artista]\" per veicolare estetiche complesse.\n*   **Gestione Conflitti:** Evitare l'uso simultaneo di stili opposti. Per evoluzioni, descrivere la progressione: *\"Starts with soft strings, middle becomes rock\"*.\n\n---\n\n### 2. LYRICS (Script Temporale e Struttura)\nI tag tra parentesi quadre controllano l'andamento del brano nel tempo.\n\n#### **Tag di Struttura (Meta Tags)**\n*   **Base:** `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Bridge]`, `[Outro]`.\n*   **Dinamica:** `[Build]`, `[Drop]`, `[Breakdown]`, `[Silence]`.\n*   **Strumentali:** `[Instrumental]`, `[Guitar Solo]`, `[Piano Interlude]`, `[Fade Out]`.\n\n#### **Controllo Vocale ed Energia**\nÈ possibile raffinare i tag con descrizioni aggiuntive: `[Chorus - anthemic]`.\n*   **Stile Vocale:** `[whispered]`, `[powerful belting]`, `[spoken word]`, `[harmonies]`.\n*   **Energia:** `[low energy]`, `[building energy]`, `[explosive]`, `[euphoric]`.\n\n---\n\n### 3. REGOLE DI SCRITTURA DEL TESTO\n*   **Controllo Sillabico:** Mantenere **6-10 sillabe per riga** per garantire fluidità ritmica.\n*   **Intensità Vocale:** Utilizzare il **MAIUSCOLO** per indicare grida o maggiore enfasi (es. `WE ARE THE CHAMPIONS!`).\n*   **Cori e Background:** Utilizzare le parentesi tonde per voci di sottofondo (es. `Into the light (into the light)`).\n*   **Coerenza:** Verificare che gli strumenti citati nella Caption siano richiamati dai tag nelle Lyrics (es. Caption: \"violin solo\" ↔ Lyrics: `[Violin Solo]`).\n\n---\n\n### 🎹 ESEMPIO DI CONFIGURAZIONE\n**Caption:** `female vocal, piano ballad, emotional, strings, building to powerful chorus`\n\n**Lyrics:**\n```text\n[Intro - piano]\n\n[Verse 1]\nTesto con ritmo regolare\nSillabe ben bilanciate\n\n[Chorus - powerful]\nRITORNELLO AD ALTA ENERGIA\nPAROLE IN MAIUSCOLO\n\n[Outro - fade out]"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 118,
+      "type": "UNETLoader",
+      "pos": [
+        -791.6254590128117,
+        -927.0456158099071
+      ],
+      "size": [
+        324.6671472593596,
+        82.55242105844579
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            266
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "ACE-Step\\ACE-Step_v1.5_Base.safetensors",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 166,
+      "type": "Primitive boolean [Crystools]",
+      "pos": [
+        1952.2767667820665,
+        -620.7074134838748
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "boolean",
+          "type": "BOOLEAN",
+          "links": [
+            307,
+            311
+          ]
+        }
+      ],
+      "title": "Scelta Base o Turbo",
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "2f18256c5b5063937106f29a8e0a7db3ae3869b7",
+        "Node name for S&R": "Primitive boolean [Crystools]"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 183,
+      "type": "PrimitiveInt",
+      "pos": [
+        633.7574412516495,
+        -308.7313555790281
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            326
+          ]
+        }
+      ],
+      "title": "Seconds",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        30,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 94,
+      "type": "TextEncodeAceStepAudio1.5",
+      "pos": [
+        1297.9264319648369,
+        -931.2708501149557
+      ],
+      "size": [
+        611.9184354063266,
+        679.7643386829468
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 267
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 257
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": 329
+        },
+        {
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": 324
+        },
+        {
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": 323
+        },
+        {
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": 321
+        },
+        {
+          "name": "min_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_p"
+          },
+          "link": 322
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            273
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "TextEncodeAceStepAudio1.5"
+      },
+      "widgets_values": [
+        "An avant-garde Italian satirical rap track with a heavy funk-rock groove. The music features a prominent, elastic slap-bass line, syncopated drum machine patterns, and quirky synth stabs. The vocal delivery is theatrical, fast-paced, and rich in internal rhymes, capturing the cynical and intellectual energy of alternative Italian hip-hop. The production is crisp and dry, with occasional distorted guitar scratches and sudden orchestral hits to emphasize the irony. It feels like a radio-friendly but lyrically dense social commentary.",
+        "[Intro - funky bass solo and record scratch]\n\n[Verse 1 - fast rhythmic flow, heavy alliteration]\nC'è una folla di santoni del \"prompt\" preconfezionato\nChe vende l'aldilà in un pacchetto abbonato\nVogliono la pappa pronta, l'estetica sbiadita\nLa creatività ridotta a una ditata sulla vita!\nPaghi il canone mensile per la tua prigione d'oro\nMentre io sudo freddo nel mio laboratorio del decoro\nSiete schiavi del logo, del server, del cloud che v'inghiotte\nIo sto tra i Python e le ombre, a smontar le tue rotte!\nCercate l'effetto \"wow\" senza manco un'idea\nIo cerco il difetto, l'incastro, la vera marea\nIn un mondo di geni che premono un tasto e s'inchinano\nIo sono il fabbro che i sogni li forgia e li dominano!\n\n[Chorus - catchy and energetic]\nNON È MAGIA, È ARCHITETTURA DI NERVI E SILICIO\nNON È UN SERVIZIO, È IL MIO SACRIFICIO!\nVOI CHIEDETE IL PERMESSO A UNA MACCHINA CHIUSA\nIO CABLO IL FLUSSO E NON CHIEDO SCUSA!\nMentre il mondo si abbronza nel raggio del cloud\nIo resto nell'ombra a gridare il mio \"out\"!\n\n[Verse 2 - sarcastic, rapid-fire metaphors]\nBenvenuti nel circo del \"fai da te\" ma fatto da loro\nDove l'artista è un cliente e il codice è un tesoro... nascosto!\nTi danno la maschera ma ti tolgono il volto\nIo resto in locale, tra i nodi, nel mio labirinto colto!\n\"Oh, ma è troppo difficile, c'è troppa teoria!\"\nSbuffo guardando la tua sterile fotometria\nIo voglio gli spaghetti, i collegamenti, i pesi sballati\nVoglio i modelli che urlano se non sono addestrati!\nSiete trendy col filtro, io son lurido di bit\nVoi cercate il \"mi piace\", io cerco il \"commit\"\nLa vostra intelligenza è un'opinione filtrata\nLa mia è una lama di codice che va affilata!\n\n[Bridge - theatrical and ascending]\nVenghino signori, nel mercato dell'ovvio\nDove il pensiero è un pigro binomio!\nVolete la fiaba? Pagate il biglietto.\nVolete la chiave? Aprite il pacchetto.\nQui non c'è il tasto \"Sì\", qui c'è il tasto \"Perché\"\nLa differenza tra un servo e un re!\n\n[Final Chorus - explosive]\nNON È MAGIA, È ARCHITETTURA DI NERVI E SILICIO\nNON È UN SERVIZIO, È IL MIO SACRIFICIO!\nVOI CHIEDETE IL PERMESSO A UNA MACCHINA CHIUSA\nIO CABLO IL FLUSSO E NON CHIEDO SCUSA!\nMentre il mondo si abbronza nel raggio del cloud\nIo resto nell'ombra a gridare il mio \"out\"!\n\n[Outro - bass groove with glitch effects]\n(Installa le dipendenze)\n(Non avere paura dei nodi)\n(L'open source è l'unica via...)\n[End]",
+        489387279551100,
+        "fixed",
+        115,
+        180,
+        "4",
+        "it",
+        "D minor",
+        true,
+        2,
+        0.85,
+        0.9,
+        0,
+        0
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 119,
+      "type": "DualCLIPLoader",
+      "pos": [
+        -792.1029552715884,
+        -639.0144233035327
+      ],
+      "size": [
+        324.74223268591146,
+        131.10481261509932
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "Qwen_0.6B_ACE_1.5.safetensors",
+        "Qwen_1.7B_ACE_1.5.safetensors",
+        "ace",
+        "default"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 107,
+      "type": "SaveAudioMP3",
+      "pos": [
+        3131.4639793837437,
+        -775.4222458063916
+      ],
+      "size": [
+        266.27111347564505,
+        136
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 272
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ACE-Step",
+        "320k"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 178,
+      "type": "MarkdownNote",
+      "pos": [
+        -1147.5728165035578,
+        -968.8966322839071
+      ],
+      "size": [
+        308.7190954024461,
+        511.2701472984161
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modello, Text Encoder, VAE",
+      "properties": {},
+      "widgets_values": [
+        "## Model Links\n\n**diffusion_models**\n\n- [acestep_v1.5_base.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/diffusion_models/acestep_v1.5_base.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/diffusion_models)\n- [acestep_v1.5_turbo.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/diffusion_models/acestep_v1.5_turbo.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/diffusion_models)\n- [acestep_v1.5_turbo-fp8s.safetensors](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/resolve/main/acestep_v1.5_turbo-fp8s.safetensors) - [repository HF](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/tree/main)\n\n**text_encoders**\n\n- [qwen_0.6b_ace15.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_0.6b_ace15.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/text_encoders)\n- [qwen_0.6b_ace15-fp8s.safetensors](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/resolve/main/qwen_0.6b_ace15-fp8s.safetensors) - [repository HF](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/tree/main)\n- [qwen_1.7b_ace15.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_1.7b_ace15.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/text_encoders)\n- [qwen_1.7b_ace15-fp8s.safetensors](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/resolve/main/qwen_1.7b_ace15-fp8s.safetensors) - [repository HF](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/tree/main)\n- [qwen_4b_ace15.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_4b_ace15.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/text_encoders)\n- [qwen_4b_ace15-fp8s.safetensors](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/resolve/main/qwen_4b_ace15-fp8s.safetensors) - [repository HF](https://huggingface.co/dummy9996/Ace-Step1.5-fp8/tree/main)\n\n**vae**\n\n- [ace_1.5_vae.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/vae/ace_1.5_vae.safetensors) - [repository HF](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/tree/main/split_files/vae)\n\n___\n## FP16/FP8\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   ├── acestep_v1.5_base.safetensors\n│   │   ├── acestep_v1.5_turbo.safetensors\n│   │   └── acestep_v1.5_turbo-fp8s.safetensors\n│   ├── 📂 text_encoders/\n│   │   ├── qwen_0.6b_ace15.safetensors\n│   │   ├── qwen_0.6b_ace15-fp8s.safetensors\n│   │   ├── qwen_1.7b_ace15.safetensors\n│   │   ├── qwen_1.7b_ace15-fp8s.safetensors\n│   │   ├── qwen_4b_ace15.safetensors\n│   │   └── qwen_4b_ace15-fp8s.safetensors\n│   └── 📂 vae/\n│       └── ace_1.5_vae.safetensors\n```\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 155,
+      "type": "MarkdownNote",
+      "pos": [
+        1294.8738820113854,
+        -215.2421653422766
+      ],
+      "size": [
+        615.8717050303011,
+        699.5292692342634
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "### 🎵 IMPOSTAZIONI DELLA TRACCIA (Prompt)\n\nImpostazioni base:\n\n- **BPM (Beats Per Minute):** La velocità del brano\n  - *60-80:* Lento/Rilassato (Lo-fi, Ballate)\n  - *100-120:* Ritmo medio (Pop, Dance leggera)\n  - *130-150+:* Veloce (Techno, Rock, Drum & Bass)\n\n---\n\n- **TIME SIGNATURE (Tempo):** Il \"ritmo\" della battuta\n  - **4:** Il tempo standard (quasi tutta la musica moderna)\n  - **3:** Tempo di Valzer (un-due-tre, un-due-tre)\n  - **2 o 6:** Usati per ritmi marziali o folk particolari\n\n---\n\n- **LANGUAGE:** La lingua che l'AI deve considerare per lo stile o per eventuali parti vocali/strutturali.\n\n---\n\n- **KEYSCALE (Tonalità):** Definisce l'emozione del brano\n  - **Note:** C (Do), D (Re), E (Mi), F (Fa), G (Sol), A (La), B (Si)\n  - **Simbolo # (Diesis):** Indica una nota \"intermedia\" (i tasti neri del pianoforte). Ad esempio C# è Do Diesis. Usali per sonorità più particolari o moderne\n  - **Major (Maggiore):** Suono solare, allegro, positivo\n  - **Minor (Minore):** Suono triste, malinconico, epico o scuro\n\n---\n\n### 🧠 GENERATE AUDIO CODES\n**Cos'è:** Una modalità \"Alta Qualità\" che attiva un secondo cervello AI (LLM) per rifinire i dettagli del suono.\n\n- **TRUE (Consigliato):** Massima qualità sonora. Più lento da generare, ma il risultato è molto più pulito e professionale\n- **FALSE:** Da usare **solo** se stai fornendo al modello un \"Audio di riferimento\" (Audio-to-Audio). In questo caso l'AI seguirà l'audio che gli dai invece di crearne uno da zero\n\n---\n\n### 🎛️ CFG\n\nIl workflow gestisce la \"fedeltà al prompt\" in due punti diversi:\n\n1. **CFG Scale (nel nodo Prompt):** \n   - È l'intensità con cui l'AI analizza le tue parole. \n   - **Default consigliato: 2.0.** \n   - Alzarlo leggermente se l'AI ignora degli strumenti che hai scritto, ma non esagerare.\n\n2. **CFG (nel KSampler - Gestito dallo Switch):**\n   - È la forza con cui l'AI applica il prompt durante la creazione del suono.\n   - **BASE:** Puoi regolarlo (consigliato 2.0 - 3.5). Più è alto, più la traccia sarà \"carica\", ma oltre 4.5 rischia di gracchiare.\n   - **TURBO:** Viene bloccato a **1.0**. Questo è necessario per la tecnologia Turbo: non modificarlo o otterrai solo rumore.\n\n**💡 Consiglio:** Se il suono ti sembra \"distorto\" o metallico, la prima cosa da fare è abbassare il CFG nel KSampler o quello nel nodo Prompt."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      119,
+      47,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      175,
+      78,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      249,
+      98,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      256,
+      3,
+      0,
+      18,
+      0,
+      "LATENT"
+    ],
+    [
+      257,
+      102,
+      0,
+      94,
+      1,
+      "INT"
+    ],
+    [
+      258,
+      102,
+      0,
+      3,
+      4,
+      "INT"
+    ],
+    [
+      266,
+      118,
+      0,
+      78,
+      0,
+      "MODEL"
+    ],
+    [
+      267,
+      119,
+      0,
+      94,
+      0,
+      "CLIP"
+    ],
+    [
+      268,
+      111,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      270,
+      18,
+      0,
+      122,
+      0,
+      "AUDIO"
+    ],
+    [
+      271,
+      122,
+      0,
+      121,
+      0,
+      "AUDIO"
+    ],
+    [
+      272,
+      122,
+      0,
+      107,
+      0,
+      "AUDIO"
+    ],
+    [
+      273,
+      94,
+      0,
+      124,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      274,
+      124,
+      0,
+      47,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      275,
+      124,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      279,
+      129,
+      0,
+      134,
+      0,
+      "FLOAT"
+    ],
+    [
+      280,
+      134,
+      0,
+      130,
+      0,
+      "FLOAT"
+    ],
+    [
+      281,
+      134,
+      0,
+      131,
+      0,
+      "FLOAT"
+    ],
+    [
+      282,
+      134,
+      0,
+      132,
+      0,
+      "FLOAT"
+    ],
+    [
+      283,
+      134,
+      0,
+      133,
+      0,
+      "FLOAT"
+    ],
+    [
+      305,
+      158,
+      0,
+      165,
+      0,
+      "INT"
+    ],
+    [
+      306,
+      159,
+      0,
+      165,
+      1,
+      "INT"
+    ],
+    [
+      307,
+      166,
+      0,
+      165,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      309,
+      174,
+      0,
+      175,
+      0,
+      "FLOAT"
+    ],
+    [
+      310,
+      169,
+      0,
+      175,
+      1,
+      "FLOAT"
+    ],
+    [
+      311,
+      166,
+      0,
+      175,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      315,
+      165,
+      0,
+      3,
+      5,
+      "INT"
+    ],
+    [
+      316,
+      175,
+      0,
+      3,
+      6,
+      "FLOAT"
+    ],
+    [
+      321,
+      133,
+      0,
+      94,
+      5,
+      "INT"
+    ],
+    [
+      322,
+      132,
+      1,
+      94,
+      6,
+      "FLOAT"
+    ],
+    [
+      323,
+      131,
+      1,
+      94,
+      4,
+      "FLOAT"
+    ],
+    [
+      324,
+      130,
+      1,
+      94,
+      3,
+      "FLOAT"
+    ],
+    [
+      325,
+      182,
+      0,
+      181,
+      0,
+      "INT"
+    ],
+    [
+      326,
+      183,
+      0,
+      181,
+      1,
+      "INT"
+    ],
+    [
+      328,
+      181,
+      1,
+      185,
+      0,
+      "FLOAT"
+    ],
+    [
+      329,
+      185,
+      0,
+      94,
+      2,
+      "FLOAT"
+    ],
+    [
+      330,
+      185,
+      0,
+      98,
+      0,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 4,
+      "title": "Caricamento CLIP - d4N87",
+      "bounding": [
+        -798.2646427354028,
+        -708.3537531163837,
+        336.98862807493504,
+        329.87235223481093
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Caricamento modello - d4N87",
+      "bounding": [
+        -798.4039089595173,
+        -997.9232345530054,
+        336.94534730776815,
+        285.75223101752226
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "VAE - d4N87",
+      "bounding": [
+        -798.1398368526343,
+        -373.2024534537158,
+        336.98020668583905,
+        259.5033292250107
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Creatività - d4N87",
+      "bounding": [
+        -94.86055438139464,
+        -997.2847038557865,
+        290.273388950133,
+        401.62257083926204
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Prompt & Impostazioni - d4N87",
+      "bounding": [
+        1290.4774636419866,
+        -998.6651523294865,
+        631.667760099391,
+        1494.4046881262589
+      ],
+      "color": "#8A8",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "Durata e Seed - d4N87",
+      "bounding": [
+        627.8811644047587,
+        -495.53065059462784,
+        506.20693023664046,
+        389.6705953500845
+      ],
+      "color": "#a1309b",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Steps Base o Turbo - d4N87",
+      "bounding": [
+        1944.8916077803754,
+        -688.7054038188112,
+        463.87171589606726,
+        567.0745123543716
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Gen - d4N87",
+      "bounding": [
+        2466.9934107448557,
+        -998.1462917321727,
+        349.39477481889753,
+        342.8
+      ],
+      "color": "#3f789e",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "Save Audio - d4N87",
+      "bounding": [
+        3121.4639793837437,
+        -994.4900393904636,
+        286.7546735346748,
+        365.06779358407204
+      ],
+      "color": "#8AA",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "Temperature - d4N87",
+      "bounding": [
+        310.0119367087485,
+        -998.1570923830628,
+        230.1010180016577,
+        409.0951360505883
+      ],
+      "color": "#b58b2a",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "Top-P - d4N87",
+      "bounding": [
+        550.9115475090314,
+        -998.2625249284778,
+        230.09479667885682,
+        423.307489077349
+      ],
+      "color": "#b58b2a",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "Top-K - d4N87",
+      "bounding": [
+        792.4206803763864,
+        -998.67594709335,
+        230.27016364845633,
+        423.36064167985006
+      ],
+      "color": "#b58b2a",
+      "font_size": 22,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "Mini-P - d4N87",
+      "bounding": [
+        1036.2165733192166,
+        -998.0809247325308,
+        230.83094792768895,
+        423.4391912581419
+      ],
+      "color": "#b58b2a",
+      "font_size": 22,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6592034012968419,
+      "offset": [
+        307.44594182733374,
+        1056.2903776728579
+      ]
+    },
+    "frontendVersion": "1.38.14",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
